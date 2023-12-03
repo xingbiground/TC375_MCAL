@@ -33,8 +33,14 @@
                        value="I2C_MCAL_SUPERVISOR">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
+<<<<<<< HEAD
                 <d:ref name="I2cSystemClock" type="REFERENCE" 
                        value="ASPath:/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/McuClockReferencePoint_0"/>
+=======
+                <d:ref name="I2cSystemClock" type="REFERENCE" >
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+>>>>>>> 94152c173c3303dfd3da9ade300e0b409d4ae01f
               </d:ctr>
               <d:ctr name="I2cConfigSet" type="IDENTIFIABLE">
                 <d:lst name="I2cChannelConfiguration" type="MAP">
