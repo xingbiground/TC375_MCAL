@@ -1,0 +1,8 @@
+TriCore_Debug_Tasking/
+*.gitignore
+.vscode/
+.settings/
+.ads/
+*_Bswmd.arxml
+*.launch
+TriCore Debug (TASKING)/
