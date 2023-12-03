@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 19.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 18:29:18      !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2023-12-03, 18:59:45      !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222          !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -98,7 +98,7 @@ Configuration: ETH_17_GETHMAC_ENA_MII_API
 - if STD_ON, Functions Eth_17_WriteMii,Eth_17_ReadMii are available
 - if STD_OFF,Functions Eth_17_WriteMii,Eth_17_ReadMii are not available
 */
-#define ETH_17_GETHMAC_ENA_MII_API  (STD_OFF)
+#define ETH_17_GETHMAC_ENA_MII_API  (STD_ON)
 /*
 Configuration:  ETH_17_GETHMAC_DEM_ENABLED
 ETH_17_GETHMAC_ENABLE_DEM_REPORT - Production error reporting enabled.

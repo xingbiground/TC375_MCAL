@@ -104,10 +104,7 @@
                              value="ALT3_SELECT_NONE">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
-                      <d:var name="EthCtrlEnableMii" type="BOOLEAN" 
-                             value="false">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                      <d:var name="EthCtrlEnableMii" type="BOOLEAN" value="true"/>
                       <d:var name="EthCtrlEnableRxInterrupt" type="BOOLEAN" 
                              value="false">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>

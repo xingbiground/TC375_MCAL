@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 9.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45            !!!IGNORE-LINE!!!             **
+**  DATE, TIME: 2023-12-03, 19:01:04            !!!IGNORE-LINE!!!             **
 **                                                                            **
 **  GENERATOR : Build b200227-0222              !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -133,7 +133,7 @@ of linked list
 #define DMA_DOUBLE_BUFFER_ENABLE            (STD_OFF)
 
 /* No of DMA channels used in the configuration */
-#define DMA_NUM_OF_CHANNELS                 (8U)
+#define DMA_NUM_OF_CHANNELS                 (5U)
 
 
 /* ******************** USER/SUPERVISOR MODE CONFIGURATIONS ***************** */
@@ -175,7 +175,7 @@ Preprocessor switch for enabling the multicore error checks and error reporting.
 
 
 /* Total number of DMA channels in core 0 */
-#define DMA_ALLOCATED_CHANNELS_CORE0 (8U)
+#define DMA_ALLOCATED_CHANNELS_CORE0 (5U)
 /* Total number of DMA channels in core 1 */
 #define DMA_ALLOCATED_CHANNELS_CORE1 (0U)
 /* Total number of DMA channels in core 2 */
