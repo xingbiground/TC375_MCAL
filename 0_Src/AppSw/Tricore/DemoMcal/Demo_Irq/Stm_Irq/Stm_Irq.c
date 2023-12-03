@@ -63,8 +63,10 @@
 #include "IfxStm_reg.h"
 #include "IfxSrc_reg.h"
 
+#ifdef APP_SW
 #if (APP_SW == TEST_APP)
 #include "Test_Stm_Irq.h"
+#endif
 #endif
 /*******************************************************************************
 **                      Private Macros Definitions                            **
