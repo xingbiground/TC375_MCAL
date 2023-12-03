@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 32.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:44          !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-03, 18:29:30          !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -526,7 +526,7 @@
               <DEPENDENCY-ON-ARTIFACT>
                 <SHORT-NAME>Icu_bmd</SHORT-NAME>
                 <ARTIFACT-DESCRIPTOR>
-                  <SHORT-LABEL>autosar::TC37x::TC377x::Icu_17_TimerIp.bmd</SHORT-LABEL>
+                  <SHORT-LABEL>autosar::TC37x::TC375x::Icu_17_TimerIp.bmd</SHORT-LABEL>
                   <CATEGORY>SWTOOL</CATEGORY>
                 </ARTIFACT-DESCRIPTOR>
                 <USAGES>

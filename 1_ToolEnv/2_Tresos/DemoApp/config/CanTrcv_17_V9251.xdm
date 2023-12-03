@@ -300,7 +300,7 @@
                 <d:var name="VendorApiInfix" type="STRING" value="V9251">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="Release" type="STRING" value="_TRICORE_TC377">
+                <d:var name="Release" type="STRING" value="_TRICORE_TC375">
                   <a:a name="IMPORTER_INFO">
                     <a:v>@CALC</a:v>
                     <a:v>@DEF</a:v>

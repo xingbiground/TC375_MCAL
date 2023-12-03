@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 7.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:44       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2023-12-03, 18:29:31       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -82,11 +82,6 @@ static const Dio_ChannelGroupType Dio_kChannelGroupConfig[DIO_CHANNELGROUPCOUNT]
       (0x0000U)
     },
     {
-    /* Port1*/
-      DIO_PORT_NOT_CONFIGURED,
-      (0x0000U)
-    },
-    {
     /* Port2*/
       DIO_PORT_CONFIGURED,
       (0x0020U)
@@ -98,11 +93,6 @@ static const Dio_ChannelGroupType Dio_kChannelGroupConfig[DIO_CHANNELGROUPCOUNT]
     },
     {
     /* Port11*/
-      DIO_PORT_NOT_CONFIGURED,
-      (0x0000U)
-    },
-    {
-    /* Port12*/
       DIO_PORT_NOT_CONFIGURED,
       (0x0000U)
     },
@@ -150,11 +140,6 @@ static const Dio_ChannelGroupType Dio_kChannelGroupConfig[DIO_CHANNELGROUPCOUNT]
     /* Port33*/
       DIO_PORT_CONFIGURED,
       (0x04e0U)
-    },
-    {
-    /* Port34*/
-      DIO_PORT_NOT_CONFIGURED,
-      (0x0000U)
     },
     {
     /* Port40*/

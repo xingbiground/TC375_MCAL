@@ -639,7 +639,7 @@
     <d:var name="ProjectSpecificSettings" value="FALSE"/>
     <d:var name="ProjectSpecificSettingsConfigurationProject" value="FALSE"/>
     <d:var name="Target" value="AURIX2G"/>
-    <d:var name="Derivate" value="TC377"/>
+    <d:var name="Derivate" value="TC375"/>
     <d:var name="DefaultPreConfiguration" value="McuPreConfiguration"/>
     <d:var name="DefaultRecConfiguration" >
       <a:a name="IMPORTER_INFO" value="@DEF"/>

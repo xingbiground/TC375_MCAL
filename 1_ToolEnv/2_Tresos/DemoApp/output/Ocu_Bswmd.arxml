@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 13.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:44          !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-03, 18:29:30          !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -742,7 +742,7 @@ OCU BMD [/cover] -->
                 <DEPENDENCY-ON-ARTIFACT>
                   <SHORT-NAME>Ocu_bmd</SHORT-NAME>
                   <ARTIFACT-DESCRIPTOR>
-                    <SHORT-LABEL>autosar::TC37x::TC377x::Ocu.bmd</SHORT-LABEL>
+                    <SHORT-LABEL>autosar::TC37x::TC375x::Ocu.bmd</SHORT-LABEL>
                     <CATEGORY>SWTOOL</CATEGORY>
                   </ARTIFACT-DESCRIPTOR>
                   <USAGES>

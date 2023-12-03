@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 19.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45      !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2023-12-03, 18:29:18      !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222          !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -98,13 +98,13 @@ Configuration: ETH_17_GETHMAC_ENA_MII_API
 - if STD_ON, Functions Eth_17_WriteMii,Eth_17_ReadMii are available
 - if STD_OFF,Functions Eth_17_WriteMii,Eth_17_ReadMii are not available
 */
-#define ETH_17_GETHMAC_ENA_MII_API  (STD_ON)
+#define ETH_17_GETHMAC_ENA_MII_API  (STD_OFF)
 /*
 Configuration:  ETH_17_GETHMAC_DEM_ENABLED
 ETH_17_GETHMAC_ENABLE_DEM_REPORT - Production error reporting enabled.
 ETH_17_GETHMAC_DISABLE_DEM_REPORT - Production error reporting disabled
 */
-#define ETH_17_GETHMAC_DEM_ENABLED  (ETH_17_GETHMAC_ENABLE_DEM_REPORT)
+#define ETH_17_GETHMAC_DEM_ENABLED  (ETH_17_GETHMAC_DISABLE_DEM_REPORT)
 /* Maximum time in nanoseconds to wait for hardware timeout errors*/
 #define ETH_17_GETHMAC_MAXTIMEOUT_COUNT  (4294967295U)
 

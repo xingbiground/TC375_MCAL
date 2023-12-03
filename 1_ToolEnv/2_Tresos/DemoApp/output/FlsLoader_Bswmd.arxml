@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 14.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:46          !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-03, 18:29:31          !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -362,7 +362,7 @@
                 <DEPENDENCY-ON-ARTIFACT>
                   <SHORT-NAME>FlsLoader_bmd</SHORT-NAME>
                   <ARTIFACT-DESCRIPTOR>
-                    <SHORT-LABEL>autosar::TC37x::TC377x::FlsLoader.bmd</SHORT-LABEL>
+                    <SHORT-LABEL>autosar::TC37x::TC375x::FlsLoader.bmd</SHORT-LABEL>
                     <CATEGORY>SWTOOL</CATEGORY>
                   </ARTIFACT-DESCRIPTOR>
                   <USAGES>

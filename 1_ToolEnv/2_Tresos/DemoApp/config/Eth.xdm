@@ -26,18 +26,48 @@
                 <d:ctr name="EthConfigSet_0" type="IDENTIFIABLE">
                   <d:lst name="EthCtrlConfig" type="MAP">
                     <d:ctr name="EthCtrlConfig_0" type="IDENTIFIABLE">
+                      <d:var name="EthCtrlIdx" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
                       <d:var name="EthSpeed" type="ENUMERATION" 
-                             value="ETH_1000MBPS"/>
+                             value="ETH_100MBPS">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
                       <d:var name="EthPhyInterface" type="ENUMERATION" 
-                             value="RGMII"/>
+                             value="RMII">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
                       <d:var name="EthOpMode" type="ENUMERATION" 
                              value="FULLDUPLEX">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
+                      <d:var name="EthCtrlPhyAddress" type="STRING" 
+                             value="00:03:19:00:00:01">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="EthCtrlRxBufLenByte" type="INTEGER" 
+                             value="1522">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="EthCtrlTxBufLenByte" type="INTEGER" 
+                             value="1522">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="EthRxBufTotal" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="EthTxBufTotal" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
                       <d:var name="EthMdioAlternateInput" type="ENUMERATION" 
-                             value="ALT2_SELECT_P12_1"/>
+                             value="ALT3_SELECT_P21_3"/>
                       <d:var name="EthRxclkInput" type="ENUMERATION" 
-                             value="ALT0_SELECT_P11_12"/>
+                             value="ALT3_SELECT_NONE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
                       <d:var name="EthRxErrMIIInput" type="ENUMERATION" 
                              value="ALT3_SELECT_NONE">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -59,52 +89,31 @@
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
                       <d:var name="EthRefClkRMIIInput" type="ENUMERATION" 
-                             value="ALT3_SELECT_NONE">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                             value="ALT0_SELECT_P11_12"/>
                       <d:var name="EthCRSDVRMIIInput" type="ENUMERATION" 
-                             value="ALT3_SELECT_NONE">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                             value="ALT0_SELECT_P11_11"/>
                       <d:var name="EthReceiveData0Input" type="ENUMERATION" 
                              value="ALT0_SELECT_P11_10"/>
                       <d:var name="EthReceiveData1Input" type="ENUMERATION" 
                              value="ALT0_SELECT_P11_9"/>
                       <d:var name="EthReceiveData2Input" type="ENUMERATION" 
-                             value="ALT0_SELECT_P11_8"/>
+                             value="ALT3_SELECT_NONE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
                       <d:var name="EthReceiveData3Input" type="ENUMERATION" 
-                             value="ALT0_SELECT_P11_7"/>
-                      <d:var name="EthCtrlEnableMii" type="BOOLEAN" value="true"/>
+                             value="ALT3_SELECT_NONE">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="EthCtrlEnableMii" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
                       <d:var name="EthCtrlEnableRxInterrupt" type="BOOLEAN" 
                              value="false">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
                       <d:var name="EthCtrlEnableTxInterrupt" type="BOOLEAN" 
                              value="false">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="EthCtrlIdx" type="INTEGER" value="0">
-                        <a:a name="IMPORTER_INFO">
-                          <a:v>@DEF</a:v>
-                          <a:v>@CALC</a:v>
-                        </a:a>
-                      </d:var>
-                      <d:var name="EthCtrlPhyAddress" type="STRING" 
-                             value="00:03:19:00:00:01">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="EthCtrlRxBufLenByte" type="INTEGER" 
-                             value="1522">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="EthCtrlTxBufLenByte" type="INTEGER" 
-                             value="1522">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="EthRxBufTotal" type="INTEGER" value="4">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="EthTxBufTotal" type="INTEGER" value="4">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
                       <d:var name="EthSkewTxClockDelay" type="INTEGER" value="0">
@@ -121,47 +130,7 @@
                              value="2500000">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
-                      <d:lst name="EthDemEventParameterRefs" type="MAP">
-                        <d:ctr name="EthDemEventParameterRefs_0" 
-                               type="IDENTIFIABLE">
-                          <d:lst name="ETH_E_ACCESS">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_ACCESS"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_ALIGNMENT">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_ALIGNMENT"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_CRC">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_CRC"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_LATECOLLISION">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_LATECOLLISION"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_MULTIPLECOLLISION">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_MULTIPLECOLLISION"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_OVERSIZEFRAME">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_OVERSIZEFRAME"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_RX_FRAMES_LOST">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_RX_FRAMESLOST"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_SINGLECOLLISION">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_SINGLECOLLISION"/>
-                          </d:lst>
-                          <d:lst name="ETH_E_UNDERSIZEFRAME">
-                            <d:ref type="REFERENCE" 
-                                   value="ASPath:/Dem/Dem/DemConfigSet/ETH_E_UNDERSIZEFRAME"/>
-                          </d:lst>
-                        </d:ctr>
-                      </d:lst>
+                      <d:lst name="EthDemEventParameterRefs" type="MAP"/>
                     </d:ctr>
                   </d:lst>
                 </d:ctr>
@@ -245,7 +214,7 @@
                 <d:var name="VendorApiInfix" type="STRING" value="GEthMac">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="Release" type="STRING" value="_TRICORE_TC377">
+                <d:var name="Release" type="STRING" value="_TRICORE_TC375">
                   <a:a name="IMPORTER_INFO">
                     <a:v>@CALC</a:v>
                     <a:v>@DEF</a:v>

@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 10.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:46              !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-03, 18:29:31              !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222                !!!IGNORE-LINE!!!           **
 **                                                                            **
@@ -64,7 +64,7 @@
 #define OTP_PROTECTION    (4U)
 
 
-#define FLSLOADER_DERIVATIVE             (FLSLOADER_TC377x)
+#define FLSLOADER_DERIVATIVE             (FLSLOADER_TC375x)
 /* FLASH LOADER module instance ID */
 #define FLSLOADER_INSTANCE_ID            ((uint8)1U)
 

@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 19.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45     !!!IGNORE-LINE!!!                     **
+**  DATE, TIME: 2023-12-03, 18:29:18     !!!IGNORE-LINE!!!                     **
 **                                                                            **
 **  GENERATOR : Build b200227-0222       !!!IGNORE-LINE!!!                      **
 **                                                                            **
@@ -122,9 +122,9 @@ static const Eth_17_GEthMac_CoreCntrlConfigType Eth_17_GEthMac_CoreCntrlConfigCo
     skew timing*/
     (uint32)0,
     /* Element to store GETH_GPCTL register value for current controller */
-    (uint32)2,
+    (uint32)3,
     /* Recommended time(in ns) to wait for back to back register write */
-    (uint32)60,
+    (uint32)240,
     (uint16)1522U,  /*Configured Receive Buffer Length*/
     (uint16)1528U,  /*Receive Buffer Length 8 byte aligned*/
     (uint16)1522U,  /*Configured Transmit Buffer Length*/
@@ -142,7 +142,7 @@ static const Eth_17_GEthMac_CoreCntrlConfigType Eth_17_GEthMac_CoreCntrlConfigCo
     Bit[7] - Rx Interrupt Enable/Disable [0 - Disabled, 1- Enabled]
     Bit[8] - CRC Stripping Enable/Disable [0 - Disabled, 1- Enabled]
     */
-    (uint16)36,
+    (uint16)51,
     (uint8)4U,         /*Total Receive Buffer*/
     (uint8)4U,         /*Total Transmit Buffer*/
     /* MAC address of the controller in network byte order */
@@ -159,23 +159,23 @@ static const Eth_17_GEthMac_CoreCntrlConfigType Eth_17_GEthMac_CoreCntrlConfigCo
     /* Clock configuration for MDC */
     (uint8)0x0U,
     /*DEM Id for Ethernet controller hardware test failure*/
-    DemConf_DemEventParameter_ETH_E_ACCESS,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller Frames Lost Error*/
-    DemConf_DemEventParameter_ETH_E_RX_FRAMESLOST,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller Frames Alignment Error*/
-    DemConf_DemEventParameter_ETH_E_ALIGNMENT,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller Frames CRC Error*/
-    DemConf_DemEventParameter_ETH_E_CRC,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller  Undersize frame Error*/
-    DemConf_DemEventParameter_ETH_E_UNDERSIZEFRAME,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller  Oversize frame Error*/
-    DemConf_DemEventParameter_ETH_E_OVERSIZEFRAME,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller Single collision Error*/
-    DemConf_DemEventParameter_ETH_E_SINGLECOLLISION,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller Multiple collision Error*/
-    DemConf_DemEventParameter_ETH_E_MULTIPLECOLLISION,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
     /*DEM Id for Ethernet controller Late collision Error*/
-    DemConf_DemEventParameter_ETH_E_LATECOLLISION,
+    ETH_17_GETHMAC_DISABLE_DEM_REPORT,
   },
 };
 /* Structure to store core0 configuration data */

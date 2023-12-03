@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 14.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2023-12-03, 18:29:31          !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -954,7 +954,7 @@
                   <!-- [cover parentID={2A8A713A-63CF-49c9-AAE3-767FD7FD2FD7}] AUTOSAR format configuration file for DSADC driver [/cover]-->
                   <SHORT-NAME>Dsadc_bmd</SHORT-NAME>
                   <ARTIFACT-DESCRIPTOR>
-                    <SHORT-LABEL>autosar::TC37x::TC377x::Dsadc.bmd</SHORT-LABEL>
+                    <SHORT-LABEL>autosar::TC37x::TC375x::Dsadc.bmd</SHORT-LABEL>
                     <CATEGORY>SWTOOL</CATEGORY>
                   </ARTIFACT-DESCRIPTOR>
                   <USAGES>
