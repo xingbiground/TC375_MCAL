@@ -3142,12 +3142,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_14_PIN_0">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="ASCLIN0_ATX"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
@@ -3205,12 +3200,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_14_PIN_1">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="ASCLIN0_ARXA"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_IN">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
