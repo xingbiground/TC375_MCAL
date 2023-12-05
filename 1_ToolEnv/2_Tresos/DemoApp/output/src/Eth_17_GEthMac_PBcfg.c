@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 19.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 18:29:18     !!!IGNORE-LINE!!!                     **
+**  DATE, TIME: 2023-12-05, 23:59:39     !!!IGNORE-LINE!!!                     **
 **                                                                            **
 **  GENERATOR : Build b200227-0222       !!!IGNORE-LINE!!!                      **
 **                                                                            **
@@ -142,7 +142,7 @@ static const Eth_17_GEthMac_CoreCntrlConfigType Eth_17_GEthMac_CoreCntrlConfigCo
     Bit[7] - Rx Interrupt Enable/Disable [0 - Disabled, 1- Enabled]
     Bit[8] - CRC Stripping Enable/Disable [0 - Disabled, 1- Enabled]
     */
-    (uint16)51,
+    (uint16)243,
     (uint8)4U,         /*Total Receive Buffer*/
     (uint8)4U,         /*Total Transmit Buffer*/
     /* MAC address of the controller in network byte order */

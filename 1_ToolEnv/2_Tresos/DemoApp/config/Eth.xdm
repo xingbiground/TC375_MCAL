@@ -106,13 +106,9 @@
                       </d:var>
                       <d:var name="EthCtrlEnableMii" type="BOOLEAN" value="true"/>
                       <d:var name="EthCtrlEnableRxInterrupt" type="BOOLEAN" 
-                             value="false">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                             value="true"/>
                       <d:var name="EthCtrlEnableTxInterrupt" type="BOOLEAN" 
-                             value="false">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                             value="true"/>
                       <d:var name="EthSkewTxClockDelay" type="INTEGER" value="0">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>

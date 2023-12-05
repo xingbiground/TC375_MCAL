@@ -396,12 +396,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_0_PIN_5">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="LED1"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
@@ -461,16 +456,9 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_0_PIN_6">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="LED2"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -497,10 +485,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -531,12 +516,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_0_PIN_7">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="BUTTON1"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_IN">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -946,7 +926,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_1" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_2" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="2">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -1593,7 +1573,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_2" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_10" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="10">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -2233,7 +2213,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_3" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_11" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="11">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -2247,7 +2227,7 @@
                       </a:a>
                     </d:var>
                     <d:lst name="PortPin" type="MAP">
-                      <d:ctr name="PortPin_0" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_2" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="178">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -2255,24 +2235,15 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_2">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GETH_TXD1"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="ALT6"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
                                value="PORT_PIN_LEVEL_LOW">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -2291,150 +2262,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPinDriveMode" 
-                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
-                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEnableAnalogInputOnly" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinControllerSelect" 
-                               type="ENUMERATION" value="DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                      </d:ctr>
-                      <d:ctr name="PortPin_1" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="179">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_3">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:lst name="PortPinMode">
-                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
-                            <a:a name="IMPORTER_INFO" value="@DEF"/>
-                          </d:var>
-                        </d:lst>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPinDriveMode" 
-                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
-                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEnableAnalogInputOnly" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinControllerSelect" 
-                               type="ENUMERATION" value="DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                      </d:ctr>
-                      <d:ctr name="PortPin_2" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="182">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_6">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:lst name="PortPinMode">
-                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
-                            <a:a name="IMPORTER_INFO" value="@DEF"/>
-                          </d:var>
-                        </d:lst>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_RGMII_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -2458,23 +2286,16 @@
                         </d:var>
                       </d:ctr>
                       <d:ctr name="PortPin_3" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="185">
+                        <d:var name="PortPinId" type="INTEGER" value="179">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
                             <a:v>@CALC</a:v>
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_9">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GETH_TXD0"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -2501,150 +2322,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPinDriveMode" 
-                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
-                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEnableAnalogInputOnly" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinControllerSelect" 
-                               type="ENUMERATION" value="DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                      </d:ctr>
-                      <d:ctr name="PortPin_4" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="186">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_10">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:lst name="PortPinMode">
-                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
-                            <a:a name="IMPORTER_INFO" value="@DEF"/>
-                          </d:var>
-                        </d:lst>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPinDriveMode" 
-                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
-                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEnableAnalogInputOnly" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinControllerSelect" 
-                               type="ENUMERATION" value="DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                      </d:ctr>
-                      <d:ctr name="PortPin_5" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="187">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_11">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:lst name="PortPinMode">
-                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
-                            <a:a name="IMPORTER_INFO" value="@DEF"/>
-                          </d:var>
-                        </d:lst>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_RGMII_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -2668,6 +2346,253 @@
                         </d:var>
                       </d:ctr>
                       <d:ctr name="PortPin_6" type="IDENTIFIABLE">
+                        <d:var name="PortPinId" type="INTEGER" value="182">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="PortPinSymbolicName" type="STRING" 
+                               value="GETH_TXEN"/>
+                        <d:var name="PortPinDirection" type="ENUMERATION" 
+                               value="PORT_PIN_OUT"/>
+                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
+                               value="ALT6"/>
+                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
+                               value="PORT_PIN_LEVEL_LOW">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="PortPinMode">
+                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:lst>
+                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPullResistor" 
+                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPadDriveStrength" 
+                               type="ENUMERATION" value="PORT_PIN_RGMII_DRIVER"/>
+                        <d:var name="PortPinOutputPinDriveMode" 
+                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
+                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEnableAnalogInputOnly" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinControllerSelect" 
+                               type="ENUMERATION" value="DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="PortPin_9" type="IDENTIFIABLE">
+                        <d:var name="PortPinId" type="INTEGER" value="185">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="PortPinSymbolicName" type="STRING" 
+                               value="GETH_RXD1A"/>
+                        <d:var name="PortPinDirection" type="ENUMERATION" 
+                               value="PORT_PIN_IN"/>
+                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
+                               value="GPIO"/>
+                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
+                               value="PORT_PIN_LEVEL_LOW">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="PortPinMode">
+                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:lst>
+                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPullResistor" 
+                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPadDriveStrength" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_DEFAULT_DRIVER"/>
+                        <d:var name="PortPinOutputPinDriveMode" 
+                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
+                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEnableAnalogInputOnly" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinControllerSelect" 
+                               type="ENUMERATION" value="DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="PortPin_10" type="IDENTIFIABLE">
+                        <d:var name="PortPinId" type="INTEGER" value="186">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="PortPinSymbolicName" type="STRING" 
+                               value="GETH_RXD0A"/>
+                        <d:var name="PortPinDirection" type="ENUMERATION" 
+                               value="PORT_PIN_IN">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
+                               value="GPIO">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
+                               value="PORT_PIN_LEVEL_LOW">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="PortPinMode">
+                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:lst>
+                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPullResistor" 
+                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPadDriveStrength" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_DEFAULT_DRIVER">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPinDriveMode" 
+                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
+                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEnableAnalogInputOnly" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinControllerSelect" 
+                               type="ENUMERATION" value="DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="PortPin_11" type="IDENTIFIABLE">
+                        <d:var name="PortPinId" type="INTEGER" value="187">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="PortPinSymbolicName" type="STRING" 
+                               value="GETH_CRSDVA"/>
+                        <d:var name="PortPinDirection" type="ENUMERATION" 
+                               value="PORT_PIN_IN">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
+                               value="GPIO">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
+                               value="PORT_PIN_LEVEL_LOW">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="PortPinMode">
+                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:lst>
+                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPullResistor" 
+                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPadDriveStrength" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_DEFAULT_DRIVER">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPinDriveMode" 
+                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
+                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEnableAnalogInputOnly" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinControllerSelect" 
+                               type="ENUMERATION" value="DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="PortPin_12" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="188">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -2675,12 +2600,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_11_PIN_12">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GETH_TXCLKB"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_IN">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -2740,7 +2660,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_4" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_13" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="13">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -3120,7 +3040,7 @@
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
-                  <d:ctr name="PortContainer_5" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_14" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="14">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -3932,7 +3852,7 @@
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
-                  <d:ctr name="PortContainer_6" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_15" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="15">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -4374,24 +4294,15 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_15_PIN_6">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="QSPI2_MTSR"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="ALT3"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
                                value="PORT_PIN_LEVEL_LOW">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4410,10 +4321,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4444,12 +4352,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_15_PIN_7">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="QSPI2_MRSTB"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_IN">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4514,24 +4417,15 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_15_PIN_8">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="QSPI2_SCLK"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="ALT3"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
                                value="PORT_PIN_LEVEL_LOW">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4550,10 +4444,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4579,7 +4470,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_7" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_20" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="20">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -4873,7 +4764,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                       </d:ctr>
-                      <d:ctr name="PortPin_4" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_6" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="326">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -4888,9 +4779,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4917,150 +4806,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPinDriveMode" 
-                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
-                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEnableAnalogInputOnly" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinControllerSelect" 
-                               type="ENUMERATION" value="DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                      </d:ctr>
-                      <d:ctr name="PortPin_5" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="327">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_20_PIN_7">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:lst name="PortPinMode">
-                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
-                            <a:a name="IMPORTER_INFO" value="@DEF"/>
-                          </d:var>
-                        </d:lst>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPinDriveMode" 
-                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
-                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEnableAnalogInputOnly" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinControllerSelect" 
-                               type="ENUMERATION" value="DISABLE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                      </d:ctr>
-                      <d:ctr name="PortPin_6" type="IDENTIFIABLE">
-                        <d:var name="PortPinId" type="INTEGER" value="328">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_20_PIN_8">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:lst name="PortPinMode">
-                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
-                            <a:a name="IMPORTER_INFO" value="@DEF"/>
-                          </d:var>
-                        </d:lst>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5084,6 +4830,129 @@
                         </d:var>
                       </d:ctr>
                       <d:ctr name="PortPin_7" type="IDENTIFIABLE">
+                        <d:var name="PortPinId" type="INTEGER" value="327">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="PortPinSymbolicName" type="STRING" 
+                               value="CAN00_RXDB"/>
+                        <d:var name="PortPinDirection" type="ENUMERATION" 
+                               value="PORT_PIN_IN">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
+                               value="GPIO">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
+                               value="PORT_PIN_LEVEL_LOW">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="PortPinMode">
+                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:lst>
+                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPullResistor" 
+                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPadDriveStrength" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_DEFAULT_DRIVER">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPinDriveMode" 
+                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
+                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEnableAnalogInputOnly" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinControllerSelect" 
+                               type="ENUMERATION" value="DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="PortPin_8" type="IDENTIFIABLE">
+                        <d:var name="PortPinId" type="INTEGER" value="328">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="PortPinSymbolicName" type="STRING" 
+                               value="CAN00_TXD"/>
+                        <d:var name="PortPinDirection" type="ENUMERATION" 
+                               value="PORT_PIN_OUT"/>
+                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
+                               value="ALT5"/>
+                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
+                               value="PORT_PIN_LEVEL_LOW">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="PortPinMode">
+                          <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:lst>
+                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPullResistor" 
+                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinOutputPadDriveStrength" 
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
+                        <d:var name="PortPinOutputPinDriveMode" 
+                               type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinInputPadLevel" type="ENUMERATION" 
+                               value="PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEnableAnalogInputOnly" 
+                               type="ENUMERATION" 
+                               value="PORT_PIN_ANALOG_INPUT_DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinEmergencyStop" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="PortPinControllerSelect" 
+                               type="ENUMERATION" value="DISABLE">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="PortPin_9" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="329">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -5153,7 +5022,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                       </d:ctr>
-                      <d:ctr name="PortPin_8" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_10" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="330">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -5223,7 +5092,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                       </d:ctr>
-                      <d:ctr name="PortPin_9" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_11" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="331">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -5293,7 +5162,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                       </d:ctr>
-                      <d:ctr name="PortPin_10" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_12" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="332">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -5363,7 +5232,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                       </d:ctr>
-                      <d:ctr name="PortPin_11" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_13" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="333">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -5433,7 +5302,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                       </d:ctr>
-                      <d:ctr name="PortPin_12" type="IDENTIFIABLE">
+                      <d:ctr name="PortPin_14" type="IDENTIFIABLE">
                         <d:var name="PortPinId" type="INTEGER" value="334">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -5506,7 +5375,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_8" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_21" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="21">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -5668,24 +5537,15 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_21_PIN_2">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GETH_MDC"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="ALT5"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
                                value="PORT_PIN_LEVEL_LOW">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5704,10 +5564,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5738,16 +5595,9 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_21_PIN_3">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GETH_MDIO"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5774,10 +5624,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinOutputPadDriveStrength" 
-                               type="ENUMERATION" 
-                               value="PORT_PIN_DEFAULT_DRIVER">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_MEDIUM_DRIVER"/>
                         <d:var name="PortPinOutputPinDriveMode" 
                                type="ENUMERATION" value="PORT_PIN_OUT_PUSHPULL">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5948,16 +5795,9 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_21_PIN_6">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="DAP_TDI"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_IN"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -6018,12 +5858,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_21_PIN_7">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="DAP_TDO"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_IN">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -6207,7 +6042,7 @@
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
-                  <d:ctr name="PortContainer_9" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_22" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="22">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -6587,7 +6422,7 @@
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
-                  <d:ctr name="PortContainer_10" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_23" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="23">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -7024,7 +6859,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_11" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_32" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="32">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -7391,7 +7226,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_12" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_33" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="33">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
@@ -8388,7 +8223,7 @@
                     </d:lst>
                     <d:lst name="PortLVDS" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="PortContainer_13" type="IDENTIFIABLE">
+                  <d:ctr name="PortContainer_40" type="IDENTIFIABLE">
                     <d:var name="PortNumber" type="INTEGER" value="40">
                       <a:a name="IMPORTER_INFO">
                         <a:v>@DEF</a:v>
