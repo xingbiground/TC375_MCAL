@@ -5,4 +5,5 @@ TriCore_Debug_Tasking/
 .ads/
 *_Bswmd.arxml
 *.launch
+*.mk
 TriCore Debug (TASKING)/
