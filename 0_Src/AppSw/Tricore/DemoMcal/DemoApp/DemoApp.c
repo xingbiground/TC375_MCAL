@@ -42,6 +42,7 @@
 #include "Mcu.h"
 #include "Port.h"
 #include "DemoApp.h"
+#include "Pwm_17_GtmCcu6.h"
 
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
@@ -723,6 +724,7 @@ void DemoApp_Init(void)
 {
   DemoApp_Mcu_Init();
   DemoApp_Port_Init();
+  Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
 }
 
 /*******************************************************************************

@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 20.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:44              !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-06, 00:33:28              !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222                !!!IGNORE-LINE!!!           **
 **                                                                            **
@@ -167,13 +167,13 @@ static const Mcu_17_Gtm_TomAtomChConfigType Pwm_kChannelConfigGtm_Core0[1] =
   {
     MCU_GTM_TIMER_TOM, /* Timer Type (TOM/ATOM)*/
     /* Bit[15:8] - Module number Bit[7:0] - Channel number*/
-    0x4U,
-    0x80000800U, /* Channel Control Register*/
-    0x0U, /* CN0 in ticks */
-    0x0U, /* CM0 in ticks */
-    0x0U, /* CM1 in ticks */
-    0x0U, /* SR0 in ticks */
-    0x0U, /* SR1 in ticks */
+    0xdU,
+    0x80003800U, /* Channel Control Register*/
+    0x8000U, /* CN0 in ticks */
+    0x8000U, /* CM0 in ticks */
+    0x4000U, /* CM1 in ticks */
+    0x8000U, /* SR0 in ticks */
+    0x4000U, /* SR1 in ticks */
     0x80U /* Period,Duty Interrupt and mode*/
   },
 };
@@ -196,8 +196,8 @@ static const Pwm_17_GtmCcu6_ChannelConfigType Pwm_kChannelConfigurationCore0[] =
       PWM_17_GTMCCU6_LOW, /* channel Idle state */
       PWM_17_GTMCCU6_HIGH  /* channel polarity */
     ),
-    (Pwm_17_GtmCcu6_PeriodType)0x0, /* Default Period */
-    (uint32)0x0, /* Default Duty Cycle */
+    (Pwm_17_GtmCcu6_PeriodType)0x8000, /* Default Period */
+    (uint32)0x4000, /* Default Duty Cycle */
     (uint32)0x0, /* Shift Value */
     (const void*)&Pwm_kChannelConfigGtm_Core0[0]
     /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen

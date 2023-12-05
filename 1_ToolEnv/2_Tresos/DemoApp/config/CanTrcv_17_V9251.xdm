@@ -133,7 +133,7 @@
                               </a:a>
                             </d:var>
                             <d:ref name="CanTrcvDioSymNameRef" type="REFERENCE" 
-                                   value="ASPath:/Dio/Dio/DioConfig/DioPort_0/STB2"/>
+                                   value="ASPath:/Dio/Dio/DioConfig/DioPort_33/STB2"/>
                           </d:ctr>
                         </d:lst>
                       </d:ctr>
@@ -190,7 +190,7 @@
                               </a:a>
                             </d:var>
                             <d:ref name="CanTrcvDioSymNameRef" type="REFERENCE" 
-                                   value="ASPath:/Dio/Dio/DioConfig/DioPort_3/STB"/>
+                                   value="ASPath:/Dio/Dio/DioConfig/DioPort_10/STB"/>
                           </d:ctr>
                         </d:lst>
                       </d:ctr>
@@ -244,7 +244,7 @@
                               </a:a>
                             </d:var>
                             <d:ref name="CanTrcvDioSymNameRef" type="REFERENCE" 
-                                   value="ASPath:/Dio/Dio/DioConfig/DioPort_0/DioChannel_2"/>
+                                   value="ASPath:/Dio/Dio/DioConfig/DioPort_33/DioChannel_2"/>
                           </d:ctr>
                         </d:lst>
                       </d:ctr>

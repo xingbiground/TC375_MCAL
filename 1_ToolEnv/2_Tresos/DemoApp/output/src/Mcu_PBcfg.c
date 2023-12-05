@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 33.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2023-12-06, 00:18:24       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -475,7 +475,7 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
     /*Toutsel 0 mask value*/
     0x00f00000U,
     /*Toutsel 1 mask value*/
-    0x00000000U,
+    0xf0000000U,
     /*Toutsel 2 mask value*/
     0x00000000U,
     /*Toutsel 3 mask value*/

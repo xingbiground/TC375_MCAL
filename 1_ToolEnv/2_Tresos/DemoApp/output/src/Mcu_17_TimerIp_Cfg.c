@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 22.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45     !!!IGNORE-LINE!!!                    **
+**  DATE, TIME: 2023-12-06, 00:18:24     !!!IGNORE-LINE!!!                    **
 **                                                                            **
 **  GENERATOR : Build b200227-0222         !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -154,7 +154,7 @@ Mcu_17_Gtm_TomChUserData[MCU_17_GTM_NO_OF_TOM_MODULES][MCU_17_GTM_NO_OF_TOM_CHAN
     0x00000000,
     0x00000000,
     0x00000000,
-    0x00000003,
+    0x00000000,
     0x00000000,
     0x00000001,
     0x00000000,
@@ -163,7 +163,7 @@ Mcu_17_Gtm_TomChUserData[MCU_17_GTM_NO_OF_TOM_MODULES][MCU_17_GTM_NO_OF_TOM_CHAN
     0x00000000,
     0x00000000,
     0x00000000,
-    0x00000000,
+    0x00000003,
     0x00000000,
     0x00000000
   },

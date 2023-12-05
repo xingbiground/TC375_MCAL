@@ -47,7 +47,7 @@
 **                      Private Macro Definitions                            **
 ******************************************************************************/
 #ifndef DioChannel_LED
-#define DioChannel_LED DioConf_DioChannel_DioChannel_LED
+#define DioChannel_LED DioConf_DioChannel_LED1
 #endif
 
 #ifndef DioChannelGroup_LED

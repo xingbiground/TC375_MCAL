@@ -47,8 +47,7 @@
               <d:ctr name="DioConfig" type="IDENTIFIABLE">
                 <a:a name="IMPORTER_INFO" value="Impr367"/>
                 <d:lst name="DioPort" type="MAP">
-                  <d:ctr name="DioPort_0" type="IDENTIFIABLE">
-                    <a:a name="IMPORTER_INFO" value="Impr367"/>
+                  <d:ctr name="DioPort_33" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="33">
                       <a:a name="IMPORTER_INFO" value="Impr367"/>
                     </d:var>
@@ -92,8 +91,7 @@
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
-                  <d:ctr name="DioPort_1" type="IDENTIFIABLE">
-                    <a:a name="IMPORTER_INFO" value="Impr367"/>
+                  <d:ctr name="DioPort_20" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="20">
                       <a:a name="IMPORTER_INFO" value="Impr367"/>
                     </d:var>
@@ -123,11 +121,26 @@
                     </d:lst>
                     <d:lst name="DioChannelGroup" type="MAP"/>
                   </d:ctr>
-                  <d:ctr name="DioPort_3" type="IDENTIFIABLE">
+                  <d:ctr name="DioPort_10" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="10"/>
                     <d:lst name="DioChannel" type="MAP">
                       <d:ctr name="STB" type="IDENTIFIABLE">
                         <d:var name="DioChannelId" type="INTEGER" value="6"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="DioChannelGroup" type="MAP"/>
+                  </d:ctr>
+                  <d:ctr name="DioPort_0" type="IDENTIFIABLE">
+                    <d:var name="DioPortId" type="INTEGER" value="0"/>
+                    <d:lst name="DioChannel" type="MAP">
+                      <d:ctr name="LED1" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="5"/>
+                      </d:ctr>
+                      <d:ctr name="LED2" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="6"/>
+                      </d:ctr>
+                      <d:ctr name="BUTTON1" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="7"/>
                       </d:ctr>
                     </d:lst>
                     <d:lst name="DioChannelGroup" type="MAP"/>
