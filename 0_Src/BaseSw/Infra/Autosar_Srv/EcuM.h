@@ -67,6 +67,8 @@ typedef uint32 EcuM_WakeupSourceType;
 /*******************************************************************************
 **                      Global Function Declarations                          **
 *******************************************************************************/
+Std_ReturnType EcuM_Init();
+
 extern void EcuM_SetWakeupEvent
 (
   EcuM_WakeupSourceType events
