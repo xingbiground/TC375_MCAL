@@ -63,7 +63,7 @@
 #include "lwip/init.h"
 #include "netif/etharp.h"
 #include "netif/ppp/pppoe.h"
-#include "IfxGeth_Eth.h"
+#include "Eth.h"
 
 //________________________________________________________________________________________
 // HELPER MACROS
@@ -130,56 +130,47 @@ typedef struct
 
 //________________________________________________________________________________________
 // GLOBAL VARIABLES
-IFX_EXTERN volatile uint32 g_TickCount_1ms;
-IFX_EXTERN Ifx_Lwip g_Lwip;
-IFX_EXTERN IfxGeth_Eth g_IfxGeth;
-IFX_EXTERN uint8 channel0TxBuffer1[IFXGETH_MAX_TX_DESCRIPTORS][IFXGETH_MAX_TX_BUFFER_SIZE];
-IFX_EXTERN uint8 channel0RxBuffer1[IFXGETH_MAX_RX_DESCRIPTORS][IFXGETH_MAX_RX_BUFFER_SIZE];
+extern volatile uint32 g_TickCount_1ms;
+extern Ifx_Lwip g_Lwip;
+// IfxGeth_Eth g_IfxGeth;
+// uint8 channel0TxBuffer1[IFXGETH_MAX_TX_DESCRIPTORS][IFXGETH_MAX_TX_BUFFER_SIZE];
+// uint8 channel0RxBuffer1[IFXGETH_MAX_RX_DESCRIPTORS][IFXGETH_MAX_RX_BUFFER_SIZE];
 
 //________________________________________________________________________________________
 // FUNCTION PROTOTYPES
 
 /** \addtogroup lib_lwIP
  * \{ */
-IFX_EXTERN void     Ifx_Lwip_init(eth_addr_t ethAddr);
-IFX_EXTERN void     Ifx_Lwip_onTimerTick(void);
-IFX_EXTERN void     Ifx_Lwip_pollTimerFlags(void);
-IFX_EXTERN void     Ifx_Lwip_pollReceiveFlags(void);
-IFX_INLINE netif_t *Ifx_Lwip_getNetIf(void);
-IFX_INLINE uint8   *Ifx_Lwip_getIpAddrPtr(void);
-IFX_INLINE uint8   *Ifx_Lwip_getHwAddrPtr(void);
-
-/* This function is used to get the low-level driver */
-IFX_INLINE IfxGeth_Eth *IfxGeth_get(void);
+void     Ifx_Lwip_init(eth_addr_t ethAddr);
+void     Ifx_Lwip_onTimerTick(void);
+void     Ifx_Lwip_pollTimerFlags(void);
+void     Ifx_Lwip_pollReceiveFlags(void);
+INLINE netif_t *Ifx_Lwip_getNetIf(void);
+INLINE uint8   *Ifx_Lwip_getIpAddrPtr(void);
+INLINE uint8   *Ifx_Lwip_getHwAddrPtr(void);
 
 /** \} */
 //________________________________________________________________________________________
 // INLINE FUNCTION IMPLEMENTATIONS
 
 /** \brief Returns pointer to the default network interface */
-IFX_INLINE netif_t *Ifx_Lwip_getNetIf(void)
+INLINE netif_t *Ifx_Lwip_getNetIf(void)
 {
     return &g_Lwip.netif;
 }
 
 
 /** \brief Returns pointer to the actual IP address */
-IFX_INLINE uint8 *Ifx_Lwip_getIpAddrPtr(void)
+INLINE uint8 *Ifx_Lwip_getIpAddrPtr(void)
 {
     return (uint8 *)&g_Lwip.netif.ip_addr.addr;
 }
 
 
 /** \brief Returns pointer to the actual H/W (MAC) address */
-IFX_INLINE uint8 *Ifx_Lwip_getHwAddrPtr(void)
+INLINE uint8 *Ifx_Lwip_getHwAddrPtr(void)
 {
     return g_Lwip.eth_addr.addr;
-}
-
-/* This function is used to get the low-level driver */
-IFX_INLINE IfxGeth_Eth *IfxGeth_get(void)
-{
-    return &g_IfxGeth;
 }
 
 

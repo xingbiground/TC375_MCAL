@@ -32,7 +32,8 @@
     #define Eth_Config              Eth_17_GEthMac_Config
 
     #define Eth_Init                Eth_17_GEthMac_Init
-    
+    #define Eth_WriteMii            Eth_17_GEthMac_WriteMii
+    #define Eth_ReadMii             Eth_17_GEthMac_ReadMii
 #elif(MCAL_AR_VERSION==MCAL_AR_440)
     #error "To add something linke below"
 #endif

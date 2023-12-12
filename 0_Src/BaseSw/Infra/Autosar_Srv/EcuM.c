@@ -151,6 +151,7 @@ extern void EcumLinTest_SetWakeupEvent(EcuM_WakeupSourceType WakeupInfo);
 Std_ReturnType EcuM_Init()
 {
   Std_ReturnType ret = E_OK;
+  Std_ReturnType InitClockRetVal;
   Mcu_PllStatusType Mcu_GetPllStatusRetVal = MCU_PLL_STATUS_UNDEFINED;
 
   /********************************* Mcu Init *********************************/  

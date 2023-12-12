@@ -49,33 +49,33 @@
 /*----------------------------------Includes----------------------------------*/
 /******************************************************************************/
 
-#include "IfxGeth_Eth.h"
+#include "Eth.h"
 /** \addtogroup IfxLld_Eth_Phy_Dp83825i_Functions
  * \{ */
 
 /******************************************************************************/
 /*-------------------------Global Function Prototypes-------------------------*/
 /******************************************************************************/
-IFX_EXTERN void IfxGet_Eth_Phy_Dp83825i_reset(void);
+void IfxGet_Eth_Phy_Dp83825i_reset(void);
 /**
  * \return Status
  */
-IFX_EXTERN uint32 IfxGeth_Eth_Phy_Dp83825i_init(void);
+uint32 IfxGeth_Eth_Phy_Dp83825i_init(void);
 
 /**
  * \return Link status
  */
-IFX_EXTERN uint32 IfxGeth_Eth_Phy_Dp83825i_link_status(void);
+uint32 IfxGeth_Eth_Phy_Dp83825i_link_status(void);
 
 /**
  * \return None
  */
-IFX_EXTERN void IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(uint32 layeraddr, uint32 regaddr, uint32 *pdata);
+void IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(uint8 layeraddr, uint8 regaddr, uint16 *pdata);
 
 /**
  * \return None
  */
-IFX_EXTERN void IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint32 layeraddr, uint32 regaddr, uint32 data);
+void IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint8 layeraddr, uint8 regaddr, uint16 data);
 
 /** \} */
 
@@ -83,6 +83,6 @@ IFX_EXTERN void IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint32 layeraddr, uint32
 /*-------------------Global Exported Variables/Constants----------------------*/
 /******************************************************************************/
 
-IFX_EXTERN uint32 IfxGeth_Eth_Phy_Dp83825i_iPhyInitDone;
+extern uint32 IfxGeth_Eth_Phy_Dp83825i_iPhyInitDone;
 
 #endif /* IFXGETH_ETH_PHY_DP83825I_H */

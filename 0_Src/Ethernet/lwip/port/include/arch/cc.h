@@ -81,6 +81,7 @@
 
 #include "Std_Types.h"
 #include "lwipopts.h"
+#include "Test_Print.h"
 
 typedef uint8  u8_t;
 typedef uint16 u16_t;
@@ -120,11 +121,10 @@ typedef u32_t  mem_ptr_t;
 #define abort(void)
 
 #ifdef LWIP_DEBUG
-s8_t Ifx_Lwip_printf(const char *s, ...);
 #define LWIP_PLATFORM_ASSERT(msg)                                                           \
-    Ifx_Lwip_printf("Assertion \"%s\" failed at line %d in %s\n", msg, __LINE__, __FILE__); \
+    print_f("Assertion \"%s\" failed at line %d in %s\n", msg, __LINE__, __FILE__); \
     abort()
-#define LWIP_PLATFORM_DIAG(msg)   Ifx_Lwip_printf msg
+#define LWIP_PLATFORM_DIAG(msg)   print_f msg
 #else
 #define LWIP_PLATFORM_ASSERT(msg) ((void)0)
 #define LWIP_PLATFORM_DIAG(msg)   ((void)0)

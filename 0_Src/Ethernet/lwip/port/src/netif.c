@@ -91,11 +91,9 @@
 #include "netif/etharp.h"
 #include "netif/ppp/pppoe.h"
 
-#include "IfxGeth_Eth.h"
 #include "Ifx_Lwip.h"
 #include "Ifx_Netif.h"
 #include "IfxGeth_Phy_Dp83825i.h"
-#include "Configuration.h"
 #include <string.h>
 
 /* Define those to better describe your network interface. */
@@ -114,19 +112,6 @@ struct ethernetif
     /* Add whatever per-interface state that is needed here. */
 };
 
-/* pin configuration DP83825I*/
-const IfxGeth_Eth_RmiiPins rmii_pins = {
-                                   .crsDiv = &ETH_CRSDIV_PIN,   /* CRSDIV */
-                                   .refClk = &ETH_REFCLK_PIN,   /* REFCLK */
-                                   .rxd0 = &ETH_RXD0_PIN,       /* RXD0 */
-                                   .rxd1 = &ETH_RXD1_PIN,       /* RXD1 */
-                                   .mdc = &ETH_MDC_PIN,         /* MDC */
-                                   .mdio = &ETH_MDIO_PIN,       /* MDIO */
-                                   .txd0 = &ETH_TXD0_PIN,       /* TXD0 */
-                                   .txd1 = &ETH_TXD1_PIN,       /* TXD1 */
-                                   .txEn = &ETH_TXEN_PIN        /* TXEN */
-};
-
 /**
  * In this function, the hardware should be initialized.
  * Called from ethernetif_init().
@@ -136,7 +121,6 @@ const IfxGeth_Eth_RmiiPins rmii_pins = {
  */
 static void low_level_init(netif_t *netif)
 {
-    IfxGeth_Eth *ethernetif = netif->state;
     int     i;
 
     /* set MAC hardware address length */
@@ -156,99 +140,7 @@ static void low_level_init(netif_t *netif)
     /* we don't set the LINK_UP flag because we don't say when it is linked */
     netif->flags = NETIF_FLAG_BROADCAST | NETIF_FLAG_ETHARP;
 
-    /* Do whatever else is needed to initialize interface. */
-    {
-        IfxGeth_Eth_Config GethConfig;
-
-        IfxGeth_Eth_initModuleConfig(&GethConfig, &MODULE_GETH);
-        // this is our DP83825I
-        GethConfig.phyInterfaceMode = IfxGeth_PhyInterfaceMode_rmii;
-        GethConfig.pins.rmiiPins = &rmii_pins;
-        GethConfig.mac.lineSpeed = IfxGeth_LineSpeed_100Mbps;
-        // MAC core configuration
-        GethConfig.mac.loopbackMode = IfxGeth_LoopbackMode_disable;
-        GethConfig.mac.macAddress[0] = netif->hwaddr[0];
-        GethConfig.mac.macAddress[1] = netif->hwaddr[1];
-        GethConfig.mac.macAddress[2] = netif->hwaddr[2];
-        GethConfig.mac.macAddress[3] = netif->hwaddr[3];
-        GethConfig.mac.macAddress[4] = netif->hwaddr[4];
-        GethConfig.mac.macAddress[5] = netif->hwaddr[5];
-
-        // MTL configuration
-        GethConfig.mtl.numOfTxQueues = 1;
-        GethConfig.mtl.numOfRxQueues = 1;
-        GethConfig.mtl.txQueue[0].txQueueSize = IfxGeth_QueueSize_2560Bytes;
-        GethConfig.mtl.txQueue[0].storeAndForward = TRUE;
-        GethConfig.mtl.rxQueue[0].rxQueueSize = IfxGeth_QueueSize_2560Bytes;
-        GethConfig.mtl.rxQueue[0].rxDmaChannelMap = IfxGeth_RxDmaChannel_0;
-        GethConfig.mtl.rxQueue[0].storeAndForward = TRUE;
-
-        GethConfig.dma.numOfTxChannels = 1;
-        GethConfig.dma.numOfRxChannels = 1;
-        GethConfig.dma.txChannel[0].channelId = IfxGeth_TxDmaChannel_0;
-        GethConfig.dma.txChannel[0].txDescrList = (IfxGeth_TxDescrList *)&IfxGeth_Eth_txDescrList[0];
-        GethConfig.dma.txChannel[0].txBuffer1StartAddress = (uint32 *)&channel0TxBuffer1[0][0]; // user buffer
-        GethConfig.dma.txChannel[0].txBuffer1Size = IFXGETH_MAX_TX_BUFFER_SIZE; // used to calculate the next descriptor  buffer offset
-
-        GethConfig.dma.rxChannel[0].channelId = IfxGeth_RxDmaChannel_0;
-        GethConfig.dma.rxChannel[0].rxDescrList = (IfxGeth_RxDescrList *)&IfxGeth_Eth_rxDescrList[0];
-        GethConfig.dma.rxChannel[0].rxBuffer1StartAddress = (uint32 *)&channel0RxBuffer1[0][0]; // user buffer
-        GethConfig.dma.rxChannel[0].rxBuffer1Size = IFXGETH_MAX_RX_BUFFER_SIZE; // user defined variable
-
-        IfxSrc_Tos gethIsrProvider;
-
-        if (CPU_WHICH_SERVICE_ETHERNET) gethIsrProvider = (IfxSrc_Tos)(CPU_WHICH_SERVICE_ETHERNET+1);
-        else  gethIsrProvider = (IfxSrc_Tos)CPU_WHICH_SERVICE_ETHERNET;
-
-        GethConfig.dma.txInterrupt[0].channelId = IfxGeth_DmaChannel_0;
-        GethConfig.dma.txInterrupt[0].priority = ISR_PRIORITY_GETH_TX;    // priority
-        GethConfig.dma.txInterrupt[0].provider = gethIsrProvider;
-        GethConfig.dma.rxInterrupt[0].channelId = IfxGeth_DmaChannel_0;
-        GethConfig.dma.rxInterrupt[0].priority = ISR_PRIORITY_GETH_RX;    // priority
-        GethConfig.dma.rxInterrupt[0].provider = gethIsrProvider;
-
-        // initialize the module
-        // make sure that the connected phy is also in the selected mode
-        // important for PEF7071 on some boards waked up in RGMII mode
-        // our reset will not work in this case
-        // we was doing this in our main function where we get the ID's to detect the phy
-        IfxGeth_Eth_initModule(ethernetif, &GethConfig);
-
-        /* We get the ID of Ethernet Phy do determine the board version, also needed for SCR */
-        IfxPort_setPinModeOutput(ETH_MDC_PIN.pin.port, ETH_MDC_PIN.pin.pinIndex, IfxPort_OutputMode_pushPull, ETH_MDC_PIN.select);
-        GETH_GPCTL.B.ALTI0  = ETH_MDIO_PIN.inSelect;
-
-        // initialize the PHY
-        IfxGeth_Eth_Phy_Dp83825i_init();
-
-        // and enable transmitter/receiver
-        IfxGeth_Eth_startTransmitters(ethernetif, 1);
-        IfxGeth_Eth_startReceivers(ethernetif, 1);
-
-        // The ETH is ready for use now!
-        /* we set the LINK_UP flag if we have a valid link */
-        if (GETH_MAC_PHYIF_CONTROL_STATUS.B.LNKSTS == 1)
-        {
-            // we have a valid link
-            netif->flags |= NETIF_FLAG_LINK_UP;
-            // we set the correct duplexMode
-            if (GETH_MAC_PHYIF_CONTROL_STATUS.B.LNKMOD == 1)
-                IfxGeth_mac_setDuplexMode(ethernetif->gethSFR, IfxGeth_DuplexMode_fullDuplex);
-            else
-                IfxGeth_mac_setDuplexMode(ethernetif->gethSFR, IfxGeth_DuplexMode_halfDuplex);
-            // we set the correct speed
-            if (GETH_MAC_PHYIF_CONTROL_STATUS.B.LNKSPEED == 0)
-                // 10MBit speed
-                IfxGeth_mac_setLineSpeed(ethernetif->gethSFR, IfxGeth_LineSpeed_10Mbps);
-            else
-                if (GETH_MAC_PHYIF_CONTROL_STATUS.B.LNKSPEED == 1)
-                    // 100MBit speed
-                    IfxGeth_mac_setLineSpeed(ethernetif->gethSFR, IfxGeth_LineSpeed_100Mbps);
-                else
-                    // 1000MBit speed
-                    IfxGeth_mac_setLineSpeed(ethernetif->gethSFR, IfxGeth_LineSpeed_1000Mbps);
-        }
-    }
+    IfxGeth_Eth_Phy_Dp83825i_init();
 }
 
 /**
@@ -268,7 +160,6 @@ static void low_level_init(netif_t *netif)
  */
 static err_t low_level_output(netif_t *netif, pbuf_t *p)
 {
-    IfxGeth_Eth      *ethernetif = netif->state;
     struct pbuf *q;
 
     u16_t        length = p->tot_len;
@@ -278,16 +169,9 @@ static err_t low_level_output(netif_t *netif, pbuf_t *p)
     pbuf_header(p, -ETH_PAD_SIZE); /* drop the padding word */
 #endif
 
-    if ((p->type_internal == PBUF_REF) || (p->type_internal == PBUF_ROM))
-    {
-        // if PBUF_REF or PBUF_ROM, no copy into ethernet RAM buffer is needed.
-        // see pbuf_alloc_special()
-        IfxGeth_Eth_sendTransmitBuffer(ethernetif, p->tot_len, IfxGeth_TxDmaChannel_0);
-    }
-    else
     {
         //initiate transfer();
-        u8_t *tbuf = IfxGeth_Eth_waitTransmitBuffer(ethernetif, IfxGeth_TxDmaChannel_0);
+        /* Here Provide buffer */
         u16_t l    = 0;
 
         for (q = p; q != NULL; q = q->next)
@@ -295,17 +179,13 @@ static err_t low_level_output(netif_t *netif, pbuf_t *p)
             /* Send the data from the pbuf to the interface, one pbuf at a
              * time. The size of the data in each pbuf is kept in the ->len
              * variable. */
-            memcpy((u8_t *)&tbuf[l], q->payload, q->len);
+            // memcpy( Here is buffer, q->payload, q->len);
             l = l + q->len;
             LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("low_level_output: data=%#x, %d\n", q->payload, q->len));
             LWIP_ASSERT("low_level_output: length overflow the buffer\n", (l < 2048));
         }
-        /* we correct the buffer 1 size (maybe overwritten in earlier packet */
-        IfxGeth_TxDescr *pactTxDescriptor;
-        pactTxDescriptor = (IfxGeth_TxDescr *)IfxGeth_Eth_getActualTxDescriptor(ethernetif, IfxGeth_TxDmaChannel_0);
-        /* set the buffer length to the max. available */
-        pactTxDescriptor->TDES2.R.B1L = IFXGETH_MAX_TX_BUFFER_SIZE;
-        IfxGeth_Eth_sendTransmitBuffer(ethernetif, l, IfxGeth_TxDmaChannel_0);
+        
+        /* Here Transmit(Confirmation is in interrupt)*/
     }
 
     LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("low_level_output: signal length: %d\n", length));
@@ -321,29 +201,6 @@ static err_t low_level_output(netif_t *netif, pbuf_t *p)
     return ERR_OK;
 }
 
-static uint16 GetRxFrameSize(IfxGeth_RxDescr *descr)
-{
-  uint16 len;
-
-  uint32 rdes3 = descr->RDES3.U;
-  uint32 rdes1 = descr->RDES1.U;
-
-  if (((rdes3 & (1UL << 15)) != 0U) ||
-      ((rdes1 & (1UL << 7)) != 0U) ||
-      ((rdes3 & (1UL << 28)) == 0U))
-  {
-    /* Error, this block is invalid */
-    len = 0xFFFFU;
-  }
-  else
-  {
-    /* Subtract CRC */
-    len = (uint16)((rdes3 & 0x7FFF) - 4U);
-  }
-
-  return len;
-}
-
 /**
  * Should allocate a pbuf and transfer the bytes of the incoming
  * packet from the interface into the pbuf.
@@ -354,15 +211,11 @@ static uint16 GetRxFrameSize(IfxGeth_RxDescr *descr)
  */
 static pbuf_t *low_level_input(netif_t *netif)
 {
-    IfxGeth_Eth *ethernetif = netif->state;
+    // IfxGeth_Eth *ethernetif = netif->state;
     pbuf_t *p, *q;
     u16_t   len;
 
     len = 0;
-    if (IfxGeth_Eth_isRxDataAvailable(ethernetif, IfxGeth_RxDmaChannel_0) != FALSE)
-    {
-        len = GetRxFrameSize((IfxGeth_RxDescr *)IfxGeth_Eth_getActualRxDescriptor(ethernetif, IfxGeth_RxDmaChannel_0));
-    }
 
     if (len == 0)
     {
@@ -382,8 +235,6 @@ static pbuf_t *low_level_input(netif_t *netif)
         pbuf_header(p, -ETH_PAD_SIZE); /* drop the padding word */
 #endif
 
-        u8_t *src = IfxGeth_Eth_getReceiveBuffer(ethernetif, IfxGeth_RxDmaChannel_0);
-
         /* We iterate over the pbuf chain until we have read the entire
          * packet into the pbuf. */
         for (q = p; q != NULL; q = q->next)
@@ -397,14 +248,10 @@ static pbuf_t *low_level_input(netif_t *netif)
              * pbuf is the sum of the chained pbuf len members.
              */
             //read data into(q->payload, q->len);
-            memcpy(q->payload, src, q->len);
-            src = &src[q->len];
+            /* Here we don't copy, just turn the pointer to buffer. */
 
             LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("low_level_input: payload=0x%x, len=%d\n", q->payload, q->len));
         }
-
-        //acknowledge that packet has been read();
-        IfxGeth_Eth_freeReceiveBuffer(ethernetif, IfxGeth_RxDmaChannel_0);
 
 #if ETH_PAD_SIZE
         pbuf_header(p, ETH_PAD_SIZE); /* reclaim the padding word */
@@ -444,7 +291,7 @@ err_t ifx_netif_input(netif_t *netif)
     /* no packet could be read, silently ignore this */
     if (p == NULL)
     {
-        //LWIP_DEBUGF(NETIF_DEBUG, ("ifx_netif_input: p == NULL!\n"));
+        LWIP_DEBUGF(NETIF_DEBUG, ("ifx_netif_input: p == NULL!\n"));
         return ERR_OK;
     }
 
@@ -495,18 +342,10 @@ err_t ifx_netif_input(netif_t *netif)
  */
 err_t ifx_netif_init(netif_t *netif)
 {
-    IfxGeth_Eth *ethernetif;
+    // IfxGeth_Eth *ethernetif;
 
     LWIP_ASSERT("netif != NULL", (netif != NULL));
     LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("ifx_netif_init ( %#x)\n", netif));
-
-    ethernetif = IfxGeth_get();
-
-    if (ethernetif == NULL)
-    {
-        LWIP_DEBUGF(NETIF_DEBUG, ("ifx_netif_init: out of memory\n"));
-        return ERR_MEM;
-    }
 
 #if LWIP_NETIF_HOSTNAME
     /* Initialize interface hostname */
@@ -520,7 +359,7 @@ err_t ifx_netif_init(netif_t *netif)
      */
     //NETIF_INIT_SNMP(netif, snmp_ifType_ethernet_csmacd, LINK_SPEED_OF_YOUR_NETIF_IN_BPS);
 
-    netif->state      = ethernetif;
+    // netif->state      = ethernetif;
     netif->name[0]    = IFNAME0;
     netif->name[1]    = IFNAME1;
     /* We directly use etharp_output() here to save a function call.

@@ -45,17 +45,16 @@
 /******************************************************************************/
 /*----------------------------------Includes----------------------------------*/
 /******************************************************************************/
-#include <Cpu/Std/Ifx_Types.h>
-#include <Cpu/Std/IfxCpu.h>
-#include "IfxGeth_Eth.h"
+//lin #include <Cpu/Std/Ifx_Types.h>
+#include "IfxGeth_reg.h"
+#include "Std_Types.h"
+#include "Eth.h"
 #include "Ifx_Lwip.h"
 #include "lwipopts.h"
 #include "Ifx_Netif.h"
 #include "IfxGeth_Phy_Dp83825i.h"
-#include "Configuration.h"
 #include <string.h>
 #include <stdarg.h>
-#include <UART_Logging.h>
 
 
 /******************************************************************************/
@@ -208,11 +207,11 @@
 
 volatile uint32 g_TickCount_1ms;
 Ifx_Lwip    g_Lwip;
-IfxGeth_Eth g_IfxGeth;
-uint32 isrTxCount=0;
-uint32 isrRxCount=0;
-uint8 channel0TxBuffer1[IFXGETH_MAX_TX_DESCRIPTORS][IFXGETH_MAX_TX_BUFFER_SIZE];
-uint8 channel0RxBuffer1[IFXGETH_MAX_RX_DESCRIPTORS][IFXGETH_MAX_RX_BUFFER_SIZE];
+// IfxGeth_Eth g_IfxGeth;
+// uint32 isrTxCount=0;
+// uint32 isrRxCount=0;
+// uint8 channel0TxBuffer1[IFXGETH_MAX_TX_DESCRIPTORS][IFXGETH_MAX_TX_BUFFER_SIZE];
+// uint8 channel0RxBuffer1[IFXGETH_MAX_RX_DESCRIPTORS][IFXGETH_MAX_RX_BUFFER_SIZE];
 
 
 /******************************************************************************/
@@ -262,88 +261,6 @@ void Ifx_Lwip_onTimerTick(void)
 }
 
 
-/** \brief Polling the timer event flags */
-void Ifx_Lwip_pollTimerFlags(void)
-{
-    Ifx_Lwip *lwip = &g_Lwip;
-    uint16    timerFlags;
-
-    /* disable interrupts */
-    boolean interruptState = IfxCpu_disableInterrupts();
-
-    timerFlags       = lwip->timerFlags;
-    lwip->timerFlags = 0;
-
-    /* enable interrupts again */
-    IfxCpu_restoreInterrupts(interruptState);
-
-#if LWIP_DHCP
-    if (timerFlags & IFX_LWIP_FLAG_DHCP_COARSE)
-    {
-    	/* only if we have a link we will check the dhcp */
-    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
-    		dhcp_coarse_tmr();
-    }
-
-    if (timerFlags & IFX_LWIP_FLAG_DHCP_FINE)
-    {
-    	/* only if we have a link we will check the dhcp */
-    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
-    		dhcp_fine_tmr();
-    }
-#endif
-
-    if (timerFlags & IFX_LWIP_FLAG_TCP_FAST)
-    {
-    	/* only if we have a link we will check the tcp */
-    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
-    		tcp_fasttmr();
-    }
-
-    if (timerFlags & IFX_LWIP_FLAG_TCP_SLOW)
-    {
-    	/* only if we have a link we will check the tcp */
-    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
-    		tcp_slowtmr();
-    }
-
-    if (timerFlags & IFX_LWIP_FLAG_ARP)
-    {
-    	/* only if we have a link we will check the arp */
-    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
-    		etharp_tmr();
-    }
-
-    if (timerFlags & IFX_LWIP_FLAG_LINK)
-    {
-        Ifx_GETH_MAC_PHYIF_CONTROL_STATUS ctrl_status;
-		ctrl_status.U = IfxGeth_Eth_Phy_Dp83825i_link_status();
-    	if (ctrl_status.B.LNKSTS == 0)
-    		netif_set_link_down(&g_Lwip.netif);
-    	else {
-    		IfxGeth_Eth *ethernetif = g_Lwip.netif.state;
-    		// we set the correct duplexMode
-    		if (ctrl_status.B.LNKMOD == 1)
-    			IfxGeth_mac_setDuplexMode(ethernetif->gethSFR, IfxGeth_DuplexMode_fullDuplex);
-    		else
-    			IfxGeth_mac_setDuplexMode(ethernetif->gethSFR, IfxGeth_DuplexMode_halfDuplex);
-    		// we set the correct speed
-    		if (ctrl_status.B.LNKSPEED == 0)
-    			// 10MBit speed
-    			IfxGeth_mac_setLineSpeed(ethernetif->gethSFR, IfxGeth_LineSpeed_10Mbps);
-    		else
-        		if (ctrl_status.B.LNKSPEED == 1)
-        			// 100MBit speed
-        			IfxGeth_mac_setLineSpeed(ethernetif->gethSFR, IfxGeth_LineSpeed_100Mbps);
-        		else
-        			// 1000MBit speed
-        			IfxGeth_mac_setLineSpeed(ethernetif->gethSFR, IfxGeth_LineSpeed_1000Mbps);
-    		netif_set_link_up(&g_Lwip.netif);
-    	}
-    }
-}
-
-
 /** \brief Polling the ETH receive event flags */
 void Ifx_Lwip_pollReceiveFlags(void)
 {
@@ -379,10 +296,6 @@ void netif_state_changed(struct netif* netif, netif_nsc_reason_t reason, const n
  * The followings are executed: */
 void Ifx_Lwip_init(eth_addr_t ethAddr)
 {
-#ifdef __LWIP_DEBUG__
-    //Init uart for debugging
-    initUART();
-#endif
     ip_addr_t default_ipaddr, default_netmask, default_gw;
     IP4_ADDR(&default_gw, 0,0,0,0);
     IP4_ADDR(&default_ipaddr, 192,168,8,8);
@@ -425,58 +338,9 @@ inline u32_t sys_now(void)
 	return g_TickCount_1ms;
 }
 
-/**
- * This interrupt is raised by the ethernet tx. The initialization is done by IfxGeth_Eth_init().
- *
- * \isrProvider \ref ISR_PROVIDER_ETH
- * \isrPriority \ref ISR_PRIORITY_GETH_TX
- *
- */
-IFX_INTERRUPT(ISR_Geth_Tx, CPU_WHICH_SERVICE_ETHERNET, ISR_PRIORITY_GETH_TX)
-{
-    isrTxCount++;
-}
 
-/**
- * This interrupt is raised by the ethernet rx. The initialization is done by IfxGeth_Eth_init().
- *
- * \isrProvider \ref ISR_PROVIDER_ETH
- * \isrPriority \ref ISR_PRIORITY_GETH_RX
- *
- */
-IFX_INTERRUPT(ISR_Geth_Rx, CPU_WHICH_SERVICE_ETHERNET, ISR_PRIORITY_GETH_RX)
-{
-    isrRxCount++;
-}
 
-//________________________________________________________________________________________
-// DEBUGGING FUNCTIONS
-#include "Configuration.h"
-#include <stdio.h>
-#include <string.h>
 
-#define MAXCHARS 256
-
-s8_t Ifx_Lwip_printf(const char *format, ...)
-{
-#ifdef __LWIP_DEBUG__
-    char    str[MAXCHARS + 4];
-    s8_t    result = ERR_CONN;
-
-    va_list args;
-    va_start(args, format);
-    vsnprintf(str, MAXCHARS, format, args);
-    va_end(args);
-    {
-        Ifx_SizeT cnt = 0;
-        while(str[cnt]!=0)
-            cnt++;
-        sendUARTMessage(str, cnt);
-        sendUARTMessage("\r\n", 2);
-    }
-#endif
-    return result;
-}
 
 #if defined(__GNUC__)
 #pragma section // end text section
