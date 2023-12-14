@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 14.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-06, 00:23:37          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2023-12-14, 23:50:35          !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -999,7 +999,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     /* MISRA2012_RULE_10_3_JUSTIFICATION: The port IOCR registers has the
     control bit field for each port pin located  as register bytes. Hence
     typecasting is done for each port pin to uint8*/
-    ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin 3*/
+    ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_ALT6),/*Pin 3*/
     (PORT_PIN_DEFAULT),/*Pin 4*/
     (PORT_PIN_DEFAULT),/*Pin 5*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: The port IOCR registers has the
@@ -1023,7 +1023,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     /* MISRA2012_RULE_10_3_JUSTIFICATION: The port IOCR registers has the
     control bit field for each port pin located  as register bytes. Hence
     typecasting is done for each port pin to uint8*/
-    ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 12*/
+    ((uint8)PORT_PIN_IN | PORT_PIN_IN_NO_PULL | PORT_PIN_MODE_GPIO),/*Pin 12*/
     (PORT_PIN_DEFAULT),/*Pin 13*/
     (PORT_PIN_DEFAULT),/*Pin 14*/
     (PORT_PIN_DEFAULT) /*Pin 15*/
@@ -1053,11 +1053,11 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     Portx_lPdrConfig1(
       (PORT_PIN_PAD_DEFAULT),/*Pin0*/
       (PORT_PIN_PAD_DEFAULT),/*Pin1*/
-      (PORT_PIN_PAD_LEVEL_DEFAULT|RFAST_PORT_PIN_RGMII_DRIVER),/*Pin2*/
-      (PORT_PIN_PAD_LEVEL_DEFAULT|RFAST_PORT_PIN_RGMII_DRIVER),/*Pin3*/
+      (PORT_PIN_PAD_LEVEL_DEFAULT|RFAST_PORT_PIN_STRONG_DRIVER_SHARP_EDGE),/*Pin2*/
+      (PORT_PIN_PAD_LEVEL_DEFAULT|RFAST_PORT_PIN_STRONG_DRIVER_SHARP_EDGE),/*Pin3*/
       (PORT_PIN_PAD_DEFAULT),/*Pin4*/
       (PORT_PIN_PAD_DEFAULT),/*Pin5*/
-      (PORT_PIN_PAD_LEVEL_DEFAULT|RFAST_PORT_PIN_RGMII_DRIVER),/*Pin6*/
+      (PORT_PIN_PAD_LEVEL_DEFAULT|RFAST_PORT_PIN_STRONG_DRIVER_SHARP_EDGE),/*Pin6*/
       (PORT_PIN_PAD_DEFAULT)/*Pin7*/
                   ),
     /* Port pins drive strength2 configuration */
@@ -1123,7 +1123,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     /* MISRA2012_RULE_10_3_JUSTIFICATION: The port IOCR registers has the
     control bit field for each port pin located  as register bytes. Hence
     typecasting is done for each port pin to uint8*/
-      ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin3*/
+      ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_ALT6),/*Pin3*/
       (PORT_PIN_DEFAULT),/*Pin4*/
       (PORT_PIN_DEFAULT),/*Pin5*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: The port IOCR registers has the
@@ -1147,7 +1147,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     /* MISRA2012_RULE_10_3_JUSTIFICATION: The port IOCR registers has the
     control bit field for each port pin located  as register bytes. Hence
     typecasting is done for each port pin to uint8*/
-      ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin12*/
+      ((uint8)PORT_PIN_IN | PORT_PIN_IN_NO_PULL | PORT_PIN_MODE_GPIO),/*Pin12*/
       (PORT_PIN_DEFAULT),/*Pin13*/
       (PORT_PIN_DEFAULT),/*Pin14*/
       (PORT_PIN_DEFAULT)/*Pin15*/
@@ -3438,11 +3438,11 @@ static const Port_n_PCSRConfigType Port_kPCSRConfig[] =
   Port_lPcsr(
       PORT_PCSR_DEFAULT,  /*Pin0*/
       PORT_PCSR_DEFAULT,  /*Pin1*/
-      PORT_PCSR_DISABLE,  /*Pin2*/
-      PORT_PCSR_DISABLE,  /*Pin3*/
+      PORT_PCSR_ENABLE,   /*Pin2*/
+      PORT_PCSR_ENABLE,   /*Pin3*/
       PORT_PCSR_DEFAULT,  /*Pin4*/
       PORT_PCSR_DEFAULT,  /*Pin5*/
-      PORT_PCSR_DISABLE,  /*Pin6*/
+      PORT_PCSR_ENABLE,   /*Pin6*/
       PORT_PCSR_DEFAULT,  /*Pin7*/
       PORT_PCSR_DEFAULT,  /*Pin8*/
       PORT_PCSR_DEFAULT,  /*Pin9*/

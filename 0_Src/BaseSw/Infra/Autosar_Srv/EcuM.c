@@ -59,6 +59,10 @@
 #include "Pwm_17_GtmCcu6.h"
 #include "Eth.h"
 
+#include "Test_Print.h"
+#include "Test_Time.h"
+#include "Ifx_Lwip.h"
+
 #ifdef BASE_TEST_MODULE_ID
 #if ((BASE_TEST_MODULE_ID == TEST_CAN_MODULE_ID)|| (BASE_TEST_MODULE_ID== TEST_CANTRCV_MODULE_ID))
 #include "ComStack_Types.h"
@@ -150,37 +154,53 @@ extern void EcumLinTest_SetWakeupEvent(EcuM_WakeupSourceType WakeupInfo);
 *******************************************************************************/
 Std_ReturnType EcuM_Init()
 {
-  Std_ReturnType ret = E_OK;
-  Std_ReturnType InitClockRetVal;
-  Mcu_PllStatusType Mcu_GetPllStatusRetVal = MCU_PLL_STATUS_UNDEFINED;
+    Std_ReturnType ret = E_OK;
+    Std_ReturnType InitClockRetVal;
+    Mcu_PllStatusType Mcu_GetPllStatusRetVal = MCU_PLL_STATUS_UNDEFINED;
 
-  /********************************* Mcu Init *********************************/  
-  Mcu_Init(&Mcu_Config);
-  InitClockRetVal = Mcu_InitClock(McuConf_McuClockSettingConfig_McuClockSettingConfig_0);
-  if(InitClockRetVal == E_OK)
-  {
-    do
+    /********************************* Mcu Init *********************************/  
+    Mcu_Init(&Mcu_Config);
+    InitClockRetVal = Mcu_InitClock(McuConf_McuClockSettingConfig_McuClockSettingConfig_0);
+    if(InitClockRetVal == E_OK)
     {
-      Mcu_GetPllStatusRetVal = Mcu_GetPllStatus ();
-    } while(Mcu_GetPllStatusRetVal != MCU_PLL_LOCKED);
+        do
+        {
+        Mcu_GetPllStatusRetVal = Mcu_GetPllStatus ();
+        } while(Mcu_GetPllStatusRetVal != MCU_PLL_LOCKED);
 
-    #if (MCU_DISTRIBUTE_PLL_CLOCK_API == STD_ON)
-    Mcu_DistributePllClock ();
-    #endif
-  }
+        #if (MCU_DISTRIBUTE_PLL_CLOCK_API == STD_ON)
+        Mcu_DistributePllClock ();
+        #endif
+    }
 
-  /********************************* Peripheral Init *********************************/
-  Port_Init(&Port_Config);
-  Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
-  Eth_Init(&Eth_Config);
+    Test_InitTime(); /* Initialize Time Measurement For Run Time Calc */
+    Test_InitPrint();/* Initialize ASC0 for Hyperterminal Communication*/
+
+    print_flushfifo();
+
+    /********************************* Peripheral Init *********************************/
+    Port_Init(&Port_Config);
+    Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
+    Eth_Init(&Eth_Config);
 
 
-  /********************************* External Peripheral Init *********************************/
-  
+    /********************************* External Peripheral Init *********************************/
+    
+    /********************************* SWC Init *********************************/
+    eth_addr_t ethAddr;
+    ethAddr.addr[0] = 0x81;
+    ethAddr.addr[1] = 0x82;
+    ethAddr.addr[2] = 0x83;
+    ethAddr.addr[3] = 0x84;
+    ethAddr.addr[4] = 0x85;
+    ethAddr.addr[5] = 0x86;
+
+    Ifx_Lwip_init(ethAddr);                                 /* Initialize LwIP with the MAC address */
+    Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
 
 
 
-  return ret;
+    return ret;
 }
 
 /*******************************************************************************

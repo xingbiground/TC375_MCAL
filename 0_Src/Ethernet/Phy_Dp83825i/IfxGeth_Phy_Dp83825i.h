@@ -70,12 +70,12 @@ uint32 IfxGeth_Eth_Phy_Dp83825i_link_status(void);
 /**
  * \return None
  */
-void IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(uint8 layeraddr, uint8 regaddr, uint16 *pdata);
+Std_ReturnType IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(uint8 EthCtrl, uint16 regaddr, uint16 *pdata);
 
 /**
  * \return None
  */
-void IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint8 layeraddr, uint8 regaddr, uint16 data);
+Std_ReturnType IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint8 EthCtrl, uint16 regaddr, uint16 data);
 
 /** \} */
 

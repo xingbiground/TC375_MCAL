@@ -41,6 +41,7 @@
 #endif
 
 #include "EcuM.h"
+#include "Ifx_Lwip.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -94,13 +95,15 @@ void core0_main (void)
   Ifx_Ssw_disableCpuWatchdog(&MODULE_SCU.WDTCPU[0], cpuWdtPassword);
   Ifx_Ssw_disableSafetyWatchdog(safetyWdtPassword);
 
-  #ifdef AURIX2G_MCAL_DEMOAPP
-  DemoApp_Init();
-  DemoApp();
-  #endif
+  EcuM_Init();
+
+  // #ifdef AURIX2G_MCAL_DEMOAPP
+  // DemoApp_Init();
+  // DemoApp();
+  // #endif
   while (LoopFlag == 1U)
   {
-
+    Ifx_Lwip_pollReceiveFlags();    
   }
 
 }

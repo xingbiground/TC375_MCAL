@@ -160,32 +160,56 @@ static void low_level_init(netif_t *netif)
  */
 static err_t low_level_output(netif_t *netif, pbuf_t *p)
 {
-    struct pbuf *q;
+    struct pbuf         *q;
+    BufReq_ReturnType   bufRet = BUFREQ_OK;
+    Std_ReturnType      txRet = E_OK;
+    u16_t               length = p->tot_len;
+    uint16              numOfBufToLow = 0;
+    uint8               *bufferPtr;
+    Eth_BufIdxType      bufferIdx;
+    Eth_FrameType       frameType;
+    uint8               desPhyAddr[6];
+    boolean             headFlag = TRUE;
 
-    u16_t        length = p->tot_len;
+
     LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("low_level_output (p=%#x)\n", p));
 
 #if ETH_PAD_SIZE
     pbuf_header(p, -ETH_PAD_SIZE); /* drop the padding word */
 #endif
 
-    {
-        //initiate transfer();
-        /* Here Provide buffer */
-        u16_t l    = 0;
+    /* Call low level transmit process */
+    if(length<14){
+        return ERR_OK;      /* This is not supposed to execute. */
+    }
+
+    bufRet = Eth_ProvideTxBuffer(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, &bufferIdx, &bufferPtr, &length);
+    if(bufRet == BUFREQ_OK){
+        /* Get DestPhyAddr */
+        memcpy(desPhyAddr, p->payload, 6);
+
+        /* Get Frame Type */
+        frameType = (((uint8*)(p->payload))[12] << 8) | (((uint8*)(p->payload))[13]);
 
         for (q = p; q != NULL; q = q->next)
         {
-            /* Send the data from the pbuf to the interface, one pbuf at a
-             * time. The size of the data in each pbuf is kept in the ->len
-             * variable. */
-            // memcpy( Here is buffer, q->payload, q->len);
-            l = l + q->len;
+            if(headFlag){
+                headFlag = FALSE;
+                memcpy((uint8*)&bufferPtr[numOfBufToLow], (uint8*)q->payload+14, q->len-14);
+                numOfBufToLow = numOfBufToLow + q->len -14;
+            }else{
+                memcpy((uint8*)&bufferPtr[numOfBufToLow], q->payload, q->len);
+                numOfBufToLow = numOfBufToLow + q->len;
+            }
             LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("low_level_output: data=%#x, %d\n", q->payload, q->len));
-            LWIP_ASSERT("low_level_output: length overflow the buffer\n", (l < 2048));
+            LWIP_ASSERT("low_level_output: length overflow the buffer\n", (numOfBufToLow < 2048));
         }
-        
-        /* Here Transmit(Confirmation is in interrupt)*/
+        txRet = Eth_Transmit(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, bufferIdx, frameType, TRUE, numOfBufToLow, &desPhyAddr[0]);
+        if(txRet == E_OK){
+            Eth_TxConfirmation(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0);
+        }else{
+            print_f("Transmit Error!");
+        }
     }
 
     LWIP_DEBUGF(NETIF_DEBUG | LWIP_DBG_TRACE, ("low_level_output: signal length: %d\n", length));
@@ -373,4 +397,19 @@ err_t ifx_netif_init(netif_t *netif)
     low_level_init(netif);
 
     return ERR_OK;
+}
+
+
+
+void netif_Indication(uint8 CtrlIdx, Eth_FrameType FrameType, boolean IsBroadcast, const uint8* PhysAddrPtr, Eth_DataType* DataPtr, uint16 LenByte )
+{
+    pbuf_t *p;
+
+    p = pbuf_alloc(PBUF_RAW, LenByte+14, PBUF_POOL);
+    p->payload = DataPtr-14;
+
+    if (g_Lwip.netif.input(p, &g_Lwip.netif) != ERR_OK){
+        LWIP_DEBUGF(NETIF_DEBUG, ("ifx_netif_input: IP input error\n"));
+        pbuf_free(p);
+    }
 }

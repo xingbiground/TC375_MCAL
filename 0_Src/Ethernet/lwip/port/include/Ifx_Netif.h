@@ -48,4 +48,6 @@
 err_t ifx_netif_init(struct netif *netif);
 err_t ifx_netif_input(struct netif *netif);
 
+void netif_Indication(uint8 CtrlIdx, Eth_FrameType FrameType, boolean IsBroadcast, const uint8* PhysAddrPtr, Eth_DataType* DataPtr, uint16 LenByte );
+
 #endif

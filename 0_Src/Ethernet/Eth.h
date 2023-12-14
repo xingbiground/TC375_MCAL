@@ -34,6 +34,11 @@
     #define Eth_Init                Eth_17_GEthMac_Init
     #define Eth_WriteMii            Eth_17_GEthMac_WriteMii
     #define Eth_ReadMii             Eth_17_GEthMac_ReadMii
+    #define Eth_Receive             Eth_17_GEthMac_Receive
+    #define Eth_ProvideTxBuffer     Eth_17_GEthMac_ProvideTxBuffer
+    #define Eth_Transmit            Eth_17_GEthMac_Transmit
+    #define Eth_TxConfirmation      Eth_17_GEthMac_TxConfirmation
+    #define Eth_SetControllerMode   Eth_17_GEthMac_SetControllerMode
 #elif(MCAL_AR_VERSION==MCAL_AR_440)
     #error "To add something linke below"
 #endif

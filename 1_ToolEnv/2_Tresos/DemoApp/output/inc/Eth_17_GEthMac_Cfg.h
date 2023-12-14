@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 19.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 18:59:45      !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2023-12-13, 21:48:29      !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222          !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -183,7 +183,7 @@ Configuration: ETH_17_GETHMAC_GLOBALTIMESUPPORT
 - if STD_ON, TimeStamp feature is enabled.
 - if STD_OFF,TimeStamp feature is disabled.
 */
-#define  ETH_17_GETHMAC_GLOBALTIMESUPPORT   (STD_OFF)
+#define  ETH_17_GETHMAC_GLOBALTIMESUPPORT   (STD_ON)
 /*
 Configuration: ETH_17_GETHMAC_MULTICORE_ERROR_DETECT :
 Adds/removes the Multi-core error detection and reporting

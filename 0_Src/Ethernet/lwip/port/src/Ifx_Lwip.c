@@ -47,8 +47,6 @@
 /******************************************************************************/
 //lin #include <Cpu/Std/Ifx_Types.h>
 #include "IfxGeth_reg.h"
-#include "Std_Types.h"
-#include "Eth.h"
 #include "Ifx_Lwip.h"
 #include "lwipopts.h"
 #include "Ifx_Netif.h"
@@ -260,17 +258,24 @@ void Ifx_Lwip_onTimerTick(void)
     lwip->timerFlags = timerFlags;
 }
 
+volatile uint16 PhyStatus[2];
+volatile uint32 Phy_LinkStatus;
 
 /** \brief Polling the ETH receive event flags */
 void Ifx_Lwip_pollReceiveFlags(void)
 {
+    Eth_RxStatusType rxStatus;
     /**
      * We are assuming that the only interrupt source is an incoming packet
      */
     //while (ethernetif_tc29x_timerFlags_interrupt())
-    {
-        ifx_netif_input(&g_Lwip.netif);
-    }
+    // {
+        // ifx_netif_input(&g_Lwip.netif);
+    // }
+    Eth_Receive((uint8)0, &rxStatus);
+    IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, 0x1, (uint16*)&PhyStatus[0]);
+    IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, 0x10, (uint16*)&PhyStatus[1]);
+    Phy_LinkStatus = IfxGeth_Eth_Phy_Dp83825i_link_status();
 }
 
 #if LWIP_NETIF_EXT_STATUS_CALLBACK

@@ -48,6 +48,8 @@
 //________________________________________________________________________________________
 // INCLUDES
 
+#include "Std_Types.h"
+#include "Eth.h"
 #include "lwip/opt.h"
 #include "lwip/def.h"
 #include "lwip/mem.h"
@@ -63,7 +65,6 @@
 #include "lwip/init.h"
 #include "netif/etharp.h"
 #include "netif/ppp/pppoe.h"
-#include "Eth.h"
 
 //________________________________________________________________________________________
 // HELPER MACROS

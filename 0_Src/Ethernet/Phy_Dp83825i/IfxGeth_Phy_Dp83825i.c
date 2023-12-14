@@ -52,6 +52,10 @@
 /******************************************************************************/
 /*----------------------------------Macros------------------------------------*/
 /******************************************************************************/
+#define DP83_REGCR          (0x000D)
+#define DP83_ADDAR          (0x000E)
+#define DP83_NOINC          (0x4000)
+#define DP83_TRCVID         (0x0)       /* This depends on hardware layout. */
 
 #define IFXGETH_PHY_DP83825I_MDIO_BMCR     0x00
 
@@ -272,20 +276,57 @@ uint32 IfxGeth_Eth_Phy_Dp83825i_link_status(void)
     return link_status.U;
 }
 
-void IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(uint8 layeraddr, uint8 regaddr, uint16 *pdata)
+static uint16 DP83_GetRegDomain(uint16 regAddr)
 {
-    uint8 Eth_CtrlIdx = 0;
-    uint8 Eth_TrcvIdx = 0;
+    uint16 regDomain;
+    if((regAddr>=0x20) && (regAddr<=0x4D7)){
+        regDomain = 0x1F;
+    }else if((regAddr>=0x1000) && (regAddr<=0x1016)){
+        regDomain = 0x3;
+    }else if((regAddr>=0x203C) && (regAddr<=0x203D)){
+        regDomain = 0x7;
+    }else{
+        regDomain = 0;
+    }
 
-    Eth_ReadMii(Eth_CtrlIdx, Eth_TrcvIdx, regaddr, pdata);    
+    return regDomain;
+}
+
+Std_ReturnType IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(uint8 EthCtrl, uint16 regAddr, uint16 *pdata)
+{
+    Std_ReturnType ret = E_OK;
+    uint16 regDomain;
+
+    if(regAddr<=0x1F){
+        ret |= Eth_ReadMii(EthCtrl, DP83_TRCVID, (uint8)regAddr, pdata);
+    }else{
+        regDomain = DP83_GetRegDomain(regAddr);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_REGCR, regDomain);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_ADDAR, regAddr);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_REGCR, regDomain|DP83_NOINC);
+        ret |= Eth_ReadMii(EthCtrl, DP83_TRCVID, DP83_ADDAR, pdata);
+    }
+
+    return ret;
 }
 
 
-void IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint8 layeraddr, uint8 regaddr, uint16 data)
+Std_ReturnType IfxGeth_Eth_Phy_Dp83825i_write_mdio_reg(uint8 EthCtrl, uint16 regAddr, uint16 data)
 {
-    uint8 Eth_CtrlIdx = 0;
-    uint8 Eth_TrcvIdx = 0;
-    Eth_WriteMii(Eth_CtrlIdx, Eth_TrcvIdx, regaddr, data);
+    Std_ReturnType ret = E_OK;
+    uint16 regDomain;
+
+    if(regAddr<=0x1F){
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, (uint8)regAddr, data);
+    }else{
+        regDomain = DP83_GetRegDomain(regAddr);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_REGCR, regDomain);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_ADDAR, regAddr);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_REGCR, regDomain|DP83_NOINC);
+        ret |= Eth_WriteMii(EthCtrl, DP83_TRCVID, DP83_ADDAR, data);
+    }
+
+    return ret;
 }
 
 #if defined(__GNUC__)

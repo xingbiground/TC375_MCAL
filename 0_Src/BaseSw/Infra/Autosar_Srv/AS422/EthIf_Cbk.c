@@ -35,6 +35,8 @@
 **                      Includes                                             **
 ******************************************************************************/
 #include "EthIf_Cbk.h"
+#include "Ifx_Lwip.h"
+#include "Ifx_Netif.h"
 #ifdef  APP_SW
 #if(APP_SW == TEST_APP)
 #include "Test_EthIf_Cbk.h"
@@ -103,6 +105,7 @@ void EthIf_RxIndication( uint8 CtrlIdx, Eth_FrameType FrameType, boolean IsBroad
     Test_EthIf_RxIndication(CtrlIdx,FrameType,IsBroadcast,PhysAddrPtr,DataPtr,LenByte);
   #endif
   #endif
+  netif_Indication(CtrlIdx,FrameType,IsBroadcast,PhysAddrPtr,DataPtr,LenByte);
 }
 
 void EthIf_TxConfirmation( uint8 CtrlIdx, Eth_BufIdxType BufIdx )
