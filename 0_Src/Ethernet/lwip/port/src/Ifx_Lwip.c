@@ -318,9 +318,6 @@ void Ifx_Lwip_pollTimerFlags(void)
     }
 }
 
-volatile uint16 PhyStatus[2];
-volatile uint32 Phy_LinkStatus;
-
 /** \brief Polling the ETH receive event flags */
 void Ifx_Lwip_pollReceiveFlags(void)
 {
@@ -333,9 +330,6 @@ void Ifx_Lwip_pollReceiveFlags(void)
         // ifx_netif_input(&g_Lwip.netif);
     // }
     Eth_Receive((uint8)0, &rxStatus);
-    IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, 0x1, (uint16*)&PhyStatus[0]);
-    IfxGeth_Eth_Phy_Dp83825i_read_mdio_reg(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, 0x10, (uint16*)&PhyStatus[1]);
-    Phy_LinkStatus = IfxGeth_Eth_Phy_Dp83825i_link_status();
 }
 
 #if LWIP_NETIF_EXT_STATUS_CALLBACK

@@ -195,7 +195,7 @@ Std_ReturnType EcuM_Init()
     
     /********************************* SWC Init *********************************/
     Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
-    Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 2000);  /* 1ms */
+    Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 50000);  /* 1ms */
     eth_addr_t ethAddr;
     ethAddr.addr[0] = 0x81;
     ethAddr.addr[1] = 0x82;
