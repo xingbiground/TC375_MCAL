@@ -54,10 +54,13 @@
 #include "IFX_Os.h"
 
 /********************************* User Include *********************************/
+#include "Ifx_reg.h"
+#include "Irq.h"
 #include "Mcu.h"
 #include "Port.h"
 #include "Pwm_17_GtmCcu6.h"
 #include "Eth.h"
+#include "Gpt.h"
 
 #include "Test_Print.h"
 #include "Test_Time.h"
@@ -177,16 +180,22 @@ Std_ReturnType EcuM_Init()
     Test_InitPrint();/* Initialize ASC0 for Hyperterminal Communication*/
 
     print_flushfifo();
+    /********************************* Irq Init *********************************/
+    IrqGtm_Init();
+    SRC_GTMATOM00.B.SRE = 1;    /* Enable GTM ATOM0 ch0 ch1 INT */
 
     /********************************* Peripheral Init *********************************/
     Port_Init(&Port_Config);
     Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
     Eth_Init(&Eth_Config);
+    Gpt_Init(&Gpt_Config);
 
 
     /********************************* External Peripheral Init *********************************/
     
     /********************************* SWC Init *********************************/
+    Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
+    Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 2000);  /* 1ms */
     eth_addr_t ethAddr;
     ethAddr.addr[0] = 0x81;
     ethAddr.addr[1] = 0x82;

@@ -4968,9 +4968,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmAtomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_ATOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_ATOM_CHANNEL_USED_BY_GPT"/>
                               <d:var name="McuAtomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>

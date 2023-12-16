@@ -40,8 +40,11 @@
 #include "DemoApp.h"
 #endif
 
+#include "Test_Print.h"
 #include "EcuM.h"
 #include "Ifx_Lwip.h"
+#include "Echo.h"
+#include "IfxStm_reg.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -96,6 +99,7 @@ void core0_main (void)
   Ifx_Ssw_disableSafetyWatchdog(safetyWdtPassword);
 
   EcuM_Init();
+  echoInit();
 
   // #ifdef AURIX2G_MCAL_DEMOAPP
   // DemoApp_Init();
@@ -103,6 +107,7 @@ void core0_main (void)
   // #endif
   while (LoopFlag == 1U)
   {
+    Ifx_Lwip_pollTimerFlags();
     Ifx_Lwip_pollReceiveFlags();    
   }
 

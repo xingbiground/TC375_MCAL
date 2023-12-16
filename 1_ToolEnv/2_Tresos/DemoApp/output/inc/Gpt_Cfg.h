@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 10.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2023-12-16, 13:11:35       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -243,12 +243,13 @@ The configuration contains allocation of Gpt channels across cores.
 #define GPT_MAX_CORE_USED                                 (2U)
 
 /* Number of channels configured as regular timers across all cores. */
-#define GPT_MAX_CHANNELS                                  (2U)
+#define GPT_MAX_CHANNELS                                  (3U)
 
 /* Number of channels configured as regular timers per core */
-#define GPT_MAX_CHANNELS_CORE0                            (1U)
+#define GPT_MAX_CHANNELS_CORE0                            (2U)
 #define GPT_MAX_CHANNELS_CORE1                            (1U)
 #define GPT_MAX_CHANNELS_CORE2                            (0U)
+
 
 
 
@@ -308,6 +309,27 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 #define GptConf_GptChannelConfiguration_GptChannelConfiguration_1  \
 ((Gpt_ChannelType)1U)
+#endif
+/* Gpt Channel ID Enumerations for Channel Configuration. */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+#ifndef GptConf_GptChannelConfiguration_LwipTimer
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+#define GptConf_GptChannelConfiguration_LwipTimer  \
+((Gpt_ChannelType)2U)
 #endif
 
 /*******************************************************************************

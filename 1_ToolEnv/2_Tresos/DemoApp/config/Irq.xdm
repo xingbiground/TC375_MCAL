@@ -5180,7 +5180,7 @@
                       </d:ctr>
                       <d:ctr name="IrqGtmATOMTosConfig" type="IDENTIFIABLE">
                         <d:var name="IrqGtmATOMSR0Tos" type="ENUMERATION" 
-                               value="CPU1"/>
+                               value="CPU0"/>
                         <d:var name="IrqGtmATOMSR1Tos" type="ENUMERATION" 
                                value="CPU0">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>

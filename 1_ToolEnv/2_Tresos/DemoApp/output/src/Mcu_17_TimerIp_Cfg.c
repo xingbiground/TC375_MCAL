@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 22.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-06, 00:18:24     !!!IGNORE-LINE!!!                    **
+**  DATE, TIME: 2023-12-16, 13:11:38     !!!IGNORE-LINE!!!                    **
 **                                                                            **
 **  GENERATOR : Build b200227-0222         !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -75,7 +75,7 @@ Mcu_17_Gtm_AtomChUserData[MCU_17_GTM_NO_OF_ATOM_MODULES][MCU_17_GTM_NO_OF_ATOM_C
   /* ATOM Module 0 */
   {
     0x00000104,
-    0x00000000,
+    0x00000204,
     0x00000000,
     0x00000000,
     0x00000000,

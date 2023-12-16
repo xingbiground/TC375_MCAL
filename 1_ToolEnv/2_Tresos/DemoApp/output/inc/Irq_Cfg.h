@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2023-12-16, 13:18:59      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222        !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -1839,7 +1839,7 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_ATOM0_SR3_PRIO       0x0
 
 /* GTM ATOM0 interrupt type of service Setting */
-#define IRQ_GTM_ATOM0_SR0_TOS        (IRQ_TOS_CPU1)
+#define IRQ_GTM_ATOM0_SR0_TOS        (IRQ_TOS_CPU0)
 #define IRQ_GTM_ATOM0_SR1_TOS        (IRQ_TOS_CPU0)
 #define IRQ_GTM_ATOM0_SR2_TOS        (IRQ_TOS_CPU0)
 #define IRQ_GTM_ATOM0_SR3_TOS        (IRQ_TOS_CPU0)

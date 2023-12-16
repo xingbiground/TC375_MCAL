@@ -243,6 +243,8 @@ void Ifx_Lwip_onTimerTick(void)
     Ifx_Lwip *lwip       = &g_Lwip;
     uint16    timerFlags = lwip->timerFlags;
 
+    g_TickCount_1ms++;   
+
     Ifx_Lwip_timerIncr(lwip->timer.arp, IFX_LWIP_ARP_PERIOD, IFX_LWIP_FLAG_ARP);
 
     Ifx_Lwip_timerIncr(lwip->timer.tcp_fast, IFX_LWIP_TCP_FAST_PERIOD, IFX_LWIP_FLAG_TCP_FAST);
@@ -256,6 +258,64 @@ void Ifx_Lwip_onTimerTick(void)
     Ifx_Lwip_timerIncr(lwip->timer.link, IFX_LWIP_LINK_PERIOD, IFX_LWIP_FLAG_LINK);
 
     lwip->timerFlags = timerFlags;
+}
+
+/** \brief Polling the timer event flags */
+void Ifx_Lwip_pollTimerFlags(void)
+{
+    Ifx_Lwip *lwip = &g_Lwip;
+    uint16    timerFlags;
+
+    timerFlags       = lwip->timerFlags;
+    lwip->timerFlags = 0;
+
+#if LWIP_DHCP
+    if (timerFlags & IFX_LWIP_FLAG_DHCP_COARSE)
+    {
+    	/* only if we have a link we will check the dhcp */
+    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
+    		dhcp_coarse_tmr();
+    }
+
+    if (timerFlags & IFX_LWIP_FLAG_DHCP_FINE)
+    {
+    	/* only if we have a link we will check the dhcp */
+    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
+    		dhcp_fine_tmr();
+    }
+#endif
+
+    if (timerFlags & IFX_LWIP_FLAG_TCP_FAST)
+    {
+    	/* only if we have a link we will check the tcp */
+    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
+    		tcp_fasttmr();
+    }
+
+    if (timerFlags & IFX_LWIP_FLAG_TCP_SLOW)
+    {
+    	/* only if we have a link we will check the tcp */
+    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
+    		tcp_slowtmr();
+    }
+
+    if (timerFlags & IFX_LWIP_FLAG_ARP)
+    {
+    	/* only if we have a link we will check the arp */
+    	if (g_Lwip.netif.flags & NETIF_FLAG_LINK_UP)
+    		etharp_tmr();
+    }
+
+    if (timerFlags & IFX_LWIP_FLAG_LINK)
+    {
+        Ifx_GETH_MAC_PHYIF_CONTROL_STATUS ctrl_status;
+		ctrl_status.U = IfxGeth_Eth_Phy_Dp83825i_link_status();
+    	if (ctrl_status.B.LNKSTS == 0)
+    		netif_set_link_down(&g_Lwip.netif);
+    	else {
+    		netif_set_link_up(&g_Lwip.netif);
+    	}
+    }
 }
 
 volatile uint16 PhyStatus[2];
