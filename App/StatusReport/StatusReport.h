@@ -1,24 +1,17 @@
 /*********************************************************
- *  Eth.h  : function description.  
+ *  StatusReport.h  : function description.  
  *  Revision History:
  *  ————————————————————————————
  *  Date          Version     Author      Detail
- *  2023-12-11    V1.0.0      LIN         To integration MCAl Eth
+ *  2023-xx-xx    V1.0.0      LIN         
  *********************************************************/
  
-#ifndef ETH_H
-#define ETH_H
+#ifndef STATUSREPORT_H
+#define STATUSREPORT_H
 
 /***********************************************************************************************************************
  *  INCLUDES
  **********************************************************************************************************************/
-#include "Mcal_Version.h"
-
-#if(MCAL_AR_VERSION==MCAL_AR_422)
-    #include "Eth_17_GEthMac.h"
-#elif(MCAL_AR_VERSION==MCAL_AR_440)
-    #error "To add something linke below"
-#endif
 
 /***********************************************************************************************************************
  *  GLOBAL CONSTANT MACROS
@@ -28,31 +21,15 @@
 /***********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
  **********************************************************************************************************************/
-#if(MCAL_AR_VERSION==MCAL_AR_422)
-    #define Eth_Config              Eth_17_GEthMac_Config
 
-    #define Eth_Init                Eth_17_GEthMac_Init
-    #define Eth_WriteMii            Eth_17_GEthMac_WriteMii
-    #define Eth_ReadMii             Eth_17_GEthMac_ReadMii
-    #define Eth_Receive             Eth_17_GEthMac_Receive
-    #define Eth_ProvideTxBuffer     Eth_17_GEthMac_ProvideTxBuffer
-    #define Eth_Transmit            Eth_17_GEthMac_Transmit
-    #define Eth_TxConfirmation      Eth_17_GEthMac_TxConfirmation
-    #define Eth_SetControllerMode   Eth_17_GEthMac_SetControllerMode
-    #define Eth_GetPhysAddr         Eth_17_GEthMac_GetPhysAddr
-#elif(MCAL_AR_VERSION==MCAL_AR_440)
-    #error "To add something linke below"
-#endif
 
 /***********************************************************************************************************************
  *  GLOBAL DATA TYPES AND STRUCTURES
  **********************************************************************************************************************/
 
-
 /***********************************************************************************************************************
  *  GLOBAL DATA PROTOTYPES
  **********************************************************************************************************************/
-
 
 /***********************************************************************************************************************
  *  GLOBAL FUNCTION PROTOTYPES
@@ -62,11 +39,12 @@
 /***********************************************************************************************************************
  *  GLOBAL FUNCTIONS
  **********************************************************************************************************************/
+void StatusReport_Init();
+void StatusReport_1000ms();
 
 
-
-#endif  /* ETH_H */
+#endif  /* STATUSREPORT_H */
 
 /***********************************************************************************************************************
- *  END OF FILE: Eth.h
+ *  END OF FILE: StatusReport.h
  **********************************************************************************************************************/

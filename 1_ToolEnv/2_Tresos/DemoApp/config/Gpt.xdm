@@ -187,7 +187,7 @@
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
                     <d:lst name="GptNotification">
-                      <d:var type="FUNCTION-NAME" value="Ifx_Lwip_onTimerTick"/>
+                      <d:var type="FUNCTION-NAME" value="SystemTickIsr"/>
                     </d:lst>
                     <d:ref name="GptChannelClkSrcRef" type="REFERENCE" 
                            value="ASPath:/Gpt/Gpt/GptDriverConfiguration/GptClockReferencePoint_0"/>

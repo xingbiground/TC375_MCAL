@@ -45,7 +45,7 @@
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
                       <d:var name="EthCtrlPhyAddress" type="STRING" 
-                             value="81:82:83:84:85:86"/>
+                             value="CC:CC:CC:CC:CC:CC"/>
                       <d:var name="EthCtrlRxBufLenByte" type="INTEGER" 
                              value="1522">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>

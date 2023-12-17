@@ -83,7 +83,7 @@ extern void IoHwAb_GptNotification1(void);
 LwipTimer
 channel notification function(s) declaration
 */
-extern void Ifx_Lwip_onTimerTick(void);
+extern void SystemTickIsr(void);
 
 /*******************************************************************************
 **                      Global Constant Definitions                           **
@@ -259,7 +259,7 @@ static const Gpt_ChannelConfigType Gpt_kChannelConfig_Core0[ ] =
   */
   {
     #if (GPT_ENABLE_DISABLE_NOTIFICATION_API == STD_ON)
-    &Ifx_Lwip_onTimerTick, /* Notification Function */
+    &SystemTickIsr, /* Notification Function */
     #endif
     
     #if ( (GPT_WAKEUP_FUNCTIONALITY_API == STD_ON) \

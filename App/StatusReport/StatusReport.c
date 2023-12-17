@@ -1,72 +1,89 @@
 /*********************************************************
- *  Eth.h  : function description.  
+ *  StatusReport.c  : function description.  
  *  Revision History:
  *  ————————————————————————————
  *  Date          Version     Author      Detail
- *  2023-12-11    V1.0.0      LIN         To integration MCAl Eth
+ *  2023-12-17    V1.0.0      LIN         
  *********************************************************/
  
-#ifndef ETH_H
-#define ETH_H
 
 /***********************************************************************************************************************
  *  INCLUDES
  **********************************************************************************************************************/
-#include "Mcal_Version.h"
-
-#if(MCAL_AR_VERSION==MCAL_AR_422)
-    #include "Eth_17_GEthMac.h"
-#elif(MCAL_AR_VERSION==MCAL_AR_440)
-    #error "To add something linke below"
-#endif
+#include "StatusReport.h"
+#include <string.h>
+#include "lwip/stats.h"
+#include "lwip/udp.h"
+#include "Test_Print.h"
 
 /***********************************************************************************************************************
- *  GLOBAL CONSTANT MACROS
+ *  LOCAL CONSTANT MACROS
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  GLOBAL FUNCTION MACROS
- **********************************************************************************************************************/
-#if(MCAL_AR_VERSION==MCAL_AR_422)
-    #define Eth_Config              Eth_17_GEthMac_Config
-
-    #define Eth_Init                Eth_17_GEthMac_Init
-    #define Eth_WriteMii            Eth_17_GEthMac_WriteMii
-    #define Eth_ReadMii             Eth_17_GEthMac_ReadMii
-    #define Eth_Receive             Eth_17_GEthMac_Receive
-    #define Eth_ProvideTxBuffer     Eth_17_GEthMac_ProvideTxBuffer
-    #define Eth_Transmit            Eth_17_GEthMac_Transmit
-    #define Eth_TxConfirmation      Eth_17_GEthMac_TxConfirmation
-    #define Eth_SetControllerMode   Eth_17_GEthMac_SetControllerMode
-    #define Eth_GetPhysAddr         Eth_17_GEthMac_GetPhysAddr
-#elif(MCAL_AR_VERSION==MCAL_AR_440)
-    #error "To add something linke below"
-#endif
-
-/***********************************************************************************************************************
- *  GLOBAL DATA TYPES AND STRUCTURES
+ *  LOCAL FUNCTION MACROS
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  GLOBAL DATA PROTOTYPES
+ *  LOCAL DATA TYPES AND STRUCTURES
+ **********************************************************************************************************************/
+typedef struct udp_pcb udpPcb;
+typedef struct pbuf pBuf;               /* Define a more convenient type                                            */
+
+/***********************************************************************************************************************
+ *  LOCAL DATA PROTOTYPES
+ **********************************************************************************************************************/
+udpPcb *udpTestPcb;
+pBuf *udpBuffer;
+
+
+/***********************************************************************************************************************
+ *  GLOBAL DATA
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  GLOBAL FUNCTION PROTOTYPES
+ *  LOCAL FUNCTION PROTOTYPES
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  GLOBAL FUNCTIONS
+ *  LOCAL FUNCTIONS
  **********************************************************************************************************************/
 
+void StatusReport_Init()
+{
+    ip_addr_t TempAddr = {PP_HTONL(LWIP_MAKEU32(192,168,8,8))};
+    ip_addr_t remoteAddr = {PP_HTONL(LWIP_MAKEU32(192,168,8,7))};
+    uint8 TempStr[10] = {'H','E','L','L','O'};
+    err_t ret = ERR_OK;
+
+    udpTestPcb = udp_new();
+    ret = udp_bind(udpTestPcb, &TempAddr, 81);
+    if(ret == ret){
+        udp_connect(udpTestPcb, &remoteAddr, 85);
+    }
+    udpBuffer = pbuf_alloc(PBUF_RAW, 255, PBUF_POOL);
+    udpBuffer->tot_len = 10;
+    udpBuffer->len = 10;
+    MEMCPY(udpBuffer->payload, TempStr, 10);
+}
+
+void StatusReport_1000ms()
+{
+    err_t ret = ERR_OK;
+    ret = udp_send(udpTestPcb, udpBuffer);
+    if(ret == ERR_OK){
+        print_f("UDP sent OK\n");
+    }else{
+        print_f("UDP sent not OK\n");
+    }
+}
 
 
-#endif  /* ETH_H */
 
 /***********************************************************************************************************************
- *  END OF FILE: Eth.h
+ *  END OF FILE: StatusReport.c
  **********************************************************************************************************************/

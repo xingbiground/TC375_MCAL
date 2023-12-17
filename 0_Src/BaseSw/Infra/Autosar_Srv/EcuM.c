@@ -66,6 +66,8 @@
 #include "Test_Time.h"
 #include "Ifx_Lwip.h"
 
+#include "IfxGeth_Phy_Dp83825i.h"
+
 #ifdef BASE_TEST_MODULE_ID
 #if ((BASE_TEST_MODULE_ID == TEST_CAN_MODULE_ID)|| (BASE_TEST_MODULE_ID== TEST_CANTRCV_MODULE_ID))
 #include "ComStack_Types.h"
@@ -188,26 +190,18 @@ Std_ReturnType EcuM_Init()
     Port_Init(&Port_Config);
     Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
     Eth_Init(&Eth_Config);
+    Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
     Gpt_Init(&Gpt_Config);
 
-
     /********************************* External Peripheral Init *********************************/
+    IfxGeth_Eth_Phy_Dp83825i_init();
     
     /********************************* SWC Init *********************************/
     Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
     Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 50000);  /* 1ms */
-    eth_addr_t ethAddr;
-    ethAddr.addr[0] = 0x81;
-    ethAddr.addr[1] = 0x82;
-    ethAddr.addr[2] = 0x83;
-    ethAddr.addr[3] = 0x84;
-    ethAddr.addr[4] = 0x85;
-    ethAddr.addr[5] = 0x86;
-
+    eth_addr_t ethAddr;   /* This can be empty cause MAC address is int Eth_Config, 
+                                    so Lwip_Init shall be called after Eth_SetControllerMode */
     Ifx_Lwip_init(ethAddr);                                 /* Initialize LwIP with the MAC address */
-    Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
-
-
 
     return ret;
 }

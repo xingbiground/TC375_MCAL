@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 19.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-14, 22:24:22     !!!IGNORE-LINE!!!                     **
+**  DATE, TIME: 2023-12-17, 14:21:20     !!!IGNORE-LINE!!!                     **
 **                                                                            **
 **  GENERATOR : Build b200227-0222       !!!IGNORE-LINE!!!                      **
 **                                                                            **
@@ -147,12 +147,12 @@ static const Eth_17_GEthMac_CoreCntrlConfigType Eth_17_GEthMac_CoreCntrlConfigCo
     (uint8)4U,         /*Total Transmit Buffer*/
     /* MAC address of the controller in network byte order */
     {
-    (uint8)0x81U,
-    (uint8)0x82U,
-    (uint8)0x83U,
-    (uint8)0x84U,
-    (uint8)0x85U,
-    (uint8)0x86U
+    (uint8)0xCCU,
+    (uint8)0xCCU,
+    (uint8)0xCCU,
+    (uint8)0xCCU,
+    (uint8)0xCCU,
+    (uint8)0xCCU
     },
     /* Eth Controller Index */
     (uint8)0,

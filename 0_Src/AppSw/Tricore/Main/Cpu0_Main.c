@@ -40,11 +40,10 @@
 #include "DemoApp.h"
 #endif
 
-#include "Test_Print.h"
-#include "EcuM.h"
 #include "Ifx_Lwip.h"
+#include "EcuM.h"
 #include "Echo.h"
-#include "IfxStm_reg.h"
+#include "StatusReport.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -68,6 +67,8 @@
 /*******************************************************************************
 **                      Global Variable Definitions                           **
 *******************************************************************************/
+uint32 SystemTick = 0;  /* System Tick, increment every millisecond */
+boolean SystemTickUpdateFlag = FALSE;
 
 /*******************************************************************************
 **                      Private Constant Definitions                          **
@@ -86,6 +87,7 @@ void core0_main (void)
   volatile unsigned short LoopFlag = 1U;
   unsigned short cpuWdtPassword;
   unsigned short safetyWdtPassword;
+  uint32 localSysTick;
 
 
   ENABLE();
@@ -99,7 +101,10 @@ void core0_main (void)
   Ifx_Ssw_disableSafetyWatchdog(safetyWdtPassword);
 
   EcuM_Init();
+
+  /********************************* App INIT *********************************/
   echoInit();
+  StatusReport_Init();
 
   // #ifdef AURIX2G_MCAL_DEMOAPP
   // DemoApp_Init();
@@ -107,8 +112,28 @@ void core0_main (void)
   // #endif
   while (LoopFlag == 1U)
   {
+    while(!SystemTickUpdateFlag){
+      /* wait for tick update. */
+    }
+    SystemTickUpdateFlag = FALSE;
+    localSysTick = SystemTick;
+
+    /********************************* 1ms rbl *********************************/
+    Ifx_Lwip_onTimerTick();
     Ifx_Lwip_pollTimerFlags();
     Ifx_Lwip_pollReceiveFlags();    
-  }
 
+    /********************************* 10ms rbl *********************************/
+    
+    /********************************* 1000 rbl *********************************/
+    if(localSysTick%1000 == 0){
+      StatusReport_1000ms();
+    }
+  }
+}
+
+void SystemTickIsr()
+{
+  SystemTick++;
+  SystemTickUpdateFlag = TRUE;
 }

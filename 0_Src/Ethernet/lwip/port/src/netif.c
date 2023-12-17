@@ -93,7 +93,7 @@
 
 #include "Ifx_Lwip.h"
 #include "Ifx_Netif.h"
-#include "IfxGeth_Phy_Dp83825i.h"
+#include "Eth.h"
 #include <string.h>
 
 /* Define those to better describe your network interface. */
@@ -121,16 +121,11 @@ struct ethernetif
  */
 static void low_level_init(netif_t *netif)
 {
-    int     i;
-
     /* set MAC hardware address length */
     netif->hwaddr_len = ETHARP_HWADDR_LEN;
 
-    /* set MAC hardware address */
-    for (i = 0; i < ETHARP_HWADDR_LEN; i++)
-    {
-        netif->hwaddr[i] = g_Lwip.eth_addr.addr[i];
-    }
+    /* get MAC hardware address from Eth_Config */
+    Eth_GetPhysAddr(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, netif->hwaddr);
 
     /* maximum transfer unit */
     netif->mtu = 1500;
@@ -139,8 +134,6 @@ static void low_level_init(netif_t *netif)
     /* don't set NETIF_FLAG_ETHARP if this device is not an ethernet one */
     /* we don't set the LINK_UP flag because we don't say when it is linked */
     netif->flags = NETIF_FLAG_BROADCAST | NETIF_FLAG_ETHARP;
-
-    IfxGeth_Eth_Phy_Dp83825i_init();
 }
 
 /**
