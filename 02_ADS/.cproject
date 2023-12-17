@@ -191,6 +191,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output/Demo_Aurix2G}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/AppCfg}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/EchoApp}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/StatusReport}&quot;"/>
 								</option>

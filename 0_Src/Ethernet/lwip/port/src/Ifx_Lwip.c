@@ -53,6 +53,7 @@
 #include "IfxGeth_Phy_Dp83825i.h"
 #include <string.h>
 #include <stdarg.h>
+#include "AppCfg.h"
 
 
 /******************************************************************************/
@@ -356,9 +357,9 @@ void netif_state_changed(struct netif* netif, netif_nsc_reason_t reason, const n
 void Ifx_Lwip_init(eth_addr_t ethAddr)
 {
     ip_addr_t default_ipaddr, default_netmask, default_gw;
-    IP4_ADDR(&default_gw, 0,0,0,0);
-    IP4_ADDR(&default_ipaddr, 192,168,8,8);
-    IP4_ADDR(&default_netmask, 255,255,255,0);
+    default_gw.addr         = APPCFG_GWADDR;        /* instead of IP4_ADDR(&default_gw, 0,0,0,0);               */
+    default_ipaddr.addr     = APPCFG_LOCALIPADDR;   /* instead of IP4_ADDR(&default_ipaddr, 192,168,8,8);       */
+    default_netmask.addr    = APPCFG_MASKADDR;      /* instead of IP4_ADDR(&default_netmask, 255,255,255,0);    */
 
     LWIP_DEBUGF(IFX_LWIP_DEBUG, ("Ifx_Lwip_init start!\n"));
 

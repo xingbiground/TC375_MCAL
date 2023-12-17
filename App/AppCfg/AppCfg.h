@@ -1,90 +1,63 @@
 /*********************************************************
- *  StatusReport.c  : function description.  
+ *  AppCfg.h  : This file handles all App Eth configuration.
  *  Revision History:
  *  ————————————————————————————
  *  Date          Version     Author      Detail
- *  2023-12-17    V1.0.0      LIN         
+ *  2023-xx-xx    V1.0.0      LIN         
  *********************************************************/
  
+#ifndef APPCFG_H
+#define APPCFG_H
 
 /***********************************************************************************************************************
  *  INCLUDES
  **********************************************************************************************************************/
-#include "StatusReport.h"
-#include <string.h>
-#include "lwip/stats.h"
-#include "lwip/udp.h"
-#include "Test_Print.h"
-#include "AppCfg.h"
+
 
 /***********************************************************************************************************************
- *  LOCAL CONSTANT MACROS
+ *  GLOBAL CONSTANT MACROS
+ **********************************************************************************************************************/
+/* Info: Mac Address is set in Eth_Config in MCAL */
+#define APPCFG_LOCALIPADDR                      (0x0808A8C0)        /* 192.168.8.8      */
+#define APPCFG_GWADDR                           (0x0)               /* 0.0.0.0          */
+#define APPCFG_MASKADDR                         (0x00ffffff)        /* 255.255.255.0    */
+
+/* Echo App Cfg */
+#define APPCFG_TCPLOCALPORT_ECHO                (80u)
+
+/* Status report App Cfg */
+#define APPCFG_UDPREMOTEIPADDR                  (0x0708A8C0)        /* 192.168.8.7 */
+#define APPCFG_UDPLOCALPORT_STATUSREPORT        (80u)
+#define APPCFG_UDPREMOTEPORT_STATUSREPORT       (81u)       
+
+/***********************************************************************************************************************
+ *  GLOBAL FUNCTION MACROS
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  LOCAL FUNCTION MACROS
+ *  GLOBAL DATA TYPES AND STRUCTURES
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  LOCAL DATA TYPES AND STRUCTURES
- **********************************************************************************************************************/
-typedef struct udp_pcb udpPcb;
-typedef struct pbuf pBuf;               /* Define a more convenient type                                            */
-
-/***********************************************************************************************************************
- *  LOCAL DATA PROTOTYPES
- **********************************************************************************************************************/
-udpPcb *udpTestPcb;
-pBuf *udpBuffer;
-
-
-/***********************************************************************************************************************
- *  GLOBAL DATA
+ *  GLOBAL DATA PROTOTYPES
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  LOCAL FUNCTION PROTOTYPES
+ *  GLOBAL FUNCTION PROTOTYPES
  **********************************************************************************************************************/
 
 
 /***********************************************************************************************************************
- *  LOCAL FUNCTIONS
+ *  GLOBAL FUNCTIONS
  **********************************************************************************************************************/
 
-void StatusReport_Init()
-{
-    ip_addr_t localIpAddr = {APPCFG_LOCALIPADDR};
-    ip_addr_t remoteIpAddr = {APPCFG_UDPREMOTEIPADDR};
-    uint8 TempStr[10] = {'H','E','L','L','O'};
-    err_t ret = ERR_OK;
-
-    udpTestPcb = udp_new();
-    ret = udp_bind(udpTestPcb, &localIpAddr, APPCFG_UDPLOCALPORT_STATUSREPORT);
-    if(ret == ret){
-        udp_connect(udpTestPcb, &remoteIpAddr, APPCFG_UDPREMOTEPORT_STATUSREPORT);
-    }
-    udpBuffer = pbuf_alloc(PBUF_RAW, 255, PBUF_POOL);
-    udpBuffer->tot_len = 10;
-    udpBuffer->len = 10;
-    MEMCPY(udpBuffer->payload, TempStr, 10);
-}
-
-void StatusReport_1000ms()
-{
-    err_t ret = ERR_OK;
-    ret = udp_send(udpTestPcb, udpBuffer);
-    if(ret == ERR_OK){
-        /* do nothing */
-    }else{
-        print_f("UDP sent not OK\n");
-    }
-}
 
 
+#endif  /* APPCFG_H */
 
 /***********************************************************************************************************************
- *  END OF FILE: StatusReport.c
+ *  END OF FILE: AppCfg.h
  **********************************************************************************************************************/
