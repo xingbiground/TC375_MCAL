@@ -3430,12 +3430,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="GtmAdcTrigger2Select" type="ENUMERATION" 
-                               value="TRIG_0_NO_TRIGGER">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="TRIG_14"/>
                         <d:var name="GtmAdcTrigger3Select" type="ENUMERATION" 
                                value="TRIG_0_NO_TRIGGER">
                           <a:a name="IMPORTER_INFO">
@@ -4722,9 +4717,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TOM_CHANNEL_NOT_USED"/>
                               <d:var name="McuTomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4734,9 +4727,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TOM_CHANNEL_USED_BY_ADC"/>
                               <d:var name="McuTomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>

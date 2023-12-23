@@ -62,6 +62,7 @@
 #include "Icu_17_TimerIp.h"
 #include "Eth.h"
 #include "Gpt.h"
+#include "Adc.h"
 
 #include "Test_Print.h"
 #include "Test_Time.h"
@@ -158,6 +159,7 @@ extern void EcumLinTest_SetWakeupEvent(EcuM_WakeupSourceType WakeupInfo);
 ** Description      : <Suitable Description>                                  **
 **                                                                            **
 *******************************************************************************/
+volatile Adc_ValueGroupType  Adc3GroupHWResult;
 Std_ReturnType EcuM_Init()
 {
     Std_ReturnType ret = E_OK;
@@ -191,6 +193,7 @@ Std_ReturnType EcuM_Init()
     Port_Init(&Port_Config);
     Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
     Icu_17_TimerIp_Init(&Icu_17_TimerIp_Config);
+    Adc_Init(&Adc_Config);
     Eth_Init(&Eth_Config);
     Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
     Gpt_Init(&Gpt_Config);
@@ -201,8 +204,9 @@ Std_ReturnType EcuM_Init()
     /********************************* SWC Init *********************************/
     Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
     Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 50000);  /* 1ms */
-
     Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_0);
+    Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_3_HW, &Adc3GroupHWResult);
+    Adc_EnableHardwareTrigger(AdcConf_AdcGroup_AdcGroup_3_HW);
 
     eth_addr_t ethAddr;   /* This can be empty cause MAC address is int Eth_Config, 
                                     so Lwip_Init shall be called after Eth_SetControllerMode */
