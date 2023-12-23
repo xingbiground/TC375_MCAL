@@ -48,7 +48,7 @@
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
                     <d:lst name="PwmNotification"/>
-                    <d:var name="PwmPeriodDefault" type="INTEGER" value="32768"/>
+                    <d:var name="PwmPeriodDefault" type="INTEGER" value="12207"/>
                     <d:var name="PwmPolarity" type="ENUMERATION" 
                            value="PWM_HIGH"/>
                     <d:ref name="PwmMcuClockReferencePoint" type="REFERENCE" >
