@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 26.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:44             !!!IGNORE-LINE!!!            **
+**  DATE, TIME: 2023-12-23, 13:16:52             !!!IGNORE-LINE!!!            **
 **                                                                            **
 **  GENERATOR : Build b200227-0222               !!!IGNORE-LINE!!!            **
 **                                                                            **
@@ -452,6 +452,57 @@ static const Icu_17_TimerIp_ChannelConfigType Icu_17_TimerIp_kChannelConfigCore_
     #endif
     /* Ram needed for this channel */
     0U
+  },
+  {
+    /* ICU Channel 1 */
+    (Icu_17_TimerIp_NotifiPtrType)0,/*Notification-function name*/
+    (Icu_17_TimerIp_NotifiPtrType)0,/*Timeout Notification-function name*/
+    (Icu_17_TimerIp_NotifiPtrType)0,/*GPT12 Counter overflow Notification-function name*/
+    {
+      (uint8)ICU_17_TIMERIP_MODE_SIGNAL_MEASUREMENT,/*Measurement Mode*/
+      (uint8)ICU_17_TIMERIP_RISING_EDGE,/*Default Start Edge */
+      (uint8)ICU_17_TIMERIP_DUTY_CYCLE,/*Measurement Property*/
+      ICU_NOT_WAKEUPCAPABLE,/*Wakeup capability*/
+      /* Assigned Hardware Resource Number */
+      /* MISRA2012_RULE_10_4_JUSTIFICATION: No side effects foreseen
+      by violating this MISRA rule.*/
+      /* MISRA2012_RULE_10_1_JUSTIFICATION: No side effects foreseen
+      by violating this MISRA rule. */
+      (uint16)5U,
+      (uint8)ICU_17_TIMERIP_GTM_OPTION, /* Assigned Hw Unit */
+      0, /* PinSelection */
+      0U,/* TimeOutEnabled */
+      0U,/* IsTimeOutExclusives */
+      0U,/* Filtering time for rising edge */
+      0U,/* Filtering time for falling edge */
+      0U, /* Overflow ISR threshold */
+      ICU_GTM_INTERRUPT_LEVEL_MODE,/* TIM interrupt mode/ CCU6 Int Node */
+      ICU_GTM_CONFIGURABLE_CLOCK_0, /* Channel Clock Select */
+      /* CTRL data */
+      ((ICU_GTM_TIM_MODE_TPWM << IFX_GTM_TIM_CH_CTRL_TIM_MODE_OFF)|(ICU_GPR0_CNTS_SEL<<IFX_GTM_TIM_CH_CTRL_GPR0_SEL_OFF)|(ICU_GPR1_CNT_SEL<<IFX_GTM_TIM_CH_CTRL_GPR1_SEL_OFF)|
+      (ICU_ISL_DSL_RISING<<IFX_GTM_TIM_CH_CTRL_DSL_OFF)|
+      ((ICU_INPUT_OF_CURRENT_TIM_CHANNEL&IFX_GTM_TIM_CH_CTRL_CICTRL_MSK)<<IFX_GTM_TIM_CH_CTRL_CICTRL_OFF)|
+      ((ICU_GTM_CONFIGURABLE_CLOCK_0&IFX_GTM_TIM_CH_CTRL_CLK_SEL_MSK)<<IFX_GTM_TIM_CH_CTRL_CLK_SEL_OFF)|
+      0U|
+      ((ICU_GTM_CONFIGURABLE_CLOCK_0&IFX_GTM_TIM_CH_CTRL_FLT_CNT_FRQ_MSK)<<IFX_GTM_TIM_CH_CTRL_FLT_CNT_FRQ_OFF)|
+      ((ICU_IMMEDIATE_EDGE_PROPAGATION_MODE&ICU_FLT_MODE_MSK)<<IFX_GTM_TIM_CH_CTRL_FLT_MODE_RE_OFF)|
+      ((ICU_IMMEDIATE_EDGE_PROPAGATION_MODE&ICU_FLT_MODE_MSK)<<IFX_GTM_TIM_CH_CTRL_FLT_MODE_FE_OFF)|
+      (0UL<<IFX_GTM_TIM_CH_CTRL_FLT_EN_OFF)),
+      /* ECTRL data */
+      (0UL|
+      0UL|
+      0UL),
+      /* TDUV Data*/
+      0U
+      
+    },
+    #if (ICU_17_TIMERIP_REPORT_WAKEUP_SOURCE == STD_ON)
+    {
+      0U /*Not applicable*/
+    },
+    #endif
+    /* Ram needed for this channel */
+    1U
   }
 };
 
@@ -469,9 +520,9 @@ static const Icu_17_TimerIp_CoreConfigType Icu_17_TimerIp_kConfigCore_0 =
   /* Pointer to Channel Configuration structure */
   &Icu_17_TimerIp_kChannelConfigCore_0[0],
   /* MaxChannelCore */
-  1,
+  2,
   /* chunks of union required */
-  1,
+  2,
 };
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -546,7 +597,8 @@ const Icu_17_TimerIp_ConfigType Icu_17_TimerIp_Config =
   },
   #if (ICU_17_TIMERIP_SINGLE_CORE == STD_OFF)
   {
-    (uint16)(ICU_CORE0 | (uint8)0)
+    (uint16)(ICU_CORE0 | (uint8)0),
+    (uint16)(ICU_CORE0 | (uint8)1)
   },
   #endif
 };

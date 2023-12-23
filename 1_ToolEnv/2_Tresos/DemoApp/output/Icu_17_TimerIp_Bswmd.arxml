@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 32.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 18:29:30          !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-23, 13:16:52          !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -725,7 +725,7 @@
               <IMPLEMENTATION-DATA-TYPE-ELEMENT>
                 <SHORT-NAME>ChannelMapping</SHORT-NAME>
                 <CATEGORY>TYPE_REFERENCE</CATEGORY>
-                <ARRAY-SIZE>1</ARRAY-SIZE>
+                <ARRAY-SIZE>2</ARRAY-SIZE>
                 <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
                 <SW-DATA-DEF-PROPS>
                   <SW-DATA-DEF-PROPS-VARIANTS>

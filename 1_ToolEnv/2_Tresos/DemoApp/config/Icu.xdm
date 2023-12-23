@@ -53,7 +53,6 @@
                   <a:a name="IMPORTER_INFO" value="Impr367"/>
                 </d:var>
                 <d:lst name="IcuChannel" type="MAP">
-                  <a:a name="IMPORTER_INFO" value="Impr367"/>
                   <d:ctr name="SignalMeas" type="IDENTIFIABLE">
                     <a:a name="IMPORTER_INFO" value="Impr367"/>
                     <d:var name="IcuTimeoutFeature" type="ENUMERATION" 
@@ -125,6 +124,124 @@
                         </d:var>
                       </d:ctr>
                     </d:lst>
+                    <d:lst name="ERUInputConfiguration" type="MAP"/>
+                    <d:lst name="GPT12Configuration" type="MAP"/>
+                  </d:ctr>
+                  <d:ctr name="IcuChannel_0" type="IDENTIFIABLE">
+                    <d:var name="IcuChannelId" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO">
+                        <a:v>@DEF</a:v>
+                        <a:v>@CALC</a:v>
+                      </a:a>
+                    </d:var>
+                    <d:var name="IcuDefaultStartEdge" type="ENUMERATION" 
+                           value="ICU_RISING_EDGE">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="IcuMeasurementMode" type="ENUMERATION" 
+                           value="ICU_MODE_SIGNAL_MEASUREMENT"/>
+                    <d:var name="IcuTimeoutFeature" type="ENUMERATION" 
+                           value="TIMEOUT_DISABLED">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="IcuWakeupCapability" type="BOOLEAN" 
+                           value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="IcuAssignedHwUnit" type="ENUMERATION" 
+                           value="GTM">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:lst name="IcuSignalEdgeDetection" type="MAP"/>
+                    <d:lst name="IcuIncrementalInterfaceMode" type="MAP"/>
+                    <d:lst name="IcuTimeOutDetection" type="MAP"/>
+                    <d:lst name="IcuSignalMeasurement" type="MAP">
+                      <d:ctr name="IcuSignalMeasurement_0" type="IDENTIFIABLE">
+                        <d:var name="IcuSignalMeasurementProperty" 
+                               type="ENUMERATION" value="ICU_DUTY_CYCLE"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="IcuTimestampMeasurement" type="MAP"/>
+                    <d:lst name="IcuWakeup" type="MAP"/>
+                    <d:lst name="GtmTimerInputConfiguration" type="MAP">
+                      <d:ctr name="GtmTimerInputConfiguration_0" 
+                             type="IDENTIFIABLE">
+                        <d:ref name="GtmTimerUsed" type="REFERENCE" 
+                               value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGtmAllocationConf_0/McuGtmTimAllocationConf_0/McuGtmTimChannelAllocationConf_5"/>
+                        <d:ctr name="TimChannelGeneral" type="IDENTIFIABLE">
+                          <d:var name="TimChannelInputSelect" 
+                                 type="ENUMERATION" 
+                                 value="INPUT_OF_CURRENT_TIM_CHANNEL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChannelClockSelect" 
+                                 type="ENUMERATION" 
+                                 value="GTM_CONFIGURABLE_CLOCK_0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChannelGpr0InputSelect" 
+                                 type="ENUMERATION" value="TIMEBASE_TBU_TS0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimInterruptMode" type="ENUMERATION" 
+                                 value="GTM_INTERRUPT_LEVEL_MODE">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="OverflowISRThreshold" type="INTEGER" 
+                                 value="0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:ctr>
+                        <d:ctr name="TimChannelFilterConfig" 
+                               type="IDENTIFIABLE">
+                          <d:var name="TimChannelFilterEnable" type="BOOLEAN" 
+                                 value="false">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChFilterCounterFreqSelect" 
+                                 type="ENUMERATION" 
+                                 value="GTM_CONFIGURABLE_CLOCK_0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChFilterModeForRisingEdge" 
+                                 type="ENUMERATION" 
+                                 value="IMMEDIATE_EDGE_PROPAGATION_MODE">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChFilterModeForFallingEdge" 
+                                 type="ENUMERATION" 
+                                 value="IMMEDIATE_EDGE_PROPAGATION_MODE">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChFilterTimeForRisingEdge" 
+                                 type="INTEGER" value="0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChFilterTimeForFallingEdge" 
+                                 type="INTEGER" value="0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:ctr>
+                        <d:ctr name="TimChannelTimeOutConfig" 
+                               type="IDENTIFIABLE">
+                          <d:var name="TimChTimeOutCounterFreqSelect" 
+                                 type="ENUMERATION" 
+                                 value="GTM_CONFIGURABLE_CLOCK_0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChTimeOutEdge" type="ENUMERATION" 
+                                 value="TDU_RISING_EDGE">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="TimChannelTimeoutInputSelect" 
+                                 type="ENUMERATION" 
+                                 value="INPUT_OF_CURRENT_TIM_CHANNEL">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:ctr>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="CCU6CC6Configuration" type="MAP"/>
                     <d:lst name="ERUInputConfiguration" type="MAP"/>
                     <d:lst name="GPT12Configuration" type="MAP"/>
                   </d:ctr>

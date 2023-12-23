@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 16.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45              !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-23, 13:16:52              !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222                !!!IGNORE-LINE!!!           **
 **                                                                            **
@@ -308,6 +308,35 @@ generation*/
 #define IcuConf_IcuChannel_SignalMeas       ((Icu_17_TimerIp_ChannelType)0U)
 #endif
 
+
+/*MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+/*MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+/*MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+/*MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+#ifndef IcuConf_IcuChannel_IcuChannel_0
+/*MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+/*MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+/*MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+/*MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars,
+in generated code is due to Autosar Naming constraints for symbolic name 
+generation*/
+#define IcuConf_IcuChannel_IcuChannel_0       ((Icu_17_TimerIp_ChannelType)1U)
+#endif
+
 /* Core 0 Configurations summary */
 
 /*MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars,
@@ -322,7 +351,7 @@ generation*/
 /*MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars,
 in generated code is due to Autosar Naming constraints for symbolic name 
 generation*/
-#define ICU_17_TIMERIP_MAX_CHANNELS_CORE0                   (1U)
+#define ICU_17_TIMERIP_MAX_CHANNELS_CORE0                   (2U)
 
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -333,7 +362,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define ICU_17_TIMERIP_CHNL_DATA_MAX_CHANNELS_CORE0         (1U)
+#define ICU_17_TIMERIP_CHNL_DATA_MAX_CHANNELS_CORE0         (2U)
 
 /*
 Core 1 Configurations    
@@ -489,7 +518,7 @@ in generated code due to Autosar Naming constraints.*/
 TOTAL NUMBER OF CONFIGURED CHANNELS 
 ****************************************************************************/
 
-#define ICU_17_TIMERIP_MAX_CHANNELS         (1U)
+#define ICU_17_TIMERIP_MAX_CHANNELS         (2U)
 
 /* Macro to idntify single core execution */
 #define  ICU_17_TIMERIP_SINGLE_CORE (STD_ON)
@@ -504,7 +533,7 @@ STD_OFF: <HW> is not used for <MODE>.
 */
 /* GTM TIM hardware resource usage */
 
-#define ICU_17_TIMERIP_GTM_TIM_USED (STD_OFF)
+#define ICU_17_TIMERIP_GTM_TIM_USED (STD_ON)
 /* CCU6 hardware resource usage */
 
 #define ICU_17_TIMERIP_CCU6_USED (STD_ON)

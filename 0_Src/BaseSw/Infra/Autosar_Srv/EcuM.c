@@ -59,6 +59,7 @@
 #include "Mcu.h"
 #include "Port.h"
 #include "Pwm_17_GtmCcu6.h"
+#include "Icu_17_TimerIp.h"
 #include "Eth.h"
 #include "Gpt.h"
 
@@ -189,6 +190,7 @@ Std_ReturnType EcuM_Init()
     /********************************* Peripheral Init *********************************/
     Port_Init(&Port_Config);
     Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
+    Icu_17_TimerIp_Init(&Icu_17_TimerIp_Config);
     Eth_Init(&Eth_Config);
     Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
     Gpt_Init(&Gpt_Config);
@@ -199,6 +201,9 @@ Std_ReturnType EcuM_Init()
     /********************************* SWC Init *********************************/
     Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
     Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 50000);  /* 1ms */
+
+    Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_0);
+
     eth_addr_t ethAddr;   /* This can be empty cause MAC address is int Eth_Config, 
                                     so Lwip_Init shall be called after Eth_SetControllerMode */
     Ifx_Lwip_init(ethAddr);                                 /* Initialize LwIP with the MAC address */

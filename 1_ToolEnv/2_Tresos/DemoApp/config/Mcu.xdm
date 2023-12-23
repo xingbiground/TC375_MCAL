@@ -3030,9 +3030,7 @@
                           </d:ctr>
                           <d:ctr name="GtmTimChannelConf_5" type="IDENTIFIABLE">
                             <d:var name="GtmTimInpPortPinSel" 
-                                   type="ENUMERATION" value="SEL0_NONE">
-                              <a:a name="IMPORTER_INFO" value="@DEF"/>
-                            </d:var>
+                                   type="ENUMERATION" value="SEL1_PORT02_PIN5"/>
                           </d:ctr>
                           <d:ctr name="GtmTimChannelConf_6" type="IDENTIFIABLE">
                             <d:var name="GtmTimInpPortPinSel" 
@@ -3990,9 +3988,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTimChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TIM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TIM_CHANNEL_USED_BY_ICU"/>
                             </d:ctr>
                             <d:ctr name="McuGtmTimChannelAllocationConf_6" 
                                    type="IDENTIFIABLE">
@@ -4508,9 +4504,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TOM_CHANNEL_USED_BY_PWM"/>
                               <d:var name="McuTomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>

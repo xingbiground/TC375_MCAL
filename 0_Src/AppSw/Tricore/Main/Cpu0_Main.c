@@ -44,6 +44,7 @@
 #include "EcuM.h"
 #include "Echo.h"
 #include "StatusReport.h"
+#include "Icu_17_TimerIp.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -88,6 +89,7 @@ void core0_main (void)
   unsigned short cpuWdtPassword;
   unsigned short safetyWdtPassword;
   uint32 localSysTick;
+  Icu_17_TimerIp_DutyCycleType PwmMeasureValue;
 
 
   ENABLE();
@@ -124,6 +126,9 @@ void core0_main (void)
     Ifx_Lwip_pollReceiveFlags();    
 
     /********************************* 10ms rbl *********************************/
+    if(localSysTick%10 == 0){
+      Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_0, &PwmMeasureValue);
+    }
     
     /********************************* 1000 rbl *********************************/
     if(localSysTick%1000 == 0){

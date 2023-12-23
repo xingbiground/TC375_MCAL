@@ -1226,24 +1226,15 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_2_PIN_4">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GTM_TOUT4"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_IN">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_OUT"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="ALT1"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
                                value="PORT_PIN_LEVEL_LOW">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -1296,12 +1287,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="PortPinSymbolicName" type="STRING" 
-                               value="PORT_2_PIN_5">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="GTM_TIM0_IN5_1"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
                                value="PORT_PIN_IN">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>

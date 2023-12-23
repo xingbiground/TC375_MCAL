@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 33.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-06, 00:18:24       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2023-12-23, 13:17:42       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -214,7 +214,7 @@ static const Mcu_GtmClusterConfigType Mcu_kGtmClusterConfigPtr_Config[6] =
   /*GTM Cluster_0 configuration*/
   {
     /*GTM cluster TIM/TOM/ATOM enable settings*/
-    0x00000006U,
+    0x00000007U,
     /*GTM cluster config clock settings*/
     0x00000000U,
     /*GTM cluster fixed clock settings*/
@@ -515,7 +515,7 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
   {
     /*Configuration of TimInSel*/   
     /*TimInsel 0 value*/
-    0x00000000U,
+    0x00100000U,
     /*TimInsel 1 value*/
     0x00000000U,
     /*TimInsel 2 value*/

@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 11.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-05, 23:59:44              !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2023-12-23, 13:17:45              !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b200227-0222                !!!IGNORE-LINE!!!           ** 
 **                                                                            **
@@ -588,7 +588,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 #define PortConf_PortContainer_2_PORT_2_PIN_3  (Port_PinType )(0x0023U)
 #endif
-/* Symbolic Name: PORT_2_PIN_4 */
+/* Symbolic Name: GTM_TOUT4 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -597,7 +597,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_2_PORT_2_PIN_4 
+#ifndef PortConf_PortContainer_2_GTM_TOUT4 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -606,7 +606,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_2_PORT_2_PIN_4  (Port_PinType )(0x0024U)
+#define PortConf_PortContainer_2_GTM_TOUT4  (Port_PinType )(0x0024U)
 #endif
 /* Symbolic Name: PORT_2_PIN_5 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
