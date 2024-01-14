@@ -189,6 +189,10 @@ Std_ReturnType EcuM_Init()
     IrqGtm_Init();
     SRC_GTMATOM00.B.SRE = 1;    /* Enable GTM ATOM0 ch0 ch1 INT */
 
+    IrqAdc_Init();
+    SRC_VADCG3SR0.B.SRE = 1;    /* Enable EVADC Group3 Source0 INT */
+
+
     /********************************* Peripheral Init *********************************/
     Port_Init(&Port_Config);
     Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
