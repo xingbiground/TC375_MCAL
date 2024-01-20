@@ -6,4 +6,6 @@ TriCore_Debug_Tasking/
 *_Bswmd.arxml
 *.launch
 *.mk
+*.hex
+*.elf
 TriCore Debug (TASKING)/
