@@ -25,7 +25,9 @@
               <d:lst name="ResourceMMcalConfig" type="MAP">
                 <d:ctr name="ResourceMMcalConfig_0" type="IDENTIFIABLE">
                   <d:var name="ResourceMMasterCore" type="ENUMERATION" 
-                         value="CORE0"/>
+                         value="CORE0">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
                   <d:var name="ResourceMNumberOfActiveCores" type="INTEGER" 
                          value="3">
                     <a:a name="IMPORTER_INFO">

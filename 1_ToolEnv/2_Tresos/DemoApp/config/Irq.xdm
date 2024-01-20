@@ -5168,7 +5168,7 @@
                       </d:ctr>
                       <d:ctr name="IrqGtmATOMPrioConfig" type="IDENTIFIABLE">
                         <d:var name="IrqGtmATOMSR0Prio" type="INTEGER" 
-                               value="254"/>
+                               value="232"/>
                         <d:var name="IrqGtmATOMSR1Prio" type="INTEGER" value="0">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>

@@ -78,6 +78,9 @@
 #define LCF_INTVEC1_START 0x805FC000
 #define LCF_INTVEC2_START 0x805FE000
 
+#define LCF_VERSIONINFO_OFFSET  0x2FFF80
+#define LCF_IMAGEINFO_OFFSET    0x2FFFC0
+
 #define LCF_TRAPVEC0_START 0x80000100
 #define LCF_TRAPVEC1_START 0x80300000
 #define LCF_TRAPVEC2_START 0x80300100
@@ -813,6 +816,10 @@ derivative tc37
                 select ".rodata.Ifx_Ssw_Tc0.*";
                 select ".rodata.Cpu0_Main.*";
                 select "(.rodata.rodata_cpu0|.rodata.rodata_cpu0.*)";
+            }
+            group (ordered, align = 4, run_addr=mem:pfls0[LCF_VERSIONINFO_OFFSET])
+            {
+                select ".rodata.versionInfo";
             }
             group (ordered, align = 4, run_addr=mem:pfls1)
             {
