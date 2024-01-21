@@ -45,6 +45,7 @@
 #include "Echo.h"
 #include "StatusReport.h"
 #include "Icu_17_TimerIp.h"
+#include "Dio.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -90,6 +91,7 @@ void core0_main (void)
   unsigned short safetyWdtPassword;
   uint32 localSysTick;
   Icu_17_TimerIp_DutyCycleType PwmMeasureValue;
+  Dio_LevelType buttonLevel;
 
 
   ENABLE();
@@ -128,6 +130,10 @@ void core0_main (void)
     /********************************* 10ms rbl *********************************/
     if(localSysTick%10 == 0){
       Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_0, &PwmMeasureValue);
+
+      /* Button and LED interaction. */
+      buttonLevel = Dio_ReadChannel(DioConf_DioChannel_BUTTON1);
+      Dio_WriteChannel(DioConf_DioChannel_LED2, buttonLevel);
     }
     
     /********************************* 1000 rbl *********************************/
