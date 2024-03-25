@@ -47,5 +47,10 @@
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/1_ToolEnv</locationURI>
 		</link>
+		<link>
+			<name>App</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/App</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

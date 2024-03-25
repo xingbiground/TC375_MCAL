@@ -48,7 +48,7 @@
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
                     <d:lst name="PwmNotification"/>
-                    <d:var name="PwmPeriodDefault" type="INTEGER" value="32768"/>
+                    <d:var name="PwmPeriodDefault" type="INTEGER" value="12207"/>
                     <d:var name="PwmPolarity" type="ENUMERATION" 
                            value="PWM_HIGH"/>
                     <d:ref name="PwmMcuClockReferencePoint" type="REFERENCE" >
@@ -70,6 +70,51 @@
                                value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGtmAllocationConf_0/McuGtmTomAllocationConf_0/McuGtmTomChannelAllocationConf_13"/>
                         <d:var name="GtmTimerClockSelect" type="ENUMERATION" 
                                value="GTM_FIXED_CLOCK_3"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="CCU6CC6Configuration" type="MAP"/>
+                  </d:ctr>
+                  <d:ctr name="PwmChannel_PwmOut" type="IDENTIFIABLE">
+                    <d:lst name="PwmChannelClass">
+                      <d:var type="ENUMERATION" value="PWM_VARIABLE_PERIOD"/>
+                    </d:lst>
+                    <d:var name="PwmChannelId" type="INTEGER" value="1"/>
+                    <d:var name="PwmAssignedHwUnit" type="ENUMERATION" 
+                           value="GTM">
+                      <a:a name="IMPORTER_INFO">
+                        <a:v>@DEF</a:v>
+                        <a:v>@CALC</a:v>
+                      </a:a>
+                    </d:var>
+                    <d:var name="PwmDutycycleDefault" type="INTEGER" 
+                           value="16384"/>
+                    <d:var name="PwmIdleState" type="ENUMERATION" 
+                           value="PWM_LOW">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:lst name="PwmNotification"/>
+                    <d:var name="PwmPeriodDefault" type="INTEGER" value="3125"/>
+                    <d:var name="PwmPolarity" type="ENUMERATION" 
+                           value="PWM_HIGH"/>
+                    <d:ref name="PwmMcuClockReferencePoint" type="REFERENCE" >
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:ref>
+                    <d:var name="PwmShiftValue" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ref name="PwmReferenceChannel" type="REFERENCE" >
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:ref>
+                    <d:var name="PwmCoherentUpdate" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:lst name="GtmTimerOutputModuleConfiguration" type="MAP">
+                      <d:ctr name="GtmTimerOutputModuleConfiguration_0" 
+                             type="IDENTIFIABLE">
+                        <d:ref name="GtmTimerUsed" type="REFERENCE" 
+                               value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGtmAllocationConf_0/McuGtmTomAllocationConf_0/McuGtmTomChannelAllocationConf_12"/>
+                        <d:var name="GtmTimerClockSelect" type="ENUMERATION" 
+                               value="GTM_FIXED_CLOCK_1"/>
                       </d:ctr>
                     </d:lst>
                     <d:lst name="CCU6CC6Configuration" type="MAP"/>

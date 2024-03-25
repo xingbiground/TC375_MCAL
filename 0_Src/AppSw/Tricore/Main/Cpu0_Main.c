@@ -39,6 +39,13 @@
 #ifdef AURIX2G_MCAL_DEMOAPP
 #include "DemoApp.h"
 #endif
+
+#include "Ifx_Lwip.h"
+#include "EcuM.h"
+#include "Echo.h"
+#include "StatusReport.h"
+#include "Icu_17_TimerIp.h"
+#include "Dio.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -62,6 +69,8 @@
 /*******************************************************************************
 **                      Global Variable Definitions                           **
 *******************************************************************************/
+uint32 SystemTick = 0;  /* System Tick, increment every millisecond */
+boolean SystemTickUpdateFlag = FALSE;
 
 /*******************************************************************************
 **                      Private Constant Definitions                          **
@@ -80,6 +89,9 @@ void core0_main (void)
   volatile unsigned short LoopFlag = 1U;
   unsigned short cpuWdtPassword;
   unsigned short safetyWdtPassword;
+  uint32 localSysTick;
+  Icu_17_TimerIp_DutyCycleType PwmMeasureValue;
+  Dio_LevelType buttonLevel;
 
 
   ENABLE();
@@ -92,13 +104,47 @@ void core0_main (void)
   Ifx_Ssw_disableCpuWatchdog(&MODULE_SCU.WDTCPU[0], cpuWdtPassword);
   Ifx_Ssw_disableSafetyWatchdog(safetyWdtPassword);
 
-  #ifdef AURIX2G_MCAL_DEMOAPP
-  DemoApp_Init();
-  DemoApp();
-  #endif
+  EcuM_Init();
+
+  /********************************* App INIT *********************************/
+  echoInit();
+  StatusReport_Init();
+
+  // #ifdef AURIX2G_MCAL_DEMOAPP
+  // DemoApp_Init();
+  // DemoApp();
+  // #endif
   while (LoopFlag == 1U)
   {
+    while(!SystemTickUpdateFlag){
+      /* wait for tick update. */
+    }
+    SystemTickUpdateFlag = FALSE;
+    localSysTick = SystemTick;
 
+    /********************************* 1ms rbl *********************************/
+    Ifx_Lwip_onTimerTick();
+    Ifx_Lwip_pollTimerFlags();
+    Ifx_Lwip_pollReceiveFlags();    
+
+    /********************************* 10ms rbl *********************************/
+    if(localSysTick%10 == 0){
+      Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_0, &PwmMeasureValue);
+
+      /* Button and LED interaction. */
+      buttonLevel = Dio_ReadChannel(DioConf_DioChannel_BUTTON1);
+      Dio_WriteChannel(DioConf_DioChannel_LED2, buttonLevel);
+    }
+    
+    /********************************* 1000 rbl *********************************/
+    if(localSysTick%1000 == 0){
+      StatusReport_1000ms();
+    }
   }
+}
 
+void SystemTickIsr()
+{
+  SystemTick++;
+  SystemTickUpdateFlag = TRUE;
 }

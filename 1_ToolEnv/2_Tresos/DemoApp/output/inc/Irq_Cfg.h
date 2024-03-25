@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-01-20, 16:44:55      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222        !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -1080,7 +1080,7 @@ Container : Irq ADC configuration
 #define IRQ_ADC3_SR3_CAT            (IRQ_CAT1)
 
 /*ADC3 interrupt Priority setting */
-#define IRQ_ADC3_SR0_PRIO           0x0
+#define IRQ_ADC3_SR0_PRIO           0x78
 #define IRQ_ADC3_SR1_PRIO           0x0
 #define IRQ_ADC3_SR2_PRIO           0x0
 #define IRQ_ADC3_SR3_PRIO           0x0
@@ -1833,13 +1833,13 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_ATOM0_SR3_CAT        (IRQ_CAT1)
 
 /* GTM ATOM0 interrupt Priority Setting */
-#define IRQ_GTM_ATOM0_SR0_PRIO       0xfe
+#define IRQ_GTM_ATOM0_SR0_PRIO       0xe8
 #define IRQ_GTM_ATOM0_SR1_PRIO       0x0
 #define IRQ_GTM_ATOM0_SR2_PRIO       0x7b
 #define IRQ_GTM_ATOM0_SR3_PRIO       0x0
 
 /* GTM ATOM0 interrupt type of service Setting */
-#define IRQ_GTM_ATOM0_SR0_TOS        (IRQ_TOS_CPU1)
+#define IRQ_GTM_ATOM0_SR0_TOS        (IRQ_TOS_CPU0)
 #define IRQ_GTM_ATOM0_SR1_TOS        (IRQ_TOS_CPU0)
 #define IRQ_GTM_ATOM0_SR2_TOS        (IRQ_TOS_CPU0)
 #define IRQ_GTM_ATOM0_SR3_TOS        (IRQ_TOS_CPU0)

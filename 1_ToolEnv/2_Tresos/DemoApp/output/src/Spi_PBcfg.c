@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 17.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-01-21, 13:38:16  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222      !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -355,7 +355,7 @@ static const Spi_JobConfigType Spi_kJobConfig_Core0[] =
     (uint8)0U,               /* Job Priority : 0...3*/
     (uint8)STD_HIGH,              /* CS polarity */
     /* Chnl[bit:7:4],QSPI[3:0] */
-    (uint8)((SPI_QSPI_CHANNEL1 << 4U)|SPI_QSPI0_INDEX),
+    (uint8)((SPI_QSPI_CHANNEL6 << 4U)|SPI_QSPI0_INDEX),
     SPI_PARITY_UNUSED,        /* Parity support */
     (0U)                    /*Frame based CS is disabled*/
   },
@@ -534,7 +534,7 @@ names
 
 static const Spi_QspiHwConfigType Spi_kQspiHwConfigQSPI0 =
 {
-  0x00020002U,               /* Active CS Level, SSOC SFR value */
+  0x00400040U,               /* Active CS Level, SSOC SFR value */
   0U,                        /* Queue length can be ignored for Sync */
   (uint8)SPI_DMA_CHNL_INVALID,   /* DMA Tx Channel */
   (uint8)SPI_DMA_CHNL_INVALID,   /* DMA Rx Channel */

@@ -3030,9 +3030,7 @@
                           </d:ctr>
                           <d:ctr name="GtmTimChannelConf_5" type="IDENTIFIABLE">
                             <d:var name="GtmTimInpPortPinSel" 
-                                   type="ENUMERATION" value="SEL0_NONE">
-                              <a:a name="IMPORTER_INFO" value="@DEF"/>
-                            </d:var>
+                                   type="ENUMERATION" value="SEL1_PORT02_PIN5"/>
                           </d:ctr>
                           <d:ctr name="GtmTimChannelConf_6" type="IDENTIFIABLE">
                             <d:var name="GtmTimInpPortPinSel" 
@@ -3432,12 +3430,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="GtmAdcTrigger2Select" type="ENUMERATION" 
-                               value="TRIG_0_NO_TRIGGER">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="TRIG_14"/>
                         <d:var name="GtmAdcTrigger3Select" type="ENUMERATION" 
                                value="TRIG_0_NO_TRIGGER">
                           <a:a name="IMPORTER_INFO">
@@ -3990,9 +3983,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTimChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TIM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TIM_CHANNEL_USED_BY_ICU"/>
                             </d:ctr>
                             <d:ctr name="McuGtmTimChannelAllocationConf_6" 
                                    type="IDENTIFIABLE">
@@ -4508,9 +4499,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TOM_CHANNEL_USED_BY_PWM"/>
                               <d:var name="McuTomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4728,9 +4717,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TOM_CHANNEL_NOT_USED"/>
                               <d:var name="McuTomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4740,9 +4727,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmTomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_TOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_TOM_CHANNEL_USED_BY_ADC"/>
                               <d:var name="McuTomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4968,9 +4953,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmAtomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_ATOM_CHANNEL_NOT_USED">
-                                <a:a name="IMPORTER_INFO" value="@DEF"/>
-                              </d:var>
+                                     value="GTM_ATOM_CHANNEL_USED_BY_GPT"/>
                               <d:var name="McuAtomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>

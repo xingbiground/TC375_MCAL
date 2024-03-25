@@ -207,9 +207,7 @@
                     <d:var name="SpiBaudrate" type="FLOAT" value="2000000.0">
                       <a:a name="IMPORTER_INFO" value="Impr367"/>
                     </d:var>
-                    <d:var name="SpiCsIdentifier" type="STRING" value="CHANNEL1">
-                      <a:a name="IMPORTER_INFO" value="Impr367"/>
-                    </d:var>
+                    <d:var name="SpiCsIdentifier" type="STRING" value="CHANNEL6"/>
                     <d:var name="SpiCsPolarity" type="ENUMERATION" value="HIGH">
                       <a:a name="IMPORTER_INFO" value="Impr367"/>
                     </d:var>

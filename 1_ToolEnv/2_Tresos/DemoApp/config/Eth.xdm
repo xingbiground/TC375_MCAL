@@ -45,9 +45,7 @@
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
                       <d:var name="EthCtrlPhyAddress" type="STRING" 
-                             value="00:03:19:00:00:01">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                             value="CC:CC:CC:CC:CC:CC"/>
                       <d:var name="EthCtrlRxBufLenByte" type="INTEGER" 
                              value="1522">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -106,9 +104,9 @@
                       </d:var>
                       <d:var name="EthCtrlEnableMii" type="BOOLEAN" value="true"/>
                       <d:var name="EthCtrlEnableRxInterrupt" type="BOOLEAN" 
-                             value="true"/>
+                             value="false"/>
                       <d:var name="EthCtrlEnableTxInterrupt" type="BOOLEAN" 
-                             value="true"/>
+                             value="false"/>
                       <d:var name="EthSkewTxClockDelay" type="INTEGER" value="0">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
@@ -138,7 +136,7 @@
                        value="ASPath:/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/McuClockReferencePointConfig"/>
                 <d:var name="EthGetDropCountApi" type="BOOLEAN" value="true"/>
                 <d:var name="EthGetEtherStatsApi" type="BOOLEAN" value="true"/>
-                <d:var name="EthGlobalTimeSupport" type="BOOLEAN" value="false"/>
+                <d:var name="EthGlobalTimeSupport" type="BOOLEAN" value="true"/>
                 <d:var name="EthIndex" type="INTEGER" value="0">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>

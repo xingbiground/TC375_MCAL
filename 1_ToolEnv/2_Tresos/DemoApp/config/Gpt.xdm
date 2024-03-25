@@ -158,6 +158,52 @@
                     <d:lst name="Gpt12TimerOutputModuleConfiguration" 
                            type="MAP"/>
                   </d:ctr>
+                  <d:ctr name="LwipTimer" type="IDENTIFIABLE">
+                    <d:var name="GptChannelId" type="INTEGER" value="2">
+                      <a:a name="IMPORTER_INFO">
+                        <a:v>@DEF</a:v>
+                        <a:v>@CALC</a:v>
+                      </a:a>
+                    </d:var>
+                    <d:var name="GptAssignedHwUnit" type="ENUMERATION" 
+                           value="GTM"/>
+                    <d:var name="GptChannelMode" type="ENUMERATION" 
+                           value="GPT_CH_MODE_CONTINUOUS">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="GptTimerChannelUsage" type="ENUMERATION" 
+                           value="GPT_TIMER_CHANNEL_NORMAL">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="GptChannelTickFrequency" type="FLOAT" 
+                           value="1.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="GptChannelTickValueMax" type="INTEGER" 
+                           value="65535">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="GptEnableWakeup" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:lst name="GptNotification">
+                      <d:var type="FUNCTION-NAME" value="SystemTickIsr"/>
+                    </d:lst>
+                    <d:ref name="GptChannelClkSrcRef" type="REFERENCE" 
+                           value="ASPath:/Gpt/Gpt/GptDriverConfiguration/GptClockReferencePoint_0"/>
+                    <d:lst name="GptWakeupConfiguration" type="MAP"/>
+                    <d:lst name="GtmTimerOutputModuleConfiguration" type="MAP">
+                      <d:ctr name="GtmTimerOutputModuleConfiguration_0" 
+                             type="IDENTIFIABLE">
+                        <d:ref name="GtmTimerUsed" type="REFERENCE" 
+                               value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGtmAllocationConf_0/McuGtmAtomAllocationConf_0/McuGtmAtomChannelAllocationConf_1"/>
+                        <d:var name="GtmTimerClockSelect" type="ENUMERATION" 
+                               value="GTM_CONFIGURABLE_CLOCK_0"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="Gpt12TimerOutputModuleConfiguration" 
+                           type="MAP"/>
+                  </d:ctr>
                 </d:lst>
               </d:ctr>
               <d:ctr name="GptConfigurationOfOptApiServices" 

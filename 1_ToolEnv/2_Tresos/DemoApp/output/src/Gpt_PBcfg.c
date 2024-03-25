@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 16.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2023-12-16, 13:11:34      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222          !!!IGNORE-LINE!!!                 **
 **                                                                            **
@@ -79,6 +79,12 @@ channel notification function(s) declaration
 */
 extern void IoHwAb_GptNotification1(void);
 
+/*
+LwipTimer
+channel notification function(s) declaration
+*/
+extern void SystemTickIsr(void);
+
 /*******************************************************************************
 **                      Global Constant Definitions                           **
 *******************************************************************************/
@@ -112,6 +118,22 @@ static const Mcu_17_Gtm_TomAtomChConfigType GptGtmTimerInfo_Core0_Ch0=
   MCU_GTM_TIMER_TOM, /* Timer Type (TOM/ATOM)*/
   0x0, /* Timer Number Module No | Timer Channel No */
   0x1800U, /* Channel Control Register */
+  0x0U, /* CN0 in ticks */
+  0x0U, /* CM0 in ticks */
+  0x0U, /* CM1 in ticks */
+  0x0U, /* SR0 in ticks */
+  0x0U, /* SR1 in ticks */
+  0x80U  /* Interrupt status and mode*/
+};
+/*
+  Channel Symbolic Name(ChannelId) : LwipTimer
+  GTM TOM/ATOM/GPT12 Channel : GTM_ATOM0_CHANNEL1 in GPT_MODE_CONTINUOUS
+*/
+static const Mcu_17_Gtm_TomAtomChConfigType GptGtmTimerInfo_Core0_Ch1=
+{
+  MCU_GTM_TIMER_ATOM, /* Timer Type (TOM/ATOM)*/
+  0x1, /* Timer Number Module No | Timer Channel No */
+  0x802U, /* Channel Control Register */
   0x0U, /* CN0 in ticks */
   0x0U, /* CM0 in ticks */
   0x0U, /* CM1 in ticks */
@@ -229,6 +251,34 @@ static const Gpt_ChannelConfigType Gpt_kChannelConfig_Core0[ ] =
     #if (GPT_GPT12_USED == STD_ON)
     NULL_PTR
     #endif
+  },
+
+  /*
+    Channel Symbolic Name(ChannelId) : LwipTimer
+    GTM TOM/ATOM/GPT12 Channel : GTM_ATOM0_CHANNEL1 in GPT_MODE_CONTINUOUS
+  */
+  {
+    #if (GPT_ENABLE_DISABLE_NOTIFICATION_API == STD_ON)
+    &SystemTickIsr, /* Notification Function */
+    #endif
+    
+    #if ( (GPT_WAKEUP_FUNCTIONALITY_API == STD_ON) \
+    && (GPT_REPORT_WAKEUP_SOURCE == STD_ON) )
+    0U, /* Wakeup Info */
+    #endif
+    
+    #if (GPT_WAKEUP_FUNCTIONALITY_API == STD_ON)
+    (boolean)FALSE, /* Wakeup Capability */
+    #endif
+    
+    GPT_MODE_CONTINUOUS, /* Channel Mode */
+    
+    #if ((GPT_ATOM_USED == STD_ON) || (GPT_TOM_USED == STD_ON))
+    &GptGtmTimerInfo_Core0_Ch1,
+    #endif
+    #if (GPT_GPT12_USED == STD_ON)
+    NULL_PTR
+    #endif
   }
 };
 
@@ -269,6 +319,7 @@ static const uint8 Gpt_ChannelIndex_Core0[] =
 {
   0x00U,    /* Channel Id 0 */
   0xFFU,    /* Channel Id 1 */
+  0x01U,    /* Channel Id 2 */
 };
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -371,6 +422,7 @@ static const uint8 Gpt_ChannelIndex_Core1[] =
 {
   0xFFU,    /* Channel Id 0 */
   0x00U,    /* Channel Id 1 */
+  0xFFU,    /* Channel Id 2 */
 };
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.

@@ -53,6 +53,23 @@
 #endif
 #include "IFX_Os.h"
 
+/********************************* User Include *********************************/
+#include "Ifx_reg.h"
+#include "Irq.h"
+#include "Mcu.h"
+#include "Port.h"
+#include "Pwm_17_GtmCcu6.h"
+#include "Icu_17_TimerIp.h"
+#include "Eth.h"
+#include "Gpt.h"
+#include "Adc.h"
+
+#include "Test_Print.h"
+#include "Test_Time.h"
+#include "Ifx_Lwip.h"
+
+#include "IfxGeth_Phy_Dp83825i.h"
+
 #ifdef BASE_TEST_MODULE_ID
 #if ((BASE_TEST_MODULE_ID == TEST_CAN_MODULE_ID)|| (BASE_TEST_MODULE_ID== TEST_CANTRCV_MODULE_ID))
 #include "ComStack_Types.h"
@@ -142,6 +159,65 @@ extern void EcumLinTest_SetWakeupEvent(EcuM_WakeupSourceType WakeupInfo);
 ** Description      : <Suitable Description>                                  **
 **                                                                            **
 *******************************************************************************/
+Adc_ValueGroupType  Adc3GroupHWResult;
+Std_ReturnType EcuM_Init(void)
+{
+    Std_ReturnType ret = E_OK;
+    Std_ReturnType InitClockRetVal;
+    Mcu_PllStatusType Mcu_GetPllStatusRetVal = MCU_PLL_STATUS_UNDEFINED;
+
+    /********************************* Mcu Init *********************************/  
+    Mcu_Init(&Mcu_Config);
+    InitClockRetVal = Mcu_InitClock(McuConf_McuClockSettingConfig_McuClockSettingConfig_0);
+    if(InitClockRetVal == E_OK)
+    {
+        do
+        {
+        Mcu_GetPllStatusRetVal = Mcu_GetPllStatus ();
+        } while(Mcu_GetPllStatusRetVal != MCU_PLL_LOCKED);
+
+        #if (MCU_DISTRIBUTE_PLL_CLOCK_API == STD_ON)
+        Mcu_DistributePllClock ();
+        #endif
+    }
+
+    Test_InitTime(); /* Initialize Time Measurement For Run Time Calc */
+    Test_InitPrint();/* Initialize ASC0 for Hyperterminal Communication*/
+
+    print_flushfifo();
+    /********************************* Irq Init *********************************/
+    IrqGtm_Init();
+    SRC_GTMATOM00.B.SRE = 1;    /* Enable GTM ATOM0 ch0 ch1 INT */
+
+    IrqAdc_Init();
+    SRC_VADCG3SR0.B.SRE = 1;    /* Enable EVADC Group3 Source0 INT */
+
+
+    /********************************* Peripheral Init *********************************/
+    Port_Init(&Port_Config);
+    Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
+    Icu_17_TimerIp_Init(&Icu_17_TimerIp_Config);
+    Adc_Init(&Adc_Config);
+    Eth_Init(&Eth_Config);
+    Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
+    Gpt_Init(&Gpt_Config);
+
+    /********************************* External Peripheral Init *********************************/
+    IfxGeth_Eth_Phy_Dp83825i_init();
+    
+    /********************************* SWC Init *********************************/
+    Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
+    Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 50000);  /* 1ms */
+    Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_0);
+    Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_3_HW, &Adc3GroupHWResult);
+    Adc_EnableHardwareTrigger(AdcConf_AdcGroup_AdcGroup_3_HW);
+
+    eth_addr_t ethAddr;   /* This can be empty cause MAC address is int Eth_Config, 
+                                    so Lwip_Init shall be called after Eth_SetControllerMode */
+    Ifx_Lwip_init(ethAddr);                                 /* Initialize LwIP with the MAC address */
+
+    return ret;
+}
 
 /*******************************************************************************
 ** Syntax           : void EcuM_SetWakeupEvent(EcuM_WakeupSourceType events)  **

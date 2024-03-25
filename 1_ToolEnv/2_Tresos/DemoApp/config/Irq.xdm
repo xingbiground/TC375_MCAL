@@ -5168,7 +5168,7 @@
                       </d:ctr>
                       <d:ctr name="IrqGtmATOMPrioConfig" type="IDENTIFIABLE">
                         <d:var name="IrqGtmATOMSR0Prio" type="INTEGER" 
-                               value="254"/>
+                               value="232"/>
                         <d:var name="IrqGtmATOMSR1Prio" type="INTEGER" value="0">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
@@ -5180,7 +5180,7 @@
                       </d:ctr>
                       <d:ctr name="IrqGtmATOMTosConfig" type="IDENTIFIABLE">
                         <d:var name="IrqGtmATOMSR0Tos" type="ENUMERATION" 
-                               value="CPU1"/>
+                               value="CPU0"/>
                         <d:var name="IrqGtmATOMSR1Tos" type="ENUMERATION" 
                                value="CPU0">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -6830,9 +6830,7 @@
                       </d:var>
                     </d:ctr>
                     <d:ctr name="IrqAdc3PrioConfig" type="IDENTIFIABLE">
-                      <d:var name="IrqAdc3SR0Prio" type="INTEGER" value="0">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                      <d:var name="IrqAdc3SR0Prio" type="INTEGER" value="120"/>
                       <d:var name="IrqAdc3SR1Prio" type="INTEGER" value="0">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
