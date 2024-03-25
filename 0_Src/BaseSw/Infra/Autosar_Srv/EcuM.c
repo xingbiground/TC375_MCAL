@@ -159,8 +159,8 @@ extern void EcumLinTest_SetWakeupEvent(EcuM_WakeupSourceType WakeupInfo);
 ** Description      : <Suitable Description>                                  **
 **                                                                            **
 *******************************************************************************/
-volatile Adc_ValueGroupType  Adc3GroupHWResult;
-Std_ReturnType EcuM_Init()
+Adc_ValueGroupType  Adc3GroupHWResult;
+Std_ReturnType EcuM_Init(void)
 {
     Std_ReturnType ret = E_OK;
     Std_ReturnType InitClockRetVal;

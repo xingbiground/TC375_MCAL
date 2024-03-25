@@ -54,7 +54,7 @@ pBuf *udpBuffer;
  *  LOCAL FUNCTIONS
  **********************************************************************************************************************/
 
-void StatusReport_Init()
+void StatusReport_Init(void)
 {
     ip_addr_t localIpAddr = {APPCFG_LOCALIPADDR};
     ip_addr_t remoteIpAddr = {APPCFG_UDPREMOTEIPADDR};
@@ -72,7 +72,7 @@ void StatusReport_Init()
     MEMCPY(udpBuffer->payload, TempStr, 10);
 }
 
-void StatusReport_1000ms()
+void StatusReport_1000ms(void)
 {
     err_t ret = ERR_OK;
     ret = udp_send(udpTestPcb, udpBuffer);
