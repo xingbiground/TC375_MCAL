@@ -10,3 +10,4 @@ TriCore_Debug_Tasking/
 *.elf
 .idea/
 TriCore Debug (TASKING)/
+Debug/
