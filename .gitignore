@@ -8,4 +8,6 @@ TriCore_Debug_Tasking/
 *.mk
 *.hex
 *.elf
+.idea/
 TriCore Debug (TASKING)/
+Debug/

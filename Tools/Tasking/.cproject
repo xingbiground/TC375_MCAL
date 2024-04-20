@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.tasking.config.ctc.abs.debug.387428286">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.tasking.config.ctc.abs.debug.387428286" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.tasking.managedbuilder.TASKING_IHEX" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_SRECORD" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TskRegexErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="TC375_MCAL" buildArtefactType="com.tasking.ctc.buildArtefactType.elf" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.tasking.ctc.buildArtefactType.elf" cleanCommand="&quot;${PRODDIR}/bin/rm&quot; -rf" description="" id="com.tasking.config.ctc.abs.debug.387428286" name="Debug" parent="com.tasking.config.ctc.abs.debug">
+					<folderInfo id="com.tasking.config.ctc.abs.debug.387428286." name="/" resourcePath="">
+						<toolChain id="com.tasking.ctc.abs.debug.1312853665" name="TASKING VX-toolset for TriCore" superClass="com.tasking.ctc.abs.debug">
+							<option id="com.tasking.ctc.pluginVersion.609353841" name="Plugin version" superClass="com.tasking.ctc.pluginVersion" value="1.238.0.0" valueType="string"/>
+							<option id="com.tasking.ctc.prodDir.1451591003" name="Product directory:" superClass="com.tasking.ctc.prodDir" value="${eclipse_home}/.." valueType="string"/>
+							<option id="com.tasking.ctc.cpu.987119343" name="Processor:" superClass="com.tasking.ctc.cpu" value="tc37x" valueType="string"/>
+							<option id="com.tasking.ctc.coreSelection.696014893" name="Use core:" superClass="com.tasking.ctc.coreSelection" value="vtc" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="com.tasking.managedbuilder.TASKING_ELF;com.tasking.managedbuilder.TASKING_SRECORD;com.tasking.managedbuilder.TASKING_IHEX" id="com.tasking.ctc.platform.abs.debug.1619435110" name="Debug" osList="" superClass="com.tasking.ctc.platform.abs.debug"/>
+							<builder buildPath="${workspace_loc:/TC375_MCAL}/Debug" id="com.tasking.ctc.builder.abs.debug.799125663" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="TASKING TriCore Makefile generator" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.tasking.ctc.builder.abs.debug"/>
+							<tool id="com.tasking.ctc.cc.abs.debug.567179386" name="C/C++ Compiler" superClass="com.tasking.ctc.cc.abs.debug">
+								<option id="com.tasking.ctc.cc.pr36858.1319123797" name="workaround for PR36858" superClass="com.tasking.ctc.cc.pr36858" value="true" valueType="string"/>
+								<option id="com.tasking.ctc.cc.includePaths.1472398426" name="Include paths" superClass="com.tasking.ctc.cc.includePaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/Cfg_Ssw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/DemoApp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Adc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Bfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_CanTrcv_17_V9251}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_CanTrcv_17_W9255}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Can_17_McmCan}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Crc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Dio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Dma}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Dsadc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Eth_17_GEthMac}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Fee}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_FlsLoader}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Fls_17_Dmu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Fr_17_Eray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Gpt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_I2c}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Icu_17_TimerIp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Irq}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Irq/Traps}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Lin_17_AscLin}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Mcu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Ocu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Pwm_17_GtmCcu6}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Smu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Spi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Stm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Uart}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Wdg_17_Scu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Autosar_Srv}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Autosar_Srv/AS422}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Irq}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Irq/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Irq/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Ssw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Ssw/TC37A}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Ssw/TC37A/Tricore}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/Phy_Dp83825i}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/port/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/port/include/arch}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix/arpa}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix/net}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix/sys}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/stdc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip/apps}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip/priv}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip/prot}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/netif}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/netif/ppp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/netif/ppp/polarssl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Platform}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Platform/AS422}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Sfr}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Sfr/TC37xA}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Sfr/TC37xA/_Reg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Adc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Adc/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Adc/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Bfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Bfx/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Bfx/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_V9251}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_V9251/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_V9251/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_W9255}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_W9255/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_W9255/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Can_17_McmCan}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Can_17_McmCan/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Can_17_McmCan/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Crc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Crc/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Crc/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dio/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dio/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dma}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dma/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dma/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dsadc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dsadc/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dsadc/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Eth_17_GEthMac}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Eth_17_GEthMac/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Eth_17_GEthMac/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fee}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fee/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fee/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/FlsLoader}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/FlsLoader/Ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/FlsLoader/Ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fls_17_Dmu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fls_17_Dmu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fls_17_Dmu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fr_17_Eray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fr_17_Eray/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fr_17_Eray/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Gpt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Gpt/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Gpt/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/I2C}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/I2C/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/I2C/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Icu_17_TimerIp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Icu_17_TimerIp/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Icu_17_TimerIp/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Lin_17_AscLin}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Lin_17_AscLin/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Lin_17_AscLin/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib/ssc/inc/AS422}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Mcu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Mcu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Mcu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Ocu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Ocu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Ocu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Port/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Port/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Pwm_17_GtmCcu6}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Pwm_17_GtmCcu6/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Pwm_17_GtmCcu6/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Smu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Smu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Smu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Spi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Spi/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Spi/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Stm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Stm/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Stm/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Uart}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Uart/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Uart/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Wdg_17_Scu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Wdg_17_Scu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Wdg_17_Scu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output/Demo_Aurix2G}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/AppCfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/EchoApp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/StatusReport}&quot;"/>
+								</option>
+								<option id="com.tasking.ctc.cc.language.optimizeAcrossVolatile.312220378" name="Allow optimization across volatile access" superClass="com.tasking.ctc.cc.language.optimizeAcrossVolatile" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.cc.fpmodel.1260536515" name="Floating-point model:" superClass="com.tasking.ctc.cc.fpmodel" value="com.tasking.ctc.cc.fpmodel.fastDouble" valueType="enumerated"/>
+								<option id="com.tasking.ctc.cc.iso.1469078588" name="Comply to C standard:" superClass="com.tasking.ctc.cc.iso" value="com.tasking.ctc.cc.iso.c11" valueType="enumerated"/>
+								<option id="com.tasking.ctc.cc.language.gcc.1998003889" name="Allow GNU C extensions" superClass="com.tasking.ctc.cc.language.gcc" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.cc.noTaskingSfr.760450615" name="Automatic inclusion of '.sfr' file" superClass="com.tasking.ctc.cc.noTaskingSfr" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.cc.definedSymbols.104168343" name="Defined symbols" superClass="com.tasking.ctc.cc.definedSymbols" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="AURIX2G_MCAL_DEMOAPP"/>
+								</option>
+								<option id="com.tasking.ctc.cc.nowarning.1496889359" name="Suppress C compiler warnings" superClass="com.tasking.ctc.cc.nowarning" valueType="stringList">
+									<listOptionValue builtIn="false" value="544"/>
+									<listOptionValue builtIn="false" value="557"/>
+								</option>
+								<inputType id="com.tasking.ctc.cppInputType.75494174" name="C++" superClass="com.tasking.ctc.cppInputType"/>
+								<inputType id="com.tasking.ctc.cpp.cInputType.470428095" name="C" superClass="com.tasking.ctc.cpp.cInputType"/>
+								<inputType id="com.tasking.ctc.cc.msInputType.1791935496" name="MS" superClass="com.tasking.ctc.cc.msInputType"/>
+							</tool>
+							<tool id="com.tasking.ctc.as.abs.debug.1568685448" name="Assembler" superClass="com.tasking.ctc.as.abs.debug">
+								<option id="com.tasking.ctc.as.includePaths.475567262" name="Include paths" superClass="com.tasking.ctc.as.includePaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/Cfg_Ssw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/DemoApp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Adc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Bfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_CanTrcv_17_V9251}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_CanTrcv_17_W9255}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Can_17_McmCan}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Crc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Dio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Dma}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Dsadc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Eth_17_GEthMac}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Fee}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_FlsLoader}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Fls_17_Dmu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Fr_17_Eray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Gpt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_I2c}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Icu_17_TimerIp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Irq}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Irq/Traps}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Lin_17_AscLin}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Mcu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Ocu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Pwm_17_GtmCcu6}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Smu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Spi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Stm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Uart}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/AppSw/Tricore/DemoMcal/Demo_Wdg_17_Scu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Autosar_Srv}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Autosar_Srv/AS422}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Irq}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Irq/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Irq/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Ssw}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Ssw/TC37A}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/BaseSw/Infra/Ssw/TC37A/Tricore}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/Phy_Dp83825i}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/port/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/port/include/arch}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix/arpa}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix/net}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/posix/sys}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/compat/stdc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip/apps}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip/priv}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/lwip/prot}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/netif}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/netif/ppp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/Ethernet/lwip/src/include/netif/ppp/polarssl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Platform}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Platform/AS422}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Sfr}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Sfr/TC37xA}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Infra_Prod/Sfr/TC37xA/_Reg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Adc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Adc/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Adc/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Bfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Bfx/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Bfx/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_V9251}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_V9251/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_V9251/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_W9255}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_W9255/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/CanTrcv_17_W9255/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Can_17_McmCan}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Can_17_McmCan/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Can_17_McmCan/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Crc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Crc/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Crc/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dio/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dio/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dma}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dma/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dma/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dsadc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dsadc/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Dsadc/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Eth_17_GEthMac}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Eth_17_GEthMac/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Eth_17_GEthMac/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fee}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fee/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fee/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/FlsLoader}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/FlsLoader/Ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/FlsLoader/Ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fls_17_Dmu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fls_17_Dmu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fls_17_Dmu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fr_17_Eray}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fr_17_Eray/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Fr_17_Eray/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Gpt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Gpt/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Gpt/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/I2C}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/I2C/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/I2C/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Icu_17_TimerIp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Icu_17_TimerIp/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Icu_17_TimerIp/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Lin_17_AscLin}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Lin_17_AscLin/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Lin_17_AscLin/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/McalLib/ssc/inc/AS422}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Mcu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Mcu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Mcu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Ocu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Ocu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Ocu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Port/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Port/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Pwm_17_GtmCcu6}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Pwm_17_GtmCcu6/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Pwm_17_GtmCcu6/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Smu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Smu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Smu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Spi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Spi/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Spi/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Stm}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Stm/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Stm/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Uart}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Uart/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Uart/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Wdg_17_Scu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Wdg_17_Scu/ssc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/0_Src/McIsar/Src/Mcal/Tricore/Wdg_17_Scu/ssc/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output/Demo_Aurix2G}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/1_ToolEnv/2_Tresos/DemoApp/output/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/AppCfg}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/EchoApp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/App/StatusReport}&quot;"/>
+								</option>
+								<inputType id="com.tasking.ctc.asmInputType.29273364" name="ASM" superClass="com.tasking.ctc.asmInputType"/>
+							</tool>
+							<tool id="com.tasking.ctc.lk.abs.debug.1908715284" name="Linker" superClass="com.tasking.ctc.lk.abs.debug">
+								<option id="com.tasking.ctc.lk.lslFile.140775870" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="C:\Users\renha\Documents\03_C\TC375_MCAL\02_ADS\Lcf_Tasking_Tricore_Tc.lsl" valueType="string"/>
+								<option id="com.tasking.ctc.lk.noDefaultLibraries.232049657" name="Link default libraries" superClass="com.tasking.ctc.lk.noDefaultLibraries" value="true" valueType="boolean"/>
+								<inputType id="com.tasking.ctc.lkObjInputType.269260555" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
+								<inputType id="com.tasking.ctc.lkLibInputType.1289592025" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule addStartupFiles="false" moduleId="com.tasking.processor"/>
+			<storageModule moduleId="com.tasking.flash.settings"/>
+			<storageModule moduleId="com.tasking.toolInfo">
+				<toolInfo>TASKING program builder v6.3r1 Build 19041558</toolInfo>
+			</storageModule>
+		</cconfiguration>
+		<cconfiguration id="com.tasking.config.ctc.abs.release.689905967">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.tasking.config.ctc.abs.release.689905967" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="com.tasking.managedbuilder.TASKING_IHEX" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TASKING_SRECORD" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.tasking.managedbuilder.TskRegexErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="TC375_MCAL" buildArtefactType="com.tasking.ctc.buildArtefactType.elf" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.tasking.ctc.buildArtefactType.elf" cleanCommand="&quot;${PRODDIR}/bin/rm&quot; -rf" description="" id="com.tasking.config.ctc.abs.release.689905967" name="Release" parent="com.tasking.config.ctc.abs.release">
+					<folderInfo id="com.tasking.config.ctc.abs.release.689905967." name="/" resourcePath="">
+						<toolChain id="com.tasking.ctc.abs.release.496022279" name="TASKING VX-toolset for TriCore" superClass="com.tasking.ctc.abs.release">
+							<option id="com.tasking.ctc.pluginVersion.313663460" name="Plugin version" superClass="com.tasking.ctc.pluginVersion" value="1.238.0.0" valueType="string"/>
+							<option id="com.tasking.ctc.prodDir.962134757" name="Product directory:" superClass="com.tasking.ctc.prodDir" value="${eclipse_home}/.." valueType="string"/>
+							<option id="com.tasking.ctc.cpu.1433888833" name="Processor:" superClass="com.tasking.ctc.cpu" value="tc37x" valueType="string"/>
+							<option id="com.tasking.ctc.coreSelection.1553962596" name="Use core:" superClass="com.tasking.ctc.coreSelection" value="vtc" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="com.tasking.managedbuilder.TASKING_ELF;com.tasking.managedbuilder.TASKING_SRECORD;com.tasking.managedbuilder.TASKING_IHEX" id="com.tasking.ctc.platform.abs.release.565626893" name="Release" osList="" superClass="com.tasking.ctc.platform.abs.release"/>
+							<builder buildPath="${workspace_loc:/TC375_MCAL}/Release" id="com.tasking.ctc.builder.abs.debug.1620225825" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="TASKING TriCore Makefile generator" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.tasking.ctc.builder.abs.debug"/>
+							<tool id="com.tasking.ctc.cc.abs.release.1911043105" name="C/C++ Compiler" superClass="com.tasking.ctc.cc.abs.release">
+								<option id="com.tasking.ctc.cc.pr36858.524045634" name="workaround for PR36858" superClass="com.tasking.ctc.cc.pr36858" value="true" valueType="string"/>
+								<inputType id="com.tasking.ctc.cppInputType.1312966437" name="C++" superClass="com.tasking.ctc.cppInputType"/>
+								<inputType id="com.tasking.ctc.cpp.cInputType.1248310993" name="C" superClass="com.tasking.ctc.cpp.cInputType"/>
+								<inputType id="com.tasking.ctc.cc.msInputType.1130079883" name="MS" superClass="com.tasking.ctc.cc.msInputType"/>
+							</tool>
+							<tool id="com.tasking.ctc.as.abs.release.1393301207" name="Assembler" superClass="com.tasking.ctc.as.abs.release">
+								<inputType id="com.tasking.ctc.asmInputType.802481181" name="ASM" superClass="com.tasking.ctc.asmInputType"/>
+							</tool>
+							<tool id="com.tasking.ctc.lk.abs.release.48800953" name="Linker" superClass="com.tasking.ctc.lk.abs.release">
+								<option id="com.tasking.ctc.lk.lslFile.1090592213" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="" valueType="string"/>
+								<inputType id="com.tasking.ctc.lkObjInputType.1929406193" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
+								<inputType id="com.tasking.ctc.lkLibInputType.1413721349" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="sync_on_halt.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule addStartupFiles="false" moduleId="com.tasking.processor"/>
+			<storageModule moduleId="com.tasking.flash.settings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="TC375_MCAL.com.tasking.ctc.target.abs.973047479" name="TASKING TriCore Application" projectType="com.tasking.ctc.target.abs"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.tasking.config.ctc.abs.release.689905967;com.tasking.config.ctc.abs.release.689905967.">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.tasking.ctc.TskTriCoreScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.tasking.config.ctc.abs.debug.387428286;com.tasking.config.ctc.abs.debug.387428286.">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.tasking.ctc.TskTriCoreScannerInfo"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+		<project-mappings>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cHeader" language="com.tasking.ctc.clanguage"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cSource" language="com.tasking.ctc.clanguage"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxHeader" language="com.tasking.ctc.cpplanguage"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxSource" language="com.tasking.ctc.cpplanguage"/>
+		</project-mappings>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/TC375_MCAL"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/TC375_MCAL"/>
+		</configuration>
+	</storageModule>
+</cproject>
