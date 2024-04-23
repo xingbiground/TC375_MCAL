@@ -392,7 +392,7 @@
 								<inputType id="com.tasking.ctc.asmInputType.29273364" name="ASM" superClass="com.tasking.ctc.asmInputType"/>
 							</tool>
 							<tool id="com.tasking.ctc.lk.abs.debug.1908715284" name="Linker" superClass="com.tasking.ctc.lk.abs.debug">
-								<option id="com.tasking.ctc.lk.lslFile.140775870" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="C:\Users\renha\Documents\03_C\TC375_MCAL\02_ADS\Lcf_Tasking_Tricore_Tc.lsl" valueType="string"/>
+								<option id="com.tasking.ctc.lk.lslFile.140775870" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="../../../02_ADS/Lcf_Tasking_Tricore_Tc.lsl" valueType="string"/>
 								<option id="com.tasking.ctc.lk.noDefaultLibraries.232049657" name="Link default libraries" superClass="com.tasking.ctc.lk.noDefaultLibraries" value="true" valueType="boolean"/>
 								<inputType id="com.tasking.ctc.lkObjInputType.269260555" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
 								<inputType id="com.tasking.ctc.lkLibInputType.1289592025" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
@@ -405,6 +405,8 @@
 			<storageModule addStartupFiles="false" moduleId="com.tasking.processor"/>
 			<storageModule moduleId="com.tasking.flash.settings"/>
 			<storageModule moduleId="com.tasking.toolInfo">
+				<toolInfo>TASKING VX-toolset for TriCore: control program v6.3r1 Build 19041558</toolInfo>
+				<toolInfo>TASKING VX-toolset for TriCore: object linker v6.3r1 Build 22081062</toolInfo>
 				<toolInfo>TASKING program builder v6.3r1 Build 19041558</toolInfo>
 			</storageModule>
 		</cconfiguration>
