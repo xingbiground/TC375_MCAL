@@ -46,6 +46,7 @@
 #include "StatusReport.h"
 #include "Icu_17_TimerIp.h"
 #include "Dio.h"
+#include "Adc.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -139,6 +140,7 @@ void core0_main (void)
     /********************************* 1000 rbl *********************************/
     if(localSysTick%1000 == 0){
       StatusReport_1000ms();
+      Adc_StartGroupConversion(AdcConf_AdcGroup_AdcSWGroup);
     }
   }
 }

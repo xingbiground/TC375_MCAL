@@ -135,9 +135,7 @@
                       <a:a name="IMPORTER_INFO" value="Impr367"/>
                     </d:var>
                     <d:var name="AdcPostCalibrationDisable" type="BOOLEAN" 
-                           value="false">
-                      <a:a name="IMPORTER_INFO" value="Impr367"/>
-                    </d:var>
+                           value="false"/>
                     <d:var name="AdcPrechargeReference" type="ENUMERATION" 
                            value="ADC_VDD_VSM_USED">
                       <a:a name="IMPORTER_INFO" value="Impr367"/>
@@ -400,13 +398,9 @@
                           <a:a name="IMPORTER_INFO" value="Impr367"/>
                         </d:var>
                         <d:var name="AdcGroupAccessMode" type="ENUMERATION" 
-                               value="ADC_ACCESS_MODE_STREAMING">
-                          <a:a name="IMPORTER_INFO" value="Impr367"/>
-                        </d:var>
+                               value="ADC_ACCESS_MODE_SINGLE"/>
                         <d:var name="AdcGroupConversionMode" type="ENUMERATION" 
-                               value="ADC_CONV_MODE_CONTINUOUS">
-                          <a:a name="IMPORTER_INFO" value="Impr367"/>
-                        </d:var>
+                               value="ADC_CONV_MODE_ONESHOT"/>
                         <d:var name="AdcGroupId" type="INTEGER" value="0">
                           <a:a name="IMPORTER_INFO" value="Impr367"/>
                         </d:var>
@@ -444,13 +438,9 @@
                           </d:var>
                         </d:lst>
                         <d:var name="AdcStreamingBufferMode" type="ENUMERATION" 
-                               value="ADC_STREAM_BUFFER_LINEAR">
-                          <a:a name="IMPORTER_INFO" value="Impr367"/>
-                        </d:var>
+                               value="ADC_STREAM_BUFFER_LINEAR"/>
                         <d:var name="AdcStreamingNumSamples" type="INTEGER" 
-                               value="5">
-                          <a:a name="IMPORTER_INFO" value="Impr367"/>
-                        </d:var>
+                               value="1"/>
                         <d:lst name="AdcGroupDefinition">
                           <a:a name="IMPORTER_INFO" value="Impr367"/>
                           <d:ref type="REFERENCE" 

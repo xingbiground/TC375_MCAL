@@ -159,7 +159,7 @@ extern void EcumLinTest_SetWakeupEvent(EcuM_WakeupSourceType WakeupInfo);
 ** Description      : <Suitable Description>                                  **
 **                                                                            **
 *******************************************************************************/
-Adc_ValueGroupType  Adc3GroupHWResult;
+Adc_ValueGroupType  Adc3GroupHWResult,Adc0GroupSWResult[2];
 Std_ReturnType EcuM_Init(void)
 {
     Std_ReturnType ret = E_OK;
@@ -191,6 +191,7 @@ Std_ReturnType EcuM_Init(void)
 
     IrqAdc_Init();
     SRC_VADCG3SR0.B.SRE = 1;    /* Enable EVADC Group3 Source0 INT */
+    SRC_VADCG0SR0.B.SRE = 1;    /* Enable EVADC Group0 Source0 INT */
 
 
     /********************************* Peripheral Init *********************************/
@@ -211,6 +212,7 @@ Std_ReturnType EcuM_Init(void)
     Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_0);
     Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_3_HW, &Adc3GroupHWResult);
     Adc_EnableHardwareTrigger(AdcConf_AdcGroup_AdcGroup_3_HW);
+    Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcSWGroup, Adc0GroupSWResult);
 
     eth_addr_t ethAddr;   /* This can be empty cause MAC address is int Eth_Config, 
                                     so Lwip_Init shall be called after Eth_SetControllerMode */

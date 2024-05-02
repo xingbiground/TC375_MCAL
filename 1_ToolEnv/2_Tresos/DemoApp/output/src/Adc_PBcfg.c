@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 14.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-23, 21:54:24            !!!IGNORE-LINE!!!             **
+**  DATE, TIME: 2024-05-03, 00:24:56            !!!IGNORE-LINE!!!             **
 **                                                                            **
 **  GENERATOR : Build b200227-0222              !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -304,10 +304,10 @@ static const Adc_GroupCfgType Adc_kHwUnit0Grp_Config[2]=
     /*Bit Mask for all the result registers configured for synchronous conversion*/
     0x0000U,
     ADC_TRIGG_SRC_SW,
-    ADC_CONV_MODE_CONTINUOUS,
-    ADC_ACCESS_MODE_STREAMING,
+    ADC_CONV_MODE_ONESHOT,
+    ADC_ACCESS_MODE_SINGLE,
     ADC_STREAM_BUFFER_LINEAR,
-    5U, /*Number of streaming samples for the group*/
+    1U, /*Number of streaming samples for the group*/
     ADC_OTHER_HW_USED, /*HW peripheral used for Trigger*/
     ADC_OTHER_HW_USED, /*HW peripheral used for Gate*/
     0U, /*Priority Level for the group*/
