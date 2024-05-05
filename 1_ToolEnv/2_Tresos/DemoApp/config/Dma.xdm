@@ -868,6 +868,147 @@
                     </d:ctr>
                   </d:lst>
                 </d:ctr>
+                <d:ctr name="DmaChTest" type="IDENTIFIABLE">
+                  <d:var name="DmaChannelId" type="INTEGER" value="8"/>
+                  <d:var name="DmaChannelAssignedPartition" type="INTEGER" 
+                         value="0">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="DmaChannelNumTransactionSet" type="INTEGER" 
+                         value="1">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="DmaTcsInterruptTransactionLoss" type="BOOLEAN" 
+                         value="false">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="DmaChannelNotification" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="DmaErrorNotification" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="DmaChannelUser" type="ENUMERATION" value="Other">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:lst name="DmaChannelTransactionSet" type="MAP">
+                    <d:ctr name="DmaChannelTransactionSet_0" 
+                           type="IDENTIFIABLE">
+                      <d:var name="DmaTcsIndex" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="DmaTcsSourceAddress" type="STRING" 
+                             value="&amp;DmaTestSrc[0]"/>
+                      <d:var name="DmaTcsDestinationAddress" type="STRING" 
+                             value="&amp;DmaTestDes[0]"/>
+                      <d:var name="DmaTcsDoubleBuffer" type="STRING" 
+                             value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaUserHeaderFileWithExternDeclarations" 
+                             type="STRING" value="Dma_Demo.h"/>
+                      <d:var name="DmaTcsMoveLength" type="ENUMERATION" 
+                             value="DMA_WIDTH_32BITS"/>
+                      <d:var name="DmaPatternMode" type="ENUMERATION" 
+                             value="Pattern_Detection_Disabled">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsTransferLength" type="ENUMERATION" 
+                             value="DMA_MOVES_1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsTransactionLength" type="INTEGER" 
+                             value="4"/>
+                      <d:var name="DmaTcsCircularBufferSourceEnable" 
+                             type="BOOLEAN" value="true"/>
+                      <d:var name="DmaTcsCircularBufferDestinationEnable" 
+                             type="BOOLEAN" value="true"/>
+                      <d:var name="DmaTcsCircularBufferSourceLength" 
+                             type="ENUMERATION" 
+                             value="DMA_CIRCULAR_BUFFER_LENGTH_16BYTE"/>
+                      <d:var name="DmaTcsCircularBufferDestinationLength" 
+                             type="ENUMERATION" 
+                             value="DMA_CIRCULAR_BUFFER_LENGTH_16BYTE"/>
+                      <d:var name="DmaTcsSourceAddressModificationFactor" 
+                             type="ENUMERATION" value="DMA_FACTOR_1"/>
+                      <d:var name="DmaTcsDestinationAddressModificationFactor" 
+                             type="ENUMERATION" value="DMA_FACTOR_1"/>
+                      <d:var name="DmaTcsAppendTimeStamp" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsSourceAddressMovement" 
+                             type="ENUMERATION" value="DMA_INCREASING"/>
+                      <d:var name="DmaTcsDestinationAddressMovement" 
+                             type="ENUMERATION" value="DMA_INCREASING">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsShadowRegisterConfiguration" 
+                             type="ENUMERATION" value="DMA_SHADOWING_DISABLED">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaCLLNextIndex" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaNextTcsIndex" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="DmaTcsTriggerFrequency" type="ENUMERATION" 
+                             value="DMA_TRANSACTION_PER_TRIGGER"/>
+                      <d:var name="DmaTcsHardwareTrigger" type="ENUMERATION" 
+                             value="DMA_NO_HARDWARE_TRIGGER"/>
+                      <d:var name="DmaTcsDaisyChaining" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsInterruptSourceAddressWrap" 
+                             type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsInterruptDestinationAddressWrap" 
+                             type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsDataTransferInterrupt" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsInterruptDataTransfer" 
+                             type="ENUMERATION" 
+                             value="DMA_INTERRUPT_PER_TRANSACTION">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsInterruptDataTransferThreshold" 
+                             type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsSwapDataCRCByteOrder" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsAutoStartEnable" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsReferenceAddressCrc" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="DmaTcsReferenceDataCrc" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                  </d:lst>
+                </d:ctr>
               </d:lst>
               <d:ctr name="DmaMoveEngineConfig" type="IDENTIFIABLE">
                 <d:var name="DmaMESourceErrorInterrupt" type="BOOLEAN" 

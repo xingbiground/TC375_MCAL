@@ -63,6 +63,7 @@
 #include "Eth.h"
 #include "Gpt.h"
 #include "Adc.h"
+#include "Dma.h"
 
 #include "Test_Print.h"
 #include "Test_Time.h"
@@ -199,6 +200,7 @@ Std_ReturnType EcuM_Init(void)
     Pwm_17_GtmCcu6_Init(&Pwm_17_GtmCcu6_Config);
     Icu_17_TimerIp_Init(&Icu_17_TimerIp_Config);
     Adc_Init(&Adc_Config);
+    Dma_Init(&Dma_Config);
     Eth_Init(&Eth_Config);
     Eth_SetControllerMode(Eth_17_GEthMacConf_EthCtrlConfig_EthCtrlConfig_0, ETH_MODE_ACTIVE);
     Gpt_Init(&Gpt_Config);

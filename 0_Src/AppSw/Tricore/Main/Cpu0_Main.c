@@ -43,10 +43,12 @@
 #include "Ifx_Lwip.h"
 #include "EcuM.h"
 #include "Echo.h"
+#include "Dma_Demo.h"
 #include "StatusReport.h"
 #include "Icu_17_TimerIp.h"
 #include "Dio.h"
 #include "Adc.h"
+#include "Dma.h"
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -72,6 +74,11 @@
 *******************************************************************************/
 uint32 SystemTick = 0;  /* System Tick, increment every millisecond */
 boolean SystemTickUpdateFlag = FALSE;
+
+#pragma align 16
+uint32 DmaTestSrc[DMATEST_BUFFERLEN];
+uint32 DmaTestDes[DMATEST_BUFFERLEN];
+#pragma align restore
 
 /*******************************************************************************
 **                      Private Constant Definitions                          **
@@ -111,6 +118,11 @@ void core0_main (void)
   echoInit();
   StatusReport_Init();
 
+  /********************************* DMA Test *********************************/
+  for(uint32 i=0;i<DMATEST_BUFFERLEN;i++){
+    DmaTestSrc[i] = i*DMATEST_PATTERN;
+  }
+
   // #ifdef AURIX2G_MCAL_DEMOAPP
   // DemoApp_Init();
   // DemoApp();
@@ -141,6 +153,7 @@ void core0_main (void)
     if(localSysTick%1000 == 0){
       StatusReport_1000ms();
       Adc_StartGroupConversion(AdcConf_AdcGroup_AdcSWGroup);
+      Dma_ChStartTransfer(8);
     }
   }
 }
