@@ -5912,18 +5912,10 @@
                       <d:var name="IrqCanSR1Prio" type="INTEGER" value="11"/>
                       <d:var name="IrqCanSR2Prio" type="INTEGER" value="17"/>
                       <d:var name="IrqCanSR3Prio" type="INTEGER" value="13"/>
-                      <d:var name="IrqCanSR4Prio" type="INTEGER" value="0">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="IrqCanSR5Prio" type="INTEGER" value="0">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="IrqCanSR6Prio" type="INTEGER" value="0">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
-                      <d:var name="IrqCanSR7Prio" type="INTEGER" value="0">
-                        <a:a name="IMPORTER_INFO" value="@DEF"/>
-                      </d:var>
+                      <d:var name="IrqCanSR4Prio" type="INTEGER" value="14"/>
+                      <d:var name="IrqCanSR5Prio" type="INTEGER" value="10"/>
+                      <d:var name="IrqCanSR6Prio" type="INTEGER" value="16"/>
+                      <d:var name="IrqCanSR7Prio" type="INTEGER" value="12"/>
                       <d:var name="IrqCanSR8Prio" type="INTEGER" value="0">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>
@@ -6062,10 +6054,10 @@
                       </d:var>
                     </d:ctr>
                     <d:ctr name="IrqCanPrioConfig" type="IDENTIFIABLE">
-                      <d:var name="IrqCanSR0Prio" type="INTEGER" value="14"/>
-                      <d:var name="IrqCanSR1Prio" type="INTEGER" value="10"/>
-                      <d:var name="IrqCanSR2Prio" type="INTEGER" value="16"/>
-                      <d:var name="IrqCanSR3Prio" type="INTEGER" value="12"/>
+                      <d:var name="IrqCanSR0Prio" type="INTEGER" value="0"/>
+                      <d:var name="IrqCanSR1Prio" type="INTEGER" value="0"/>
+                      <d:var name="IrqCanSR2Prio" type="INTEGER" value="0"/>
+                      <d:var name="IrqCanSR3Prio" type="INTEGER" value="0"/>
                       <d:var name="IrqCanSR4Prio" type="INTEGER" value="0">
                         <a:a name="IMPORTER_INFO" value="@DEF"/>
                       </d:var>

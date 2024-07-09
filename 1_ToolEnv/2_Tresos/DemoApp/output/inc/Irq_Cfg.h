@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2024-01-20, 16:44:55      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-07-09, 23:45:08      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222        !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -926,10 +926,10 @@ Container : IrqCaninterruptConfiguration
 #define IRQ_CAN0_SR1_PRIO     0xb
 #define IRQ_CAN0_SR2_PRIO     0x11
 #define IRQ_CAN0_SR3_PRIO     0xd
-#define IRQ_CAN0_SR4_PRIO     0x0
-#define IRQ_CAN0_SR5_PRIO     0x0
-#define IRQ_CAN0_SR6_PRIO     0x0
-#define IRQ_CAN0_SR7_PRIO     0x0
+#define IRQ_CAN0_SR4_PRIO     0xe
+#define IRQ_CAN0_SR5_PRIO     0xa
+#define IRQ_CAN0_SR6_PRIO     0x10
+#define IRQ_CAN0_SR7_PRIO     0xc
 #define IRQ_CAN0_SR8_PRIO     0x0
 #define IRQ_CAN0_SR9_PRIO     0x0
 #define IRQ_CAN0_SR10_PRIO     0x0
@@ -976,10 +976,10 @@ Container : IrqCaninterruptConfiguration
 #define IRQ_CAN1_SR15_CAT      (IRQ_CAT1)
 
 /* CAN1 interrupt Priority Setting */
-#define IRQ_CAN1_SR0_PRIO     0xe
-#define IRQ_CAN1_SR1_PRIO     0xa
-#define IRQ_CAN1_SR2_PRIO     0x10
-#define IRQ_CAN1_SR3_PRIO     0xc
+#define IRQ_CAN1_SR0_PRIO     0x0
+#define IRQ_CAN1_SR1_PRIO     0x0
+#define IRQ_CAN1_SR2_PRIO     0x0
+#define IRQ_CAN1_SR3_PRIO     0x0
 #define IRQ_CAN1_SR4_PRIO     0x0
 #define IRQ_CAN1_SR5_PRIO     0x0
 #define IRQ_CAN1_SR6_PRIO     0x0

@@ -80,7 +80,7 @@ extern void CanIf_TestCheckTrcvWakeFlagIndication(uint8 Transceiver);
 
 void CanIf_RxIndication(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr)
 {
-  #if ((defined(APP_SW)) && (APP_SW == DEMO_APP))
+  // #if ((defined(APP_SW)) && (APP_SW == DEMO_APP))
   uint8 i;
   uint16 MsgdlcCnt;
   uint16 CanDlc;
@@ -131,7 +131,7 @@ void CanIf_RxIndication(const Can_HwType *Mailbox, const PduInfoType *PduInfoPtr
 
   print_f("\n");
 
-  #endif
+  // #endif
 }
 
 /*******************************************************************************
@@ -141,8 +141,8 @@ void CanIf_TxConfirmation (PduIdType CanTxPduId)
 {
   #if ((defined(APP_SW)) && (APP_SW == DEMO_APP))
   print_f("\n Transmitted a message! CanTxPduId = %d", CanTxPduId);
-  Test_TxConfirmCount++ ;
   #endif
+  Test_TxConfirmCount++ ;
 }
 
 /*******************************************************************************

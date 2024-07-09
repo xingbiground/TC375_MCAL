@@ -44,6 +44,7 @@
 #include "EcuM.h"
 #include "Echo.h"
 #include "Dma_Demo.h"
+#include "Can_17_McmCan_Demo.h"
 #include "StatusReport.h"
 #include "Icu_17_TimerIp.h"
 #include "Dio.h"
@@ -154,6 +155,8 @@ void core0_main (void)
       StatusReport_1000ms();
       Adc_StartGroupConversion(AdcConf_AdcGroup_AdcSWGroup);
       Dma_ChStartTransfer(8);
+
+      Can_17_McmCan_Demo();
     }
   }
 }

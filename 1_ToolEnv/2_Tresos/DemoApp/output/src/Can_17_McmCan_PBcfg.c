@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 32.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2024-07-09, 23:39:51          !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -166,9 +166,9 @@ static const Can_17_McmCan_ControllerConfigType \
     cast the generated address with CAN Node structure type */
     /* MISRA2012_RULE_11_4_JUSTIFICATION: conversion between pointer and
     integer type. Permitted for special function registers.*/
-    (volatile Ifx_CAN_N*)0xf0218100U,
+    (volatile Ifx_CAN_N*)0xf0208500U,
     /* combination of Loopback and receive input pin selection setting */
-    0x2U,
+    0x0U,
     /* The controller Hw object configuration mapping information */
     {
       /* Tx Message storage start Index */
@@ -191,9 +191,9 @@ static const Can_17_McmCan_ControllerConfigType \
     /* Total no of Baudrate configuration */
     0x3U,
     /* The controller Associated Kernel configuration Index */
-    0x1U,
+    0x0U,
     /* The CAN controller Hw Index */
-    0x00U,
+    0x01U,
     /* The CAN controller Logical Hw Index - Controller ID defined by user */
     1,
     /* FD support status of the controller */
@@ -277,13 +277,13 @@ static const Can_17_McmCan_ControllerMsgRAMConfigType \
   {
     /* Start Address of each section within the Message RAM */
     {
-      0xf0210000UL,
-      0xf021000cUL,
+      0xf020027cUL,
+      0xf0200288UL,
       0x00000000UL,
       0x00000000UL,
-      0xf021001cUL,
-      0xf021013cUL,
-      0xf021015cUL
+      0xf0200298UL,
+      0xf02003b8UL,
+      0xf02003d8UL
     },
     0x4U,
     0x4U,
@@ -841,7 +841,7 @@ in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 static const Can_17_McmCan_McmModuleConfigType \
-  Can_17_McmCan_kMcmCanModuleConfig[2] =
+  Can_17_McmCan_kMcmCanModuleConfig[1] =
 {
   {
     /* The Global Base address of Kernel module */
@@ -855,26 +855,7 @@ static const Can_17_McmCan_McmModuleConfigType \
       /* Node 0 of kernel enable state */
       TRUE,
       /* Node 1 of kernel enable state */
-      FALSE,
-      /* Node 2 of kernel enable state */
-      FALSE,
-      /* Node 3 of kernel enable state */
-      FALSE
-    }
-  },
-  {
-    /* The Global Base address of Kernel module */
-    /* MISRA2012_RULE_11_6_JUSTIFICATION: The pointer cast is used to
-    cast the generated address with CAN Kernel structure type */
-    /* MISRA2012_RULE_11_4_JUSTIFICATION: conversion between pointer and
-    integer type. Permitted for special function registers.*/
-    (volatile Ifx_CAN*) 0xf0210000U,
-    /* The CAN node is enabled or not within the kernel*/
-    {
-      /* Node 0 of kernel enable state */
       TRUE,
-      /* Node 1 of kernel enable state */
-      FALSE,
       /* Node 2 of kernel enable state */
       FALSE,
       /* Node 3 of kernel enable state */
@@ -931,7 +912,7 @@ static const Can_17_McmCan_LogicalControllerIndexType \
   Can_17_McmCan_kMcmCanLogicContIndexConfig[2] =
 {
   {0,0,0,0},
-  {0,1,0,1}
+  {0,1,1,0}
 };
 /******************************************************************************/
         /* Overall Physical CAN Controller Indexing Configuration */
@@ -953,10 +934,10 @@ static const Can_17_McmCan_PhyControllerIndexType \
   Can_17_McmCan_kMcmCanPhyContIndexConfig[8] =
 {
   {0,0,0},
-  {255,255,255},
-  {255,255,255},
-  {255,255,255},
   {1,1,0},
+  {255,255,255},
+  {255,255,255},
+  {255,255,255},
   {255,255,255},
   {255,255,255},
   {255,255,255}
@@ -980,7 +961,7 @@ const Can_17_McmCan_ConfigType \
   },
   /****************** Global data shared amongst all cores ********************/
   /* Number of Kernels configured */
-  2U,
+  1U,
   /* Number of Hrh configured */
   (Can_HwHandleType)8U,
   /* The number of hardware objects (includes Tx and Rx) configured in a

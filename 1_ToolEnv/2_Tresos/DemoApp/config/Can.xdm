@@ -197,9 +197,7 @@
                       <a:a name="IMPORTER_INFO" value="IMP"/>
                     </d:var>
                     <d:var name="CanControllerBaseAddress" type="INTEGER" 
-                           value="4028727552">
-                      <a:a name="IMPORTER_INFO" value="IMP"/>
-                    </d:var>
+                           value="4028663040"/>
                     <d:var name="CanControllerId" type="INTEGER" value="1">
                       <a:a name="IMPORTER_INFO" value="IMP"/>
                     </d:var>
@@ -208,9 +206,7 @@
                       <a:a name="IMPORTER_INFO" value="IMP"/>
                     </d:var>
                     <d:var name="CanRxInputSelection" type="ENUMERATION" 
-                           value="CANxx_RXDC">
-                      <a:a name="IMPORTER_INFO" value="IMP"/>
-                    </d:var>
+                           value="CANxx_RXDA"/>
                     <d:var name="CanRxProcessing" type="ENUMERATION" 
                            value="INTERRUPT">
                       <a:a name="IMPORTER_INFO" value="IMP"/>

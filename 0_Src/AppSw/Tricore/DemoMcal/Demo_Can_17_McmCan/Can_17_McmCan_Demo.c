@@ -241,6 +241,8 @@ void Can_17_McmCan_Demo(void)
     Can_EnableServiceRequest(2);
     Can_Init_Status++;
   }
+  CAN0_NPCR0.B.LBM = 1;
+  CAN0_NPCR1.B.LBM = 1;
 
   while (!TempUSage)
   {
@@ -1639,6 +1641,11 @@ void Can_EnableServiceRequest(uint8 node)
     SRC_CAN_CAN0_INT1.U |= CAN_SRC_SET_SRE ;
     SRC_CAN_CAN0_INT2.U |= CAN_SRC_SET_SRE ;
     SRC_CAN_CAN0_INT3.U |= CAN_SRC_SET_SRE ;
+    
+    SRC_CAN_CAN0_INT4.U |= CAN_SRC_SET_SRE ;
+    SRC_CAN_CAN0_INT5.U |= CAN_SRC_SET_SRE ;
+    SRC_CAN_CAN0_INT6.U |= CAN_SRC_SET_SRE ;
+    SRC_CAN_CAN0_INT7.U |= CAN_SRC_SET_SRE ;
 
     if(0U == node)
     {
