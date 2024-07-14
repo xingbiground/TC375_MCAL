@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 32.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2024-07-09, 23:39:51          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2024-07-14, 10:20:08          !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b200227-0222            !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -117,7 +117,7 @@ static const Can_17_McmCan_ControllerConfigType \
     integer type. Permitted for special function registers.*/
     (volatile Ifx_CAN_N*)0xf0208100U,
     /* combination of Loopback and receive input pin selection setting */
-    0x1U,
+    0x100U,
     /* The controller Hw object configuration mapping information */
     {
       /* Tx Message storage start Index */
@@ -168,7 +168,7 @@ static const Can_17_McmCan_ControllerConfigType \
     integer type. Permitted for special function registers.*/
     (volatile Ifx_CAN_N*)0xf0208500U,
     /* combination of Loopback and receive input pin selection setting */
-    0x0U,
+    0x100U,
     /* The controller Hw object configuration mapping information */
     {
       /* Tx Message storage start Index */

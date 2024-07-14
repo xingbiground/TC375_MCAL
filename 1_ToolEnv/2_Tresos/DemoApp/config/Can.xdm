@@ -45,9 +45,7 @@
                       <a:a name="IMPORTER_INFO" value="IMP"/>
                     </d:var>
                     <d:var name="CanControllerLoopbackEnable" type="BOOLEAN" 
-                           value="false">
-                      <a:a name="IMPORTER_INFO" value="IMP"/>
-                    </d:var>
+                           value="true"/>
                     <d:var name="CanRxInputSelection" type="ENUMERATION" 
                            value="CANxx_RXDB">
                       <a:a name="IMPORTER_INFO" value="IMP"/>
@@ -202,9 +200,7 @@
                       <a:a name="IMPORTER_INFO" value="IMP"/>
                     </d:var>
                     <d:var name="CanControllerLoopbackEnable" type="BOOLEAN" 
-                           value="false">
-                      <a:a name="IMPORTER_INFO" value="IMP"/>
-                    </d:var>
+                           value="true"/>
                     <d:var name="CanRxInputSelection" type="ENUMERATION" 
                            value="CANxx_RXDA"/>
                     <d:var name="CanRxProcessing" type="ENUMERATION" 
