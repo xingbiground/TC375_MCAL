@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 10.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-16, 13:11:35       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2024-10-28, 20:45:58       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -252,7 +252,6 @@ The configuration contains allocation of Gpt channels across cores.
 
 
 
-
 /* Adds/removes the code related to 'TOM channels'
 - if STD_ON, atleast one of the channel is using TOM channel
 - if STD_OFF, none of the channels are using TOM channel */
@@ -264,7 +263,7 @@ The configuration contains allocation of Gpt channels across cores.
 #define GPT_ATOM_USED                                     (STD_ON)
 
 
-#define GPT_GPT12_USED                                    (STD_OFF)
+#define GPT_GPT12_USED                                    (STD_ON)
 /*******************************************************************************
 **                          Gpt Channel Symbolic Names                        **
 *******************************************************************************/

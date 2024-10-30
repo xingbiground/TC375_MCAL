@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 16.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-16, 13:11:34      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-10-28, 22:39:29      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222          !!!IGNORE-LINE!!!                 **
 **                                                                            **
@@ -127,19 +127,23 @@ static const Mcu_17_Gtm_TomAtomChConfigType GptGtmTimerInfo_Core0_Ch0=
 };
 /*
   Channel Symbolic Name(ChannelId) : LwipTimer
-  GTM TOM/ATOM/GPT12 Channel : GTM_ATOM0_CHANNEL1 in GPT_MODE_CONTINUOUS
+  GTM TOM/ATOM/GPT12 Channel : MCU_GPT12_TIMER2 in GPT_MODE_CONTINUOUS
 */
-static const Mcu_17_Gtm_TomAtomChConfigType GptGtmTimerInfo_Core0_Ch1=
+static const Mcu_17_Gpt12_TimerConfigType GptGpt12TimerInfo_Core0_Ch1[ ]=
 {
-  MCU_GTM_TIMER_ATOM, /* Timer Type (TOM/ATOM)*/
-  0x1, /* Timer Number Module No | Timer Channel No */
-  0x802U, /* Channel Control Register */
-  0x0U, /* CN0 in ticks */
-  0x0U, /* CM0 in ticks */
-  0x0U, /* CM1 in ticks */
-  0x0U, /* SR0 in ticks */
-  0x0U, /* SR1 in ticks */
-  0x80U  /* Interrupt status and mode*/
+
+  {
+    MCU_GPT12_TIMER3,      /* Timer Type (GPT1/GPT2)*/
+    0x280U, /* Channel Control Register */
+    0x0U,
+    0x0U
+  },
+  {
+    MCU_GPT12_TIMER2,      /* Timer Type (GPT1/GPT2)*/
+    0x227U, /* Channel Control Register */
+    0x0U,
+    0x0U
+  }
 };
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -255,7 +259,7 @@ static const Gpt_ChannelConfigType Gpt_kChannelConfig_Core0[ ] =
 
   /*
     Channel Symbolic Name(ChannelId) : LwipTimer
-    GTM TOM/ATOM/GPT12 Channel : GTM_ATOM0_CHANNEL1 in GPT_MODE_CONTINUOUS
+    GTM TOM/ATOM/GPT12 Channel : MCU_GPT12_TIMER2 in GPT_MODE_CONTINUOUS
   */
   {
     #if (GPT_ENABLE_DISABLE_NOTIFICATION_API == STD_ON)
@@ -274,10 +278,10 @@ static const Gpt_ChannelConfigType Gpt_kChannelConfig_Core0[ ] =
     GPT_MODE_CONTINUOUS, /* Channel Mode */
     
     #if ((GPT_ATOM_USED == STD_ON) || (GPT_TOM_USED == STD_ON))
-    &GptGtmTimerInfo_Core0_Ch1,
+    NULL_PTR,
     #endif
     #if (GPT_GPT12_USED == STD_ON)
-    NULL_PTR
+    GptGpt12TimerInfo_Core0_Ch1
     #endif
   }
 };

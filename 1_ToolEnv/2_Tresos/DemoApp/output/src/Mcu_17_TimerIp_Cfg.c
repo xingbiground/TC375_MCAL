@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 22.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-23, 21:54:21     !!!IGNORE-LINE!!!                    **
+**  DATE, TIME: 2024-10-28, 20:42:10     !!!IGNORE-LINE!!!                    **
 **                                                                            **
 **  GENERATOR : Build b200227-0222         !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -75,7 +75,7 @@ Mcu_17_Gtm_AtomChUserData[MCU_17_GTM_NO_OF_ATOM_MODULES][MCU_17_GTM_NO_OF_ATOM_C
   /* ATOM Module 0 */
   {
     0x00000104,
-    0x00000204,
+    0x00000000,
     0x00000000,
     0x00000000,
     0x00000000,
@@ -331,8 +331,8 @@ The extern declaration is present in Mcu_17_TimerIp_Local.h. Hence can't
 be made block scope. No side effects foreseen by violating this MISRA rule. */
 const uint16 Mcu_17_Gpt12_ChUserData[MCU_17_GPT12_NO_OF_TIMERS] =
 {
-  0x0000,
-  0x0000,
+  0x0204,
+  0x0204,
   0x0000,
   0x0000,
   0x0000

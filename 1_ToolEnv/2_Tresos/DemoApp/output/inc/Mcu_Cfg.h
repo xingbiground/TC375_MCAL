@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 21.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 16:05:45         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2024-10-28, 20:42:10         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b200227-0222             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -265,7 +265,7 @@
 #define MCU_CCU61_USED     (STD_ON)
 
 /* This parameter defines whether GPT1 Block is used or not*/
-#define MCU_GPT1_USED     (STD_OFF)
+#define MCU_GPT1_USED     (STD_ON)
 
 /* This parameter defines whether GPT1 Block is used or not*/
 #define MCU_GPT2_USED     (STD_OFF)

@@ -464,7 +464,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="ALT1"/>
+                               value="GPIO"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
                                value="PORT_PIN_LEVEL_LOW">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>

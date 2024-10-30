@@ -194,6 +194,8 @@ Std_ReturnType EcuM_Init(void)
     SRC_VADCG3SR0.B.SRE = 1;    /* Enable EVADC Group3 Source0 INT */
     SRC_VADCG0SR0.B.SRE = 1;    /* Enable EVADC Group0 Source0 INT */
 
+    IrqGpt_Init();
+    SRC_GPT120T3.B.SRE = 1;     /* Enable GPT12 T3 Source. */
 
     /********************************* Peripheral Init *********************************/
     Port_Init(&Port_Config);
@@ -210,7 +212,7 @@ Std_ReturnType EcuM_Init(void)
     
     /********************************* SWC Init *********************************/
     Gpt_EnableNotification(GptConf_GptChannelConfiguration_LwipTimer);
-    Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 50000);  /* 1ms */
+    Gpt_StartTimer(GptConf_GptChannelConfiguration_LwipTimer, 25000);  /* 1ms */
     Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_0);
     Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_3_HW, &Adc3GroupHWResult);
     Adc_EnableHardwareTrigger(AdcConf_AdcGroup_AdcGroup_3_HW);

@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2024-07-09, 23:45:08      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-10-28, 20:42:05      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b200227-0222        !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -91,7 +91,7 @@ Container : IrqGPTinterruptConfiguration
 /*  GPT120 interrupt Priority setting  */
 #define IRQ_GPT120_CARPEL_PRIO      0x0
 #define IRQ_GPT120_T2_PRIO          0x0
-#define IRQ_GPT120_T3_PRIO          0x0
+#define IRQ_GPT120_T3_PRIO          0x32
 #define IRQ_GPT120_T4_PRIO          0x0
 #define IRQ_GPT120_T5_PRIO          0x0
 #define IRQ_GPT120_T6_PRIO          0x0

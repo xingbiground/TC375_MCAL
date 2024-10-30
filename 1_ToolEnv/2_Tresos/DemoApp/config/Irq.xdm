@@ -62,9 +62,7 @@
                     <d:var name="Irq_GPT120T2_Prio" type="INTEGER" value="0">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
-                    <d:var name="Irq_GPT120T3_Prio" type="INTEGER" value="0">
-                      <a:a name="IMPORTER_INFO" value="@DEF"/>
-                    </d:var>
+                    <d:var name="Irq_GPT120T3_Prio" type="INTEGER" value="50"/>
                     <d:var name="Irq_GPT120T4_Prio" type="INTEGER" value="0">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>

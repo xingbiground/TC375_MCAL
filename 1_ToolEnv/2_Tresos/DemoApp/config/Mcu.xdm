@@ -852,9 +852,7 @@
                 <d:lst name="McuRamSectorSettingConf" type="MAP"/>
                 <d:ctr name="McuGpt12PrescalerConf" type="IDENTIFIABLE">
                   <d:var name="Gpt1BlockPrescalerSel" type="ENUMERATION" 
-                         value="GPT1_BLOCK_NOT_USED">
-                    <a:a name="IMPORTER_INFO" value="@DEF"/>
-                  </d:var>
+                         value="GPT1_PRESCALING_FACTOR_4"/>
                   <d:var name="Gpt2BlockPrescalerSel" type="ENUMERATION" 
                          value="GPT2_BLOCK_NOT_USED">
                     <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4953,7 +4951,7 @@
                                    type="IDENTIFIABLE">
                               <d:var name="McuGtmAtomChannelAllocationConf" 
                                      type="ENUMERATION" 
-                                     value="GTM_ATOM_CHANNEL_USED_BY_GPT"/>
+                                     value="GTM_ATOM_CHANNEL_NOT_USED"/>
                               <d:var name="McuAtomChannelEventHandledByDsadc" 
                                      type="BOOLEAN" value="false">
                                 <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -5752,7 +5750,8 @@
                         </a:a>
                       </d:var>
                       <d:var name="McuGpt12ModuleAllocationConf" 
-                             type="ENUMERATION" value="GPT_TIMER_NOT_USED"/>
+                             type="ENUMERATION" 
+                             value="GPT_TIMER_USED_BY_GPT_DRIVER"/>
                     </d:ctr>
                     <d:ctr name="McuGpt12ModuleAllocationConf_1" 
                            type="IDENTIFIABLE">
@@ -5764,7 +5763,8 @@
                         </a:a>
                       </d:var>
                       <d:var name="McuGpt12ModuleAllocationConf" 
-                             type="ENUMERATION" value="GPT_TIMER_NOT_USED"/>
+                             type="ENUMERATION" 
+                             value="GPT_TIMER_USED_BY_GPT_DRIVER"/>
                     </d:ctr>
                     <d:ctr name="McuGpt12ModuleAllocationConf_2" 
                            type="IDENTIFIABLE">

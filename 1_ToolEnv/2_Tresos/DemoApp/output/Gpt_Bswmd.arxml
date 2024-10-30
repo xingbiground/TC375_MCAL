@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 27.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-03, 18:29:31       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2024-10-28, 20:45:58       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -146,6 +146,15 @@
                     <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                       <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_17_Gtm_AtomChInitCheck</BSW-MODULE-ENTRY-REF>
                     </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_17_Gpt12_TimerInit</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_17_Gpt12_TimerDeInit</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_17_Gpt12_TimerInitCheck</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   </REQUIRED-ENTRYS>
                 </BSW-MODULE-DEPENDENCY>
                 <BSW-MODULE-DEPENDENCY>
@@ -162,6 +171,12 @@
                 <BSW-INTERNAL-BEHAVIOR>
                   <SHORT-NAME>GptBehavior</SHORT-NAME>
                   <EXCLUSIVE-AREAS>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>Gpt12StartTimer</SHORT-NAME>
+                      <INTRODUCTION>
+                        <NOTE SI="User of GPT shall ensure that the critical section protection provided by GPT for GPT12 start timer local function is implemented to suspend and resume interrupts" NOTE-TYPE="HINT"/>
+                      </INTRODUCTION>
+                    </EXCLUSIVE-AREA>
                     <EXCLUSIVE-AREA>
                       <SHORT-NAME>GtmStartTimer</SHORT-NAME>
                       <INTRODUCTION>
@@ -189,6 +204,7 @@
                       <SHORT-NAME>Gpt_StartTimer</SHORT-NAME>
                       <CAN-ENTER-EXCLUSIVE-AREA-REFS>
                         <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Gpt/BswModuleDescriptions/Gpt/GptBehavior/GtmStartTimer</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Gpt/BswModuleDescriptions/Gpt/GptBehavior/Gpt12StartTimer</CAN-ENTER-EXCLUSIVE-AREA-REF>
                       </CAN-ENTER-EXCLUSIVE-AREA-REFS>
                       <REENTRANCY-LEVEL>MULTICORE-REENTRANT</REENTRANCY-LEVEL>
                       <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Gpt/BswModuleEntrys/Gpt_StartTimer</IMPLEMENTED-ENTRY-REF>

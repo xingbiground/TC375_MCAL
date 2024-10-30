@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 33.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2023-12-23, 21:39:13       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2024-10-28, 20:42:10       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b200227-0222           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -542,7 +542,7 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
 static const Mcu_Gpt12ConfigType Mcu_kGpt12PrescalerConfiguration_Config =
 {
   /*GPT Block 1 Prescalar */
-  0x00U,
+  0x01U,
   /*GPT Block 2 Prescalar */
   0x00U,
   /*Reserved field initialized to 0*/

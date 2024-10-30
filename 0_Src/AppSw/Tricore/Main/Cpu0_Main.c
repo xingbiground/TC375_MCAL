@@ -147,16 +147,16 @@ void core0_main (void)
 
       /* Button and LED interaction. */
       buttonLevel = Dio_ReadChannel(DioConf_DioChannel_BUTTON1);
-      Dio_WriteChannel(DioConf_DioChannel_LED2, buttonLevel);
     }
     
     /********************************* 1000 rbl *********************************/
-    if(localSysTick%1000 == 0){
+    if(localSysTick%500 == 0){
+      Dio_FlipChannel(DioConf_DioChannel_LED1);
       StatusReport_1000ms();
       Adc_StartGroupConversion(AdcConf_AdcGroup_AdcSWGroup);
       Dma_ChStartTransfer(8);
 
-      Can_17_McmCan_Demo();
+      // Can_17_McmCan_Demo();
     }
   }
 }

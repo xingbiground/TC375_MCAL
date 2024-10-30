@@ -166,7 +166,7 @@
                       </a:a>
                     </d:var>
                     <d:var name="GptAssignedHwUnit" type="ENUMERATION" 
-                           value="GTM"/>
+                           value="GPT12"/>
                     <d:var name="GptChannelMode" type="ENUMERATION" 
                            value="GPT_CH_MODE_CONTINUOUS">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -192,17 +192,24 @@
                     <d:ref name="GptChannelClkSrcRef" type="REFERENCE" 
                            value="ASPath:/Gpt/Gpt/GptDriverConfiguration/GptClockReferencePoint_0"/>
                     <d:lst name="GptWakeupConfiguration" type="MAP"/>
-                    <d:lst name="GtmTimerOutputModuleConfiguration" type="MAP">
-                      <d:ctr name="GtmTimerOutputModuleConfiguration_0" 
+                    <d:lst name="GtmTimerOutputModuleConfiguration" type="MAP"/>
+                    <d:lst name="Gpt12TimerOutputModuleConfiguration" 
+                           type="MAP">
+                      <d:ctr name="Gpt12TimerOutputModuleConfiguration_0" 
                              type="IDENTIFIABLE">
-                        <d:ref name="GtmTimerUsed" type="REFERENCE" 
-                               value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGtmAllocationConf_0/McuGtmAtomAllocationConf_0/McuGtmAtomChannelAllocationConf_1"/>
-                        <d:var name="GtmTimerClockSelect" type="ENUMERATION" 
-                               value="GTM_CONFIGURABLE_CLOCK_0"/>
+                        <d:ref name="Gpt12TimerUsed" type="REFERENCE" 
+                               value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGpt12ModuleAllocationConf_0"/>
+                        <d:var name="Gpt12ChannelClockDivider" type="INTEGER" 
+                               value="0"/>
+                      </d:ctr>
+                      <d:ctr name="Gpt12TimerOutputModuleConfiguration_1" 
+                             type="IDENTIFIABLE">
+                        <d:ref name="Gpt12TimerUsed" type="REFERENCE" 
+                               value="ASPath:/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGpt12ModuleAllocationConf_1"/>
+                        <d:var name="Gpt12ChannelClockDivider" type="INTEGER" 
+                               value="0"/>
                       </d:ctr>
                     </d:lst>
-                    <d:lst name="Gpt12TimerOutputModuleConfiguration" 
-                           type="MAP"/>
                   </d:ctr>
                 </d:lst>
               </d:ctr>
